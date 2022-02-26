@@ -1,0 +1,19 @@
+﻿- hosts: nodes
+  tasks:
+  - name: Remove fetched directory locally
+    file:
+      path: "fetched/"
+      state: absent
+    delegate_to: localhost  
+  - name: Create directories for hosts
+    file:
+      path: "fetched/{{C_NODENAME}}-{{ inventory_hostname }}-runs"
+      state: directory
+    delegate_to: localhost
+  - name: Transfering files
+    synchronize:
+      src: ~/dcepambrosiadir/runs/
+      dest: "fetched/{{C_NODENAME}}-{{ inventory_hostname }}-runs/"
+      recursive: True
+      mode: pull
+      delete: True

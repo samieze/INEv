@@ -1,0 +1,80 @@
+﻿- hosts: nodes
+  vars:
+    PORT_BASEOFFSET : 2300
+    BASEPORTNUMBER : "{{ PORT_BASEOFFSET|int + 3|int * (C_NODENAME|int)}}"
+    CRA_PORT: "{{ BASEPORTNUMBER|int|string}}"
+    LOCAL_SEND_PORT: "{{(BASEPORTNUMBER|int + 1|int)|string}}"
+    LOCAL_RECEIVE_PORT: "{{(BASEPORTNUMBER|int + 2|int)|string}}"
+    SERVICENAME: "adcep{{C_NODENAME}}"
+    IPADDR: "{{ansible_default_ipv4.address|default(ansible_all_ipv4_addresses[0])}}"
+#    extra_path: "$HOME/dcepambrosiadir/AMBROSIA"
+  environment:
+#    AZURE_STORAGE_CONN_STRING: ""
+#    PATH: "{{ ansible_env.PATH }}:$HOME/dcepambrosiadir/AMBROSIA"
+#    AMBROSIATOOLS: "$HOME/dcepambrosiadir/AMBROSIA"
+#    AZURE_STORAGE_CONN_STRING: ""
+  tasks:
+#    - name: add {{extra_path}} to path
+#      lineinfile: 
+#        path: /etc/environment
+#        state: present
+#        backrefs: yes
+#        regexp: 'PATH=(["]*)((?!.*?{{extra_path}}).*?)(["]*)$'
+#        line: 'PATH=\\1\\2:{{extra_path}}\\3'
+#    
+    - name: Create runs directory
+      file:
+        path: "$HOME/dcepambrosiadir/runs"
+        state: directory
+    - name: Ansible delete multiple file example
+      file:
+        path: "$HOME/dcepambrosiadir/runs/{{ item }}"
+        state: absent
+      with_items:
+        - output.txt
+        - ambrosia_logs
+    - name: cleanup temporary run files
+      file:
+        path: "~/dcepambrosiadir/runs/{{ item }}"
+        state: absent
+      with_fileglob:
+        - "*.sh"
+        - "healthMonitorContinue.*"
+        - "*.log"
+        - "*.stackdump"
+          
+    - shell: "echo Using AZURE_STORAGE_CONN_STRING with account $AZURE_STORAGE_CONN_STRING"
+      register: accountstr
+    - debug:
+        var: accountstr
+        
+    - name: Ambrosia Register Instance
+      command: "Ambrosia RegisterInstance -i {{SERVICENAME}} --rp {{LOCAL_RECEIVE_PORT}} --sp {{LOCAL_SEND_PORT}} -l ~/dcepambrosiadir/runs/ambrosia_logs"
+
+    - name: runAmbrosiaService
+      shell: "runAmbrosiaService.sh $(realpath ~/dcepambrosiadir/bin/DCEP.AmbrosiaNode) --receivePort={{LOCAL_SEND_PORT}} --sendPort={{LOCAL_RECEIVE_PORT}} --serviceName={{SERVICENAME}}  ~/dcepambrosiadir/inputdata/smallclustertest/clustertest.txt -t Second -w 10 -d 100 > output.txt"
+      async: 2592000               # 60*60*24*30 – 1 month
+      poll: 0
+      register: ambrosiaServiceSH
+      args:
+        chdir: "$HOME/dcepambrosiadir/runs/"
+        executable: /bin/bash
+      environment:
+        AMBROSIA_INSTANCE_NAME: "{{SERVICENAME}}"
+        AMBROSIA_IMMORTALCOORDINATOR_PORT: "{{CRAPORT}}"
+        COORDTAG: "Coord{{SERVICENAME}}"
+        AMBROSIA_IMMORTALCOORDINATOR_LOG: "{{SERVICENAME}}-coord.log"
+#    - name: Start AmbrosiaDCEP instance
+#      shell: "../bin/run_cluster_node.sh {{LOCAL_RECEIVE_PORT}} {{LOCAL_SEND_PORT}} {{CRA_PORT}} {{C_NODENAME}} ~/dcepambrosiadir/inputdata/sampleA.txt -t Second -w 10 -d 100 > output.txt"
+#      args:
+#        chdir: "$HOME/dcepambrosiadir/runs/"
+#        executable: /bin/bash
+#      async: 2592000               # 60*60*24*30 – 1 month
+#      poll: 0
+#      register: clustertest
+#    - name: "check on clustertest"
+#      async_status:
+#        jid: "{{ clustertest.ansible_job_id }}"
+#      register: job_result
+#      until: job_result.finished
+#      retries: 30
