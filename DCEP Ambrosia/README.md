@@ -14,8 +14,8 @@ The distributed query processor can be used within a simulation and with Ambrosi
 Running our distributed query processor with Ambrosia requires a full installation and setup of Ambrosia as described in https://github.com/microsoft/AMBROSIA.
 More concretely, we recommend running the **hello world** example (https://github.com/microsoft/AMBROSIA/tree/master/Samples/HelloWorld) first before starting DCEP-Ambrosia.
 
-To start the Ambrosia implementation for 20 nodes using the input example `AND3_MS.txt`, run the following command from inside the directory `/bin`:
-`nice -n 19 bash ../bin/run_all_linux.sh ../inputexamples/queries_google_cluster/AND3_MS.txt -t Minute -w 30 -d 300 --datasetSpeedup 3 --experimentname AND3_MS --doBenchmarkTo CSV > output.txt`
+To start the Ambrosia implementation for 20 nodes using the input example `Filter_doubleUpdate.txt`, run the following command from inside the directory `/bin`:
+`../bin/run_all_linux.sh ../inputexamples/queries_google_cluster/DoubleUpdate/Filter_doubleUpdate.txt -t Minute -w 30 -d 300 --experimentname DoubleUpdate --doBenchmarkTo CSV > output.txt`
 
 The last lines of the created file `output.txt` contain the totally generated primitve events and projections, as well as number of events sent.
 The directory `out\benchmark\` contains for each node latency and throughput metrics. 
@@ -24,7 +24,7 @@ The directory `out\benchmark\` contains for each node latency and throughput met
 
 Likewise, our distributed query processor can be started as a simulation using the follwing command from inside the directory `/bin`:
 
-`nice -n 19 ../bin/DCEP.Simulation ../inputexamples/queries_google_clusterAND3_MS.txt -t Minute -w 30 -d 300 --datasetSpeedup 3 --experimentname AND3_MS --doBenchmarkTo CSV > output.txt`
+`../bin/DCEP.Simulation ../inputexamples/queries_google_cluster/DoubleUpdate/Filter_doubleUpdate.txt -t Minute -w 30 -d 300 --experimentname DoubleUpdate --doBenchmarkTo CSV > output.txt`
 
 The last lines of the created file `output.txt` contain the totally generated primitve events and projections, as well as number of events sent.
 The directory `out\benchmark\` contains for each node latency and throughput metrics. 
