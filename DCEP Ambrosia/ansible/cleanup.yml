@@ -1,0 +1,10 @@
+﻿- hosts: nodes
+  tasks:
+  - name: Delete run directory
+    file:
+      path: "$HOME/dcepambrosiadir/runs/"
+      state: absent
+  - name: Recreate and empty run directory
+    file:
+      path: "$HOME/dcepambrosiadir/runs"
+      state: directory
