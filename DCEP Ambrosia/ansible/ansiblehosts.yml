@@ -1,0 +1,44 @@
+﻿all:
+  children:
+    nodes:
+      hosts:
+        dbis73:
+          C_NODENAME: 0
+        dbis22:
+          C_NODENAME: 1
+        dbis23:
+          C_NODENAME: 2
+        dbis14:
+          C_NODENAME: 3
+        dbis31:
+          C_NODENAME: 4
+        dbis32:
+          C_NODENAME: 5
+        dbis34:
+          C_NODENAME: 6
+        dbis41:
+          C_NODENAME: 7
+        dbis42:
+          C_NODENAME: 8
+        dbis43:
+          C_NODENAME: 9
+#        dbis74:
+#          C_NODENAME: 10
+#        dbis51:
+#          C_NODENAME: 11
+#        dbis52:
+#          C_NODENAME: 12
+#        dbis53:
+#          C_NODENAME: 13
+#        dbis54:
+#          C_NODENAME: 14
+#        dbis61:
+#          C_NODENAME: 15
+#        dbis63:
+#          C_NODENAME: 16
+#        dbis64:
+#          C_NODENAME: 17
+#        dbis71:
+#          C_NODENAME: 18
+#        dbis72:
+#          C_NODENAME: 19

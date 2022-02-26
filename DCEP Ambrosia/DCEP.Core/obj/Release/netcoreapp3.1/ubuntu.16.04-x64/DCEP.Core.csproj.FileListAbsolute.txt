@@ -1,0 +1,17 @@
+/home/steve/Desktop/dcep-ambrosia-Watermark_SkipTillNextMatch/DCEP.Core/bin/Release/netcoreapp3.1/ubuntu.16.04-x64/DCEP.Core.deps.json
+/home/steve/Desktop/dcep-ambrosia-Watermark_SkipTillNextMatch/DCEP.Core/bin/Release/netcoreapp3.1/ubuntu.16.04-x64/DCEP.Core.dll
+/home/steve/Desktop/dcep-ambrosia-Watermark_SkipTillNextMatch/DCEP.Core/bin/Release/netcoreapp3.1/ubuntu.16.04-x64/DCEP.Core.pdb
+/home/steve/Desktop/dcep-ambrosia-Watermark_SkipTillNextMatch/DCEP.Core/obj/Release/netcoreapp3.1/ubuntu.16.04-x64/DCEP.Core.AssemblyInfoInputs.cache
+/home/steve/Desktop/dcep-ambrosia-Watermark_SkipTillNextMatch/DCEP.Core/obj/Release/netcoreapp3.1/ubuntu.16.04-x64/DCEP.Core.AssemblyInfo.cs
+/home/steve/Desktop/dcep-ambrosia-Watermark_SkipTillNextMatch/DCEP.Core/obj/Release/netcoreapp3.1/ubuntu.16.04-x64/DCEP.Core.csproj.CoreCompileInputs.cache
+/home/steve/Desktop/dcep-ambrosia-Watermark_SkipTillNextMatch/DCEP.Core/obj/Release/netcoreapp3.1/ubuntu.16.04-x64/DCEP.Core.dll
+/home/steve/Desktop/dcep-ambrosia-Watermark_SkipTillNextMatch/DCEP.Core/obj/Release/netcoreapp3.1/ubuntu.16.04-x64/DCEP.Core.pdb
+/home/steve/Desktop/DCEP-arbitrary-topologies/dcep-ambrosia/DCEP.Core/bin/Release/netcoreapp3.1/ubuntu.16.04-x64/DCEP.Core.deps.json
+/home/steve/Desktop/DCEP-arbitrary-topologies/dcep-ambrosia/DCEP.Core/bin/Release/netcoreapp3.1/ubuntu.16.04-x64/DCEP.Core.dll
+/home/steve/Desktop/DCEP-arbitrary-topologies/dcep-ambrosia/DCEP.Core/bin/Release/netcoreapp3.1/ubuntu.16.04-x64/DCEP.Core.pdb
+/home/steve/Desktop/DCEP-arbitrary-topologies/dcep-ambrosia/DCEP.Core/obj/Release/netcoreapp3.1/ubuntu.16.04-x64/DCEP.Core.AssemblyInfoInputs.cache
+/home/steve/Desktop/DCEP-arbitrary-topologies/dcep-ambrosia/DCEP.Core/obj/Release/netcoreapp3.1/ubuntu.16.04-x64/DCEP.Core.AssemblyInfo.cs
+/home/steve/Desktop/DCEP-arbitrary-topologies/dcep-ambrosia/DCEP.Core/obj/Release/netcoreapp3.1/ubuntu.16.04-x64/DCEP.Core.csproj.CoreCompileInputs.cache
+/home/steve/Desktop/DCEP-arbitrary-topologies/dcep-ambrosia/DCEP.Core/obj/Release/netcoreapp3.1/ubuntu.16.04-x64/DCEP.Core.dll
+/home/steve/Desktop/DCEP-arbitrary-topologies/dcep-ambrosia/DCEP.Core/obj/Release/netcoreapp3.1/ubuntu.16.04-x64/DCEP.Core.pdb
+/home/steve/Desktop/DCEP-arbitrary-topologies/dcep-ambrosia/DCEP.Core/obj/Release/netcoreapp3.1/ubuntu.16.04-x64/DCEP.Core.GeneratedMSBuildEditorConfig.editorconfig

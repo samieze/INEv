@@ -1,0 +1,42 @@
+﻿- hosts: nodes
+  tasks:
+    - name: Create directories if not exist
+      file:
+        path: "$HOME/dcepambrosiadir/{{ item }}"
+        state: directory
+      register: file_output
+      loop:
+        - AMBROSIA
+        - bin
+        - inputdata
+    - name: Update AMBROSIA dir
+      synchronize:
+        src: ~/dcepambrosiadir/AMBROSIA/
+        dest: ~/dcepambrosiadir/AMBROSIA/
+        recursive: True
+        delete: True
+    - name: Update binary dir
+      synchronize:
+        src: ~/dcepambrosiadir/bin/
+        dest: ~/dcepambrosiadir/bin/
+        recursive: True
+        delete: True        
+    - name: Update inputdata dir
+      synchronize:
+        src: ~/dcepambrosiadir/inputdata/
+        dest: ~/dcepambrosiadir/inputdata/
+        recursive: True
+        delete: True
+    - name: Making binaries executable (adding "+x")
+      file: 
+        dest: "$HOME/dcepambrosiadir/bin/{{ item }}"
+        mode: a+x
+      loop:
+        - DCEP.AmbrosiaNode
+        - DCEP.Simulation
+    - name: Making shell scripts executable (adding "+x")
+      file:
+        dest: "{{ item }}"
+        mode: a+x
+      with_fileglob:
+        - "~/dcepambrosiadir/bin/*.sh"
