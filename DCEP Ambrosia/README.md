@@ -18,7 +18,6 @@ To start the Ambrosia implementation for 20 nodes using the input example `Filte
 `../bin/run_all_linux.sh ../inputexamples/queries_google_cluster/DoubleUpdate/Filter_doubleUpdate.txt -t Minute -w 30 -d 10 > output.txt`
 
 The last lines of the created file `output.txt` contain the totally generated primitve events and projections, as well as number of events sent.
-The directory `out\benchmark\` contains for each node latency and throughput metrics. 
 
 ### using Simulation
 
@@ -27,7 +26,6 @@ Likewise, our distributed query processor can be started as a simulation using t
 `../bin/DCEP.Simulation ../inputexamples/queries_google_cluster/DoubleUpdate/Filter_doubleUpdate.txt -t Minute -w 30 -d 10 > output.txt`
 
 The last lines of the created file `output.txt` contain the totally generated primitve events and projections, as well as number of events sent.
-The directory `out\benchmark\` contains for each node latency and throughput metrics. 
 
 #### Parameters
 
