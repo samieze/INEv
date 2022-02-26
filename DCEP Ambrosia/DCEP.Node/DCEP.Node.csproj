@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Version>0.7</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommandLineParser" Version="2.8.0" />
+    <PackageReference Include="CsvHelper" Version="15.0.5" />
+    <PackageReference Include="Microsoft.Ambrosia.LibCS" Version="1.0.14" Condition="'$(Configuration)' == 'Release' " />
+    <PackageReference Include="Microsoft.Ambrosia.LibCSDebug" Version="1.0.14" Condition="'$(Configuration)' == 'Debug'" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DCEP.Core\DCEP.Core.csproj" />
+    <ProjectReference Include="..\GeneratedSourceFiles\DCEP.AmbrosiaNodeAPIGenerated\latest\DCEP.AmbrosiaNodeAPIGenerated.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+    <_Parameter1>DCEP.Test</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
+
+</Project>
