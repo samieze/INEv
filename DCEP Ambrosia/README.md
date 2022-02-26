@@ -15,6 +15,7 @@ Running our distributed query processor with Ambrosia requires a full installati
 More concretely, we recommend running the **hello world** example (https://github.com/microsoft/AMBROSIA/tree/master/Samples/HelloWorld) first before starting DCEP-Ambrosia.
 
 To start the Ambrosia implementation for 20 nodes using the input example `Filter_doubleUpdate.txt`, run the following command from inside the directory `/bin`:
+
 `../bin/run_all_linux.sh ../inputexamples/queries_google_cluster/DoubleUpdate/Filter_doubleUpdate.txt -t Minute -w 30 -d 300 --experimentname DoubleUpdate --doBenchmarkTo CSV > output.txt`
 
 The last lines of the created file `output.txt` contain the totally generated primitve events and projections, as well as number of events sent.
