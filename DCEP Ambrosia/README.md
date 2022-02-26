@@ -1,4 +1,4 @@
-# DCEP-ambrosia
+# DCEP Ambrosia
 Distributed Complex Event Processing with Microsoft Ambrosia
 
 ## Related Links
