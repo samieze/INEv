@@ -38,6 +38,4 @@ Parameter | Meaning
 -t| Required. The time unit events will be generated at rate (n events / time unit).
  -w | Required. The global time window in which event components must occur to trigger a match. The time unit is specified with -t.
 -d |  The execution duration of the simulation. Per default it wil run indefinitely. If set to a value, the number of exchanged events within the time period will be measured and eventually printed to stdout. The time unit is specified with -t.
- --doBenchmarkTo | set to 'CSV' to write performance metrics into the /out/benchmarks directory.
---benchmarkInterval | (Default: 10) The time window of benchmark metrics in seconds. They are continuously written to a file in out/benchmark/.
 
