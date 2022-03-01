@@ -37,7 +37,8 @@ Parameter | Meaning
  -w | Required. The global time window in which event components must occur to trigger a match. The time unit is specified with -t.
 -d |  The execution duration of the simulation. Per default it wil run indefinitely. If set to a value, the number of exchanged events within the time period will be measured and eventually printed to stdout. The time unit is specified with -t.
 
-#### How to build
+
+### How to build
 To build this project, the script `/scripts/build_dotnetcore.sh` needs execution permissions (i.e., using Linux `cd scripts` and `chmod +x build_dotnetcore.sh`). Afterward, the script must be run from the main directory:
 
 `cd ../DCEP Ambrosia` and type `scripts/buildotnet_core.sh`.
