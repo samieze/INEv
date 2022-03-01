@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "DCEP": {
+      "commandName": "Project",
+      "commandLineArgs": "-i devinput.txt",
+      "workingDirectory": "C:\\Users\\Hermann\\Projekte\\dcep-ambrosia"
+    }
+  }
+}

@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = DCEP.AmbrosiaNodeAPI
+build_property.ProjectDir = /home/steve/Desktop/DCEP-arbitrary-topologies/dcep-ambrosia/DCEP.AmbrosiaNodeAPI/
