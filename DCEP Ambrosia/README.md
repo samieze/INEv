@@ -41,7 +41,7 @@ Parameter | Meaning
 ### How to build
 To build this project, the script `../scripts/build_dotnetcore.sh` needs execution permissions (i.e., using Linux `cd ../scripts` and `chmod +x build_dotnetcore.sh`). Afterward, the script must be run from the main directory:
 
-`cd ../DCEP Ambrosia` and type `scripts/buildotnet_core.sh`.
+`cd ../DCEP Ambrosia` and type `./scripts/buildotnet_core.sh`.
 
 After the project has been built successfully, a `/publish` folder is created in the directory that contains two folders, `/bin` and `/inputdata`. Inside the `/bin` folder are all files needed to run the engine, and inside `/inputdata` are all input files. Now, the engine can be started using the following command:
 
