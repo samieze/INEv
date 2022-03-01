@@ -16,5 +16,5 @@ The input files used to conduct our case study as well as input files for the ex
 
 #### CaseStudy
 
-The directory contains a descriptions of the queries used in our case study.
+The directory contains a description of the queries used in our case study.
 
