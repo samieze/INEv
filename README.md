@@ -1,4 +1,4 @@
-# INEv: INEv: In-Network Evaluation for Event Stream Processing
+# INEv: In-Network Evaluation for Event Stream Processing
 
 ## Overview
 
@@ -12,9 +12,9 @@ The directory `INEv` contains the implementation of our algorithms and the scrip
 #### DCEP_Ambrosia
 
 The directory `DCEP_Ambrosia` contains the implementation of light-weight distributed complex event processing engine using Microsoft Ambrosia for fault-tolerant communication. The query processor can alternatively be started as a simulation which does not require to locally set up Ambrosia.
-The input files used to conduct our case study as well as input files for the execution of in-network evaluation based on of INEv graphs constructed for synthetic data can be found in `DCEP_Ambrosia/inputdata` 
+The input files used to conduct our case study as well as input files for the execution of in-network evaluation based on INEv graphs constructed for synthetic data can be found in `DCEP_Ambrosia/inputexamples`.
 
 #### CaseStudy
 
-The directory contains a descriptions of the queries used in our case study.
+The directory contains a description of the queries used in our case study.
 
