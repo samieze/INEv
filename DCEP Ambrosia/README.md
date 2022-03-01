@@ -37,3 +37,11 @@ Parameter | Meaning
  -w | Required. The global time window in which event components must occur to trigger a match. The time unit is specified with -t.
 -d |  The execution duration of the simulation. Per default it wil run indefinitely. If set to a value, the number of exchanged events within the time period will be measured and eventually printed to stdout. The time unit is specified with -t.
 
+#### How to build
+To build this project, the script `/scripts/build_dotnetcore.sh` needs execution permissions (i.e., using Linux `cd scripts` and `chmod +x build_dotnetcore.sh`). Afterward, the script must be run from the main directory:
+
+`cd ../DCEP Ambrosia` and type `scripts/buildotnet_core.sh`.
+
+After the project has been built successfully, a `/publish` folder is created in the directory that contains two folders, `/bin` and `/inputdata`. Inside the /bin folder are all files needed to run the engine, and inside the /inputdata folder are all input files. Thus, the engine can be started with the following command using the publish folder:
+
+`../publish/bin/DCEP.Simulation ../publish/bin/inputdata/queries_google_cluster/DoubleUpdate/Filter_doubleUpdate.txt -t Minute -w 30 -d 10 > output.txt`
