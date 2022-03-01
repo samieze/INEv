@@ -1,4 +1,4 @@
-# INEv: INEv: In-Network Evaluation for Event Stream Processing
+# INEv: In-Network Evaluation for Event Stream Processing
 
 ## Overview
 
