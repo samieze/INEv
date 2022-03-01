@@ -81,7 +81,7 @@ def main():
         
     if len(sys.argv) > 3:    
         eventrates = generate_eventrates(eventskew,num_eventtypes)   
-    print("HALLO" + str(eventrates))
+
     if not eventrates[0]:
    	  eventrates = generate_eventrates(eventskew,num_eventtypes)
     
