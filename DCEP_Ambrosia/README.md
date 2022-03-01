@@ -39,7 +39,7 @@ Parameter | Meaning
 
 
 ### How to build
-To build this project, the script `../scripts/build_dotnetcore.sh` needs execution permissions (i.e., using Linux `cd ../scripts` and `chmod +x build_dotnetcore.sh`). Afterward, the script must be run from the main directory:
+To build this project, the script `../scripts/build_dotnetcore.sh` needs execution permissions (e.g., using Linux `cd ../scripts` and `chmod +x build_dotnetcore.sh`). Afterward, the script must be run from the main directory:
 
 `cd ../DCEP Ambrosia` and type `./scripts/buildotnet_core.sh`.
 
