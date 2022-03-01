@@ -5,9 +5,11 @@
 ## Scripts
 Scripts for reproducing experiments presented in paper.
 Using the `_plan.sh`-version of a script, saves for each experiment the resulting INEv graphs in the `plans/` folder. 
+Please note, that only only one script can be executed at thes time.
 
 - *\_single and *\_single\_plan execute set of experiments for single query of size 7, concrete event rates used in networks for experiments in paper can be found in top section of generate_network.py 
 - eventSkewLatency.sh execute set of experiments for query workload of size 10, and varying latency factors
+- conflicting_qwl to reproduce performance of multi-query scenario with varying overlap in event types between queries
 - *\_qwl and *\_qwl\_plan execute set of experiments for query workloads of varying sizes, concrete event rates used in networks for experiments in paper can be found in top section of generate_network.py 
 
 ## Schema of Results
