@@ -42,6 +42,6 @@ To build this project, the script `/scripts/build_dotnetcore.sh` needs execution
 
 `cd ../DCEP Ambrosia` and type `scripts/buildotnet_core.sh`.
 
-After the project has been built successfully, a `/publish` folder is created in the directory that contains two folders, `/bin` and `/inputdata`. Inside the /bin folder are all files needed to run the engine, and inside the /inputdata folder are all input files. Thus, the engine can be started with the following command using the publish folder:
+After the project has been built successfully, a `/publish` folder is created in the directory that contains two folders, `/bin` and `/inputdata`. Inside the `/bin` folder are all files needed to run the engine, and inside `/inputdata` are all input files. Now, the engine can be started using the following command:
 
 `../publish/bin/DCEP.Simulation ../publish/bin/inputdata/queries_google_cluster/DoubleUpdate/Filter_doubleUpdate.txt -t Minute -w 30 -d 10 > output.txt`
