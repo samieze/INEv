@@ -11,8 +11,8 @@ The directory `INEv` contains the implementation of our algorithms and the scrip
 
 #### DCEP_Ambrosia
 
-The directory `DCEP_Ambrosia` contains the implementation of distributed complex event processing using Microsoft Ambrosia. The query processor can alternatively be started as a simulation which does not require to locally set up Ambrosia.
-The input files used to conduct our case study as well as input files for the evaluation of INEv graph based on synthetic data can be found in `DCEP_Ambrosia/inputdata` 
+The directory `DCEP_Ambrosia` contains the implementation of light-weight distributed complex event processing engine using Microsoft Ambrosia for fault-tolerant communication. The query processor can alternatively be started as a simulation which does not require to locally set up Ambrosia.
+The input files used to conduct our case study as well as input files for the execution of in-network evaluation based on of INEv graphs constructed for synthetic data can be found in `DCEP_Ambrosia/inputdata` 
 
 #### CaseStudy
 
