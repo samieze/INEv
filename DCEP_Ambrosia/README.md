@@ -13,6 +13,10 @@ The distributed query processor can be used within a simulation and with Ambrosi
 Running our distributed query processor with Ambrosia requires a full installation and setup of Ambrosia as described in https://github.com/microsoft/AMBROSIA.
 More concretely, we recommend running the **hello world** example (https://github.com/microsoft/AMBROSIA/tree/master/Samples/HelloWorld) first before starting DCEP-Ambrosia.
 
+Before the DCEP Ambrosia engine can be started, the connection string from the Azure account must be exported. To do this, you have to login into your Azure account, click on the previously created storage account and then click on "Access keys". The connection string must then be copied and exported within the command line using the command "export". Make sure that the part after AZURE_STORAGE_CONN_STRING is put in quotation marks until the end, i.e.,
+
+`export AZURE_STORAGE_CONN_STRING="DefaultEndpointsProtocol=https;AccountName=ExampleUser;AccountKey=AOSIDJiojsad48nj34EKMRkxBaQPW0Puy14mk32m4nvmPZ1y/6Ohx8lzE124ok4116Vm0L3d/M941BPyTo412nj4A==;EndpointSuffix=core.windows.net"`
+
 To start the Ambrosia implementation for 20 nodes using the input example `Q1_douleUpdate.txt`, run the following command from inside the directory `/bin`:
 
 `../bin/run_all_linux.sh ../inputexamples/google_cluster/Q1_doubleUpdate/Q1_douleUpdate.txt -t Minute -w 30 -d 10 > output.txt`
