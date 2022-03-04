@@ -43,6 +43,7 @@ Parameter | Meaning
 
 
 ### How to build
+- Before building the project, install the .NET SDK version 5.0.404.
 To build this project, the script `../scripts/build_dotnetcore.sh` needs execution permissions (e.g., using Linux `cd ../scripts` and `chmod +x build_dotnetcore.sh`). Afterward, the script must be run from the main directory:
 
 `cd ../DCEP Ambrosia` and type `./scripts/buildotnet_core.sh`.
