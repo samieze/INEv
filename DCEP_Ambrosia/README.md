@@ -19,7 +19,7 @@ Before the DCEP Ambrosia engine can be started, the connection string from the A
 
 To start the Ambrosia implementation for 20 nodes using the input example `Q1_douleUpdate.txt`, run the following command from inside the directory `/bin`:
 
-`../bin/run_all_linux.sh ../inputexamples/google_cluster/Q1_doubleUpdate/Q1_douleUpdate.txt -t Minute -w 30 -d 10 > output.txt`
+`../bin/run_all_linux.sh ../inputexamples/google_cluster/Q1_doubleUpdate/Q1_douleUpdate.txt -t Minute -w 30 -d 10 --name doubleUpdate > output.txt`
 
 The last lines of the created file `output.txt` contain the totally generated primitve events and projections, as well as number of events sent.
 
@@ -27,7 +27,7 @@ The last lines of the created file `output.txt` contain the totally generated pr
 
 Likewise, our distributed query processor can be started as a simulation using the follwing command from inside the directory `/bin`:
 
-`../bin/DCEP.Simulation ../inputexamples/google_cluster/Q1_doubleUpdate/Q1_douleUpdate.txt -t Minute -w 30 -d 10 > output.txt`
+`../bin/DCEP.Simulation ../inputexamples/google_cluster/Q1_doubleUpdate/Q1_douleUpdate.txt -t Minute -w 30 -d 10 --name doubleUpdate > output.txt`
 
 The last lines of the created file `output.txt` contain the totally generated primitve events and projections, as well as number of events sent.
 
@@ -39,8 +39,11 @@ Parameter | Meaning
 ------------ | -------------
 -t| Required. The time unit events will be generated at rate (n events / time unit).
  -w | Required. The global time window in which event components must occur to trigger a match. The time unit is specified with -t.
--d |  The execution duration of the simulation. Per default it wil run indefinitely. If set to a value, the number of exchanged events within the time period will be measured and eventually printed to stdout. The time unit is specified with -t.
-
+-d |  Optional. The execution duration of the simulation. Per default it wil run indefinitely. If set to a value, the number of exchanged events within the time period will be measured and eventually printed to stdout. The time unit is specified with -t.
+-v | Optional. The event output rate variance as a percentage of the total output rate.
+-s | Optional. The event output rate variance seed.
+-f | Optional. The factor each event output rate is multiplied with.
+--name | Required. Used as a custom identifier for benchmark file names in /out/benchmark/.
 
 ### How to build
 - Before building the project, install the .NET SDK version 5.0.404.
@@ -51,7 +54,7 @@ To build this project, the script `../scripts/build_dotnetcore.sh` needs executi
 
 After the project has been built successfully, a `/publish` folder is created in the directory that contains two folders, `/bin` and `/inputdata`. Inside the `/bin` folder are all files needed to run the engine, and inside `/inputdata` are all input files. Now, the engine can be started using the following command:
 
-`../publish/bin/DCEP.Simulation ../inputexamples/google_cluster/Q1_doubleUpdate/Q1_douleUpdate.txt -t Minute -w 30 -d 10 > output.txt`
+`../publish/bin/DCEP.Simulation ../inputexamples/google_cluster/Q1_doubleUpdate/Q1_douleUpdate.txt -t Minute -w 30 -d 10 --name doubleUpdate > output.txt`
 
 
 ### Case Study Parameters
