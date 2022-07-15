@@ -30,6 +30,7 @@ namespace DCEP.Core
 
         public ForwardRule()
         {
+            //dropProbability = ...
             this.constraints = new Dictionary<EventType, NodeName>();
             this.destinations = new HashSet<NodeName>();
         }
@@ -41,21 +42,30 @@ namespace DCEP.Core
         
         public bool isSatisfiedBy(AbstractEvent e)
         {
+            //Console.WriteLine("isSatisfiedBy: " + e);
             HashSet<EventType> seenEventTypes = new HashSet<EventType>();
-
+            //Console.WriteLine("e.lastSenderNodeName:" + e.lastSenderNodeName + " -> " + e);
+            //Console.WriteLine("lastSenderNodeName:" + lastSenderNodeName + " -> " + e);
             if (!e.lastSenderNodeName.Equals(lastSenderNodeName))
                 return false;
             
             foreach(var component in e.getAllEventComponents())
             {
+                
+                //Console.WriteLine("component: " + component);
                 if(constraints.ContainsKey(component.type))
                 {
+                    
+                    //Console.WriteLine("Constraint satisfied!" + e);
                     seenEventTypes.Add(component.type);
+                    
+                    //Console.WriteLine("component.nodeName" + component.nodeName + " -> " + e);
                     
                     if(!component.nodeName.Equals(constraints[component.type]))
                         return false;
                 }
-
+                //else
+                    //Console.WriteLine("Constraint not satisfied!");
             }
             
             //every constraint is satisfied (or not)

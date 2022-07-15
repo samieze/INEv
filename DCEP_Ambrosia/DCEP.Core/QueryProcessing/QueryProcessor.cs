@@ -17,6 +17,9 @@ namespace DCEP.Core.QueryProcessing
         
         [DataMember]
         public int removedActivations { get; set; }
+        
+        [DataMember]
+        public static HashSet<EventType> transitionEventTypes = new HashSet<EventType>();
 
         public abstract IEnumerable<ComplexEvent> processInputEvent(AbstractEvent e, DateTime t);
         public abstract void removeActivations(DateTime t);
@@ -24,6 +27,15 @@ namespace DCEP.Core.QueryProcessing
         {
             this.query = query;
             this.timeWindow = timeWindow;
+            foreach(var transitionEventType in query.inputEvents)
+            {
+                transitionEventTypes.Add(transitionEventType);
+            }
+        }
+
+        public bool inputEventIsTransitionEventType(AbstractEvent e)
+        {
+            return transitionEventTypes.Contains(e.type);
         }
 
         public static QueryProcessor getQueryProcessorForQuery(Query q, TimeSpan timeWindow, ExecutionPlan executionPlan, NodeName name)
@@ -31,6 +43,11 @@ namespace DCEP.Core.QueryProcessing
             // check if any primitive events occure more than once in the query
             var primitiveEventTypesInQuery = q.rootOperator.getListOfPrimitiveEventTypes();
             var numberOfUniquePrimitiveEventTypesInQuery = new HashSet<EventType>(primitiveEventTypesInQuery).Count;
+
+            foreach(var transitionEventType in q.inputEvents)
+            {
+                transitionEventTypes.Add(transitionEventType);
+            }
 
             if (primitiveEventTypesInQuery.Count == numberOfUniquePrimitiveEventTypesInQuery)
             {

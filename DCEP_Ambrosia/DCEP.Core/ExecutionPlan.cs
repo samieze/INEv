@@ -287,7 +287,8 @@ namespace DCEP.Core
                 nodeID++;
                 var currentNodeName = new NodeName(nodeID.ToString());
 
-                int[] rates = Array.ConvertAll(line.Trim().Split(' '), Int32.Parse);
+                //int[] rates = Array.ConvertAll(line.Trim().Split(' '), Int32.Parse);
+                float[] rates = Array.ConvertAll(line.Trim().Split(' '), float.Parse);
                 EventType[] eventNames = EventNameSequence.Substring(0, rates.Length).Select(c => new EventType(c.ToString())).ToArray();
 
 

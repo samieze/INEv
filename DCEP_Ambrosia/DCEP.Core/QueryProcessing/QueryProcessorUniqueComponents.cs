@@ -327,6 +327,10 @@ namespace DCEP.Core
 
         private void getSizeOfPartialMatches()
         {   
+            /*Console.WriteLine("getSizeOfPartialMatches");
+            Console.WriteLine("DateTime.UtcNow:" + DateTime.UtcNow);
+            Console.WriteLine("startTime:" + startTime);
+            Console.WriteLine("DateTime.UtcNow - startTime > printInterval" + (DateTime.UtcNow - startTime > printInterval));*/
             if(DateTime.UtcNow - startTime > printInterval)
             {
                 int size = 0;

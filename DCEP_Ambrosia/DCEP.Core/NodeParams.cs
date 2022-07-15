@@ -14,9 +14,9 @@ namespace DCEP.Core
         public EventType[] primitiveEventNames { get; set; }
 
         [DataMember]
-        public int[] primitiveEventRates { get; set; }
+        public float[] primitiveEventRates { get; set; }
 
-        public NodeParams(NodeName name, EventType[] primitiveEventNames, int[] primitiveEventRates)
+        public NodeParams(NodeName name, EventType[] primitiveEventNames, float[] primitiveEventRates)
         {
             this.name = name;
             this.primitiveEventNames = primitiveEventNames;

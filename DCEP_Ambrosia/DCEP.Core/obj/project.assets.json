@@ -7866,11 +7866,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/steve/Desktop/DCEP-arbitrary-topologies/dcep-ambrosia/DCEP.Core/DCEP.Core.csproj",
+      "projectUniqueName": "/home/steve/Desktop/DCEP-INEv/dcep-ambrosia/DCEP.Core/DCEP.Core.csproj",
       "projectName": "DCEP.Core",
-      "projectPath": "/home/steve/Desktop/DCEP-arbitrary-topologies/dcep-ambrosia/DCEP.Core/DCEP.Core.csproj",
+      "projectPath": "/home/steve/Desktop/DCEP-INEv/dcep-ambrosia/DCEP.Core/DCEP.Core.csproj",
       "packagesPath": "/home/steve/.nuget/packages/",
-      "outputPath": "/home/steve/Desktop/DCEP-arbitrary-topologies/dcep-ambrosia/DCEP.Core/obj/",
+      "outputPath": "/home/steve/Desktop/DCEP-INEv/dcep-ambrosia/DCEP.Core/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/steve/.nuget/NuGet/NuGet.Config"
