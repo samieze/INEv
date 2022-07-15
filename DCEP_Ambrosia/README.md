@@ -43,7 +43,7 @@ Parameter | Meaning
 -v | Optional. The event output rate variance as a percentage of the total output rate.
 -s | Optional. The event output rate variance seed.
 -f | Optional. The factor each event output rate is multiplied with.
---doBenchmarkTo | Optional. Set to 'CSV' to write performance metrics into the /out/benchmarks directory.
+--doBenchmarkTo | Optional. Set to 'CSV' to write performance metrics into the /out/benchmark/ directory.
 --name | Required. Used as a custom identifier for benchmark file names in /out/benchmark/.
 
 ### How to build
