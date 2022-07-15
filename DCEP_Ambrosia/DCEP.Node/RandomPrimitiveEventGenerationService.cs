@@ -27,7 +27,7 @@ namespace DCEP.Node
             {
                 if (e.Rate > 0)
                 {
-                    eventGenerators.Add(new PrimitiveEventGenerator(e.Rate, settings.timeUnit, e.Name, nodeName));
+                    eventGenerators.Add(new PrimitiveEventGenerator(e.Rate, settings.outputRateFactor, settings.outputRateVariance, settings.outputRateVarianceSeed, settings.duration, settings.timeUnit, e.Name, nodeName));
                 }
             }
         }

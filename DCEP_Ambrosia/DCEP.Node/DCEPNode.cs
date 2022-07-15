@@ -308,8 +308,15 @@ namespace DCEP.Node
                 externalEvent.knownToNodes.Add(this.nodeName);
                 var processingStart = stopwatch.ElapsedMilliseconds;
                 processQueries(externalEvent);
-                benchmarkMeter.registerProcessedEvent(externalEvent, processingStart, stopwatch.ElapsedMilliseconds);
                 
+                foreach (var queryProcessor in queryProcessors)
+                {
+                    if (queryProcessor.inputEventIsTransitionEventType(externalEvent))
+                    {
+                        benchmarkMeter.registerProcessedEvent(externalEvent, processingStart, stopwatch.ElapsedMilliseconds);
+                        break;
+                    }
+                }
                 forwardRuleProcessor.processEvent(externalEvent, this.nodeName); // steven
             }
 
@@ -322,7 +329,15 @@ namespace DCEP.Node
                 if (queryProcessors.Count != 0) 
                 {
                     processQueries(internalEvent);
-                    benchmarkMeter.registerProcessedEvent(internalEvent, processingStart, stopwatch.ElapsedMilliseconds);
+                    
+                    foreach (var queryProcessor in queryProcessors)
+                    {
+                        if (queryProcessor.inputEventIsTransitionEventType(internalEvent))
+                        {
+                            benchmarkMeter.registerProcessedEvent(internalEvent, processingStart, stopwatch.ElapsedMilliseconds);
+                            break;
+                        }
+                    }
                 }
          
                 forwardRuleProcessor.processEvent(internalEvent, this.nodeName);
@@ -334,8 +349,10 @@ namespace DCEP.Node
 
         private void processQueries(AbstractEvent inputEvent)
         {
-
+	     	 
             DateTime t = inputEvent.getOldest(); // Samira  [getOldest is defined as generation time for prim, oldest timestamp of contained prim for complex events]
+            var processingStart = stopwatch.ElapsedMilliseconds; // new
+            int stupidCount = 0;
 
             if (TimestampsDict.TryGetValue(inputEvent.knownToNodes[0], out DateTime value)) // Samira [if t is older than the oldest timestamp received from the same node (inputEvent.knownToNodes[0])
             {if (t > value) TimestampsDict.AddOrUpdate(inputEvent.knownToNodes[0], t, (key, oldValue) => t); }
@@ -357,7 +374,7 @@ namespace DCEP.Node
             foreach (var queryProcessor in queryProcessors)
             {
                 foreach (var outputEvent in queryProcessor.processInputEvent(inputEvent, oldestTimestamp))
-                {
+                {   
                     proxyProvider.getProxy(nodeName).RegisterComplexEventMatchFork(outputEvent, false); // Samira [isDropped is always false, as dropping events now happens during processing]
                 }
             }

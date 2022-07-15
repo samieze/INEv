@@ -71,7 +71,7 @@ namespace DCEP.Node
                                 //prevents the multiple sending of matches produced by a subprojection (i.e., filter) of a projection
                                 if(!alreadySent.Contains((eventToSend.ID,nodeName)))
                                 {
-                                    Console.WriteLine(String.Format(TAG + "Sending {0} to Node {1}", eventToSend, nodeName));
+                                    //Console.WriteLine(String.Format(TAG + "Sending {0} to Node {1}", eventToSend, nodeName));
                                     proxyProvider.getProxy(nodeName).ReceiveExternalEventFork(eventToSend.DeepClone());
                                     alreadySent.Add((eventToSend.ID,nodeName));
                                 }

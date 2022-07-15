@@ -14,7 +14,19 @@ namespace DCEP.Node
     public class PrimitiveEventGenerator
     {
         [DataMember]
-        private readonly int eventCount;
+        private double eventCount;
+        
+        [DataMember]
+        private readonly int eventPercentageVariance;
+        
+        [DataMember]
+        private int eventCountForCurrInterval;
+    
+        [DataMember]
+        private int intervalCount;
+        
+        [DataMember]
+        private double duration;
 
         [DataMember]
         EventType eventName;
@@ -42,28 +54,107 @@ namespace DCEP.Node
 
         [DataMember]
         private readonly NodeName nodeName;
+        
+        [DataMember]
+        private int[] outputratesAdjustedByVariance;
+        
+        [DataMember]
+        private int varianceSeed;
+        
+        [DataMember]
+        private int[] outputRateFactor;
 
-        public PrimitiveEventGenerator(int eventCount, TimeUnit timeUnit, EventType eventName, NodeName nodeName)
+        public PrimitiveEventGenerator(double eventCount, double outputRateFactor, int eventPercentageVariance, int varianceSeed, double duration, TimeUnit timeUnit, EventType eventName, NodeName nodeName)
         {
-            this.eventCount = eventCount;
+            this.eventCount = eventCount * outputRateFactor;
+            this.eventPercentageVariance = eventPercentageVariance;
+            this.varianceSeed = varianceSeed;
             this.eventName = eventName;
             this.nodeName = nodeName;
-
+            this.intervalCount = 1;
+            this.duration = duration;
+            
+            this.outputratesAdjustedByVariance = new int[(int)duration];
+            if (varianceSeed != 0)
+                this.random = new Random(varianceSeed);
             //this.rate = timeUnit.GetIntervalFromCountPerUnit(eventCount);
-            timeArray = new double[eventCount];
+            //timeArray = new double[eventCount];
+            
+            //duration is the number of time intervals
+            double actualVariance = eventPercentageVariance * duration * eventCount/100.0;
+            int budget = (int) (eventCount * duration + (random.NextDouble() * 2 * actualVariance - actualVariance));
+            int usedBudget = budget;
+            
+            for(int i = 0; i < duration; ++i)
+            {
+                if (eventPercentageVariance == 0)
+                {
+                    this.outputratesAdjustedByVariance[i] = 0;
+                    continue;
+                }
+
+                if (i == 0)
+                {
+                    this.outputratesAdjustedByVariance[i] = random.Next(0,budget+1);
+                    usedBudget -= this.outputratesAdjustedByVariance[i];
+                }
+                else if (i == duration-1)
+                {
+                    this.outputratesAdjustedByVariance[i] = usedBudget;
+                } 
+                else
+                {
+                    this.outputratesAdjustedByVariance[i] = random.Next(0,usedBudget+1);
+                    usedBudget -= this.outputratesAdjustedByVariance[i];
+                }
+            }
+            
+            outputratesAdjustedByVariance = outputratesAdjustedByVariance.OrderBy(x => random.Next()).ToArray();    
+
             intervalMS = (long)timeUnit.GetTimeSpanFromDuration(1).TotalMilliseconds;
+            
         }
 
         private void repopulateTimeArray()
         {
-            stopwatch.Restart();
-            timeArrayIndex = 0;
-
-            for (int i = 0; i < eventCount; i++)
+            if (intervalCount < duration)
             {
-                timeArray[i] = random.NextDouble() * intervalMS;
+                if (eventCount < 1 && eventCount > 0)
+                {
+                    if (random.NextDouble() <= eventCount)
+                    {
+                        eventCount = 1;
+                    }
+                    else
+                    {
+                        eventCount = 0;
+                    }
+                }
+                
+                //Console.WriteLine("intervalCount-1:"+(intervalCount-1));
+                if (random.Next() % 2 == 0)
+                {                        
+                    eventCountForCurrInterval = (int)eventCount + outputratesAdjustedByVariance[intervalCount-1]; //also negative values should be allowed here
+                }
+                else
+                {
+                    //Console.WriteLine("REDUCED OUTRATE" + eventCount);
+                    eventCountForCurrInterval = Math.Max((int)eventCount - outputratesAdjustedByVariance[intervalCount-1],0); //also negative values should be allowed here
+                }
+                eventCountForCurrInterval = (int)eventCountForCurrInterval;
+                //Console.WriteLine("[" + nodeName + "] "+" interval "+ intervalCount +" ~ " + "for eventtype " + eventName + " - variance output rate " + eventCountForCurrInterval + " - actual output rate: " + eventCount);
+                timeArray = new double[eventCountForCurrInterval];
+                
+                stopwatch.Restart();
+                ++intervalCount;
+                timeArrayIndex = 0;
+                
+                for (int i = 0; i < eventCountForCurrInterval; i++)
+                {
+                    timeArray[i] = random.NextDouble() * intervalMS;
+                }
+                Array.Sort(timeArray);
             }
-            Array.Sort(timeArray);
 
         }
 
@@ -79,7 +170,7 @@ namespace DCEP.Node
             // count the random timestamps in the array that have passed and not yet been registered
             var outputCount = 0;
             double passedTime = stopwatch.Elapsed.TotalMilliseconds + elapsedTimeOffset;
-            while (timeArrayIndex < eventCount && timeArray[timeArrayIndex] <= passedTime)
+            while (timeArrayIndex < eventCountForCurrInterval && timeArray[timeArrayIndex] <= passedTime)
             {
                 outputCount++;
                 timeArrayIndex++;
@@ -89,7 +180,7 @@ namespace DCEP.Node
             if (passedTime - lastIntervalReset > intervalMS)
             {
                 // count potentially remaining array timestamps before the array is reset
-                outputCount += eventCount - timeArrayIndex;
+                outputCount += eventCountForCurrInterval - timeArrayIndex;
 
                 // calculate offset between upcoming actual interval change and theoretical interval change
                 // add this offset to the elapsed time afterwards, since the time between theoretical interval change

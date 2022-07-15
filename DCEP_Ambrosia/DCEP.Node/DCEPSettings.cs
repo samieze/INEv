@@ -24,6 +24,15 @@ namespace DCEP.Node
 
         [Option('d', "duration", Required = false, Default = 0, HelpText = "The execution duration of the simulation. Per default it wil run indefinitely. If set to a value, the number of exchanged events within the time period will be measured and eventually printed to stdout. The time unit is specified with -t.")]
         public double duration { get; set; }
+        
+        [Option('v', "outputRateVariance", Required = false, Default = 0, HelpText = "The event output rate variance for each time interval as a percentage of the total output rate.")]
+        public int outputRateVariance { get; set; }
+        
+        [Option('s', "outputRateVarianceSeed", Required = false, Default = 0, HelpText = "The event output rate variance for each time interval as a percentage of the total output rate.")]
+        public int outputRateVarianceSeed { get; set; }
+        
+        [Option('f', "outputRateFactor", Required = false, Default = 1, HelpText = "The event output rate is multiplied with this factor.")]
+        public double outputRateFactor { get; set; }
 
         [Option("doBenchmarkTo", Required = false, HelpText = "Set to 'CSV' to write performance metrics into the /out/benchmarks directory.")]
         public IEnumerable<BenchmarkReporterName> benchmarkReporterNames { get; set; }
@@ -31,9 +40,11 @@ namespace DCEP.Node
         [Option("benchmarkInterval", Default = 10, HelpText = "The time window of benchmark metrics in seconds. They are continuously written to a file in out/benchmark/.")]
         public long benchmarkIntervalInSeconds { get; set; }
 
-        [Option(HelpText = "Can be used as a custom identifier for benchmark file names in  /out/benchmark/.")]
-        public string experimentName
-        {
+        [Option("name", Required = false, Default = 00, HelpText = "Can be used as a custom identifier for benchmark file names in  /out/benchmark/.")]
+        public string experimentName { get; set; }
+
+	
+/*        {
             get
             {
                 return _experimentName;
@@ -43,7 +54,7 @@ namespace DCEP.Node
                 _experimentName = experimentName;
             }
         }
-        private string _experimentName = System.Guid.NewGuid().ToString().Substring(0, 8);
+        private string _experimentName = System.Guid.NewGuid().ToString().Substring(0, 8);*/
 
 
         protected NodeName _directorNodeName = null;

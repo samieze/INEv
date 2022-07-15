@@ -9078,11 +9078,11 @@
   "project": {
     "version": "0.7.0",
     "restore": {
-      "projectUniqueName": "/home/steve/Desktop/DCEP-arbitrary-topologies/dcep-ambrosia/DCEP.Node/DCEP.Node.csproj",
+      "projectUniqueName": "/home/steve/Desktop/DCEP-INEv/dcep-ambrosia/DCEP.Node/DCEP.Node.csproj",
       "projectName": "DCEP.Node",
-      "projectPath": "/home/steve/Desktop/DCEP-arbitrary-topologies/dcep-ambrosia/DCEP.Node/DCEP.Node.csproj",
+      "projectPath": "/home/steve/Desktop/DCEP-INEv/dcep-ambrosia/DCEP.Node/DCEP.Node.csproj",
       "packagesPath": "/home/steve/.nuget/packages/",
-      "outputPath": "/home/steve/Desktop/DCEP-arbitrary-topologies/dcep-ambrosia/DCEP.Node/obj/",
+      "outputPath": "/home/steve/Desktop/DCEP-INEv/dcep-ambrosia/DCEP.Node/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/steve/.nuget/NuGet/NuGet.Config"
@@ -9097,11 +9097,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "/home/steve/Desktop/DCEP-arbitrary-topologies/dcep-ambrosia/DCEP.Core/DCEP.Core.csproj": {
-              "projectPath": "/home/steve/Desktop/DCEP-arbitrary-topologies/dcep-ambrosia/DCEP.Core/DCEP.Core.csproj"
+            "/home/steve/Desktop/DCEP-INEv/dcep-ambrosia/DCEP.Core/DCEP.Core.csproj": {
+              "projectPath": "/home/steve/Desktop/DCEP-INEv/dcep-ambrosia/DCEP.Core/DCEP.Core.csproj"
             },
-            "/home/steve/Desktop/DCEP-arbitrary-topologies/dcep-ambrosia/GeneratedSourceFiles/DCEP.AmbrosiaNodeAPIGenerated/latest/DCEP.AmbrosiaNodeAPIGenerated.csproj": {
-              "projectPath": "/home/steve/Desktop/DCEP-arbitrary-topologies/dcep-ambrosia/GeneratedSourceFiles/DCEP.AmbrosiaNodeAPIGenerated/latest/DCEP.AmbrosiaNodeAPIGenerated.csproj"
+            "/home/steve/Desktop/DCEP-INEv/dcep-ambrosia/GeneratedSourceFiles/DCEP.AmbrosiaNodeAPIGenerated/latest/DCEP.AmbrosiaNodeAPIGenerated.csproj": {
+              "projectPath": "/home/steve/Desktop/DCEP-INEv/dcep-ambrosia/GeneratedSourceFiles/DCEP.AmbrosiaNodeAPIGenerated/latest/DCEP.AmbrosiaNodeAPIGenerated.csproj"
             }
           }
         }
