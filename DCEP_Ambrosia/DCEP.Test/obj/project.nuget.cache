@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hoapzDsxoFdSvnBuzBu0scrWOXc2V+cAjujG22cqyrqmO7fKfPJ6IrsXAMD9bB4a75zb7ok+AZ+jTe65b21xYA==",
+  "dgSpecHash": "NC7q5/mfV6Hb0Mj85PsHR3wf6aHLVwfH349ni7IhiIEjVUBL7GPmqR9dj2UZkYozxTv8RTcm+5auLOFHyhqYKA==",
   "success": true,
-  "projectFilePath": "/home/steve/Desktop/DCEP-arbitrary-topologies/dcep-ambrosia/DCEP.Test/DCEP.Test.csproj",
+  "projectFilePath": "/home/steve/Desktop/DCEP-INEv/dcep-ambrosia/DCEP.Test/DCEP.Test.csproj",
   "expectedPackageFiles": [
     "/home/steve/.nuget/packages/aqua-core/4.5.1/aqua-core.4.5.1.nupkg.sha512",
     "/home/steve/.nuget/packages/aqua-core-newtonsoft-json/4.5.1/aqua-core-newtonsoft-json.4.5.1.nupkg.sha512",

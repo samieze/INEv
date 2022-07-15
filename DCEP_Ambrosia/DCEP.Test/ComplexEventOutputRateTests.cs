@@ -17,9 +17,9 @@ namespace DCEP.Test
         public void test_rate_AND_A_B_C_instantPrimitiveGeneration(){
 
             var primitiveGenerators = new PrimitiveEventGenerator[3] {
-                new PrimitiveEventGenerator(100, TimeUnit.Second, new EventType("A")),
-                new PrimitiveEventGenerator(100, TimeUnit.Second, new EventType("B")),
-                new PrimitiveEventGenerator(100, TimeUnit.Second, new EventType("C"))
+                new PrimitiveEventGenerator(100, 0, TimeUnit.Second, new EventType("A")),
+                new PrimitiveEventGenerator(100, 0, TimeUnit.Second, new EventType("B")),
+                new PrimitiveEventGenerator(100, 0, TimeUnit.Second, new EventType("C"))
             };
 
             var stopwatch = new Stopwatch();

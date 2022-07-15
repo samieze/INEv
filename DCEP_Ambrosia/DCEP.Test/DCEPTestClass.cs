@@ -72,7 +72,7 @@ namespace DCEP.Test
 
             foreach (var rate in rateString.Split(" "))
             {
-                data[i] = new PrimitiveEventGenerator(Int16.Parse(rate), TimeUnit.Second, new EventType(names[i].ToString()), null);
+                data[i] = new PrimitiveEventGenerator(Int16.Parse(rate), 1, 0, 0, 0, TimeUnit.Second, new EventType(names[i].ToString()), null);
                 i++;
             }
 

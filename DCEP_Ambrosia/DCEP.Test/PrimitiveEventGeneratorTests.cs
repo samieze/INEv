@@ -17,7 +17,7 @@ namespace DCEP.Test
         {
             var seconds = 2;
             var eventsPerInterval = 100000;
-            var g = new PrimitiveEventGenerator(eventsPerInterval, TimeUnit.Second, new EventType("T"), null);
+            var g = new PrimitiveEventGenerator(eventsPerInterval, 1, 0, 0, 0, TimeUnit.Second, new EventType("T"), null);
             var sw = new Stopwatch();
             long count = 0;
             sw.Start();
@@ -34,7 +34,7 @@ namespace DCEP.Test
         {
             var seconds = 2;
             var eventsPerInterval = 1;
-            var g = new PrimitiveEventGenerator(eventsPerInterval, TimeUnit.Second, new EventType("T"), null);
+            var g = new PrimitiveEventGenerator(eventsPerInterval, 1, 0, 0, 0, TimeUnit.Second, new EventType("T"), null);
             var sw = new Stopwatch();
             long count = 0;
             sw.Start();
@@ -51,7 +51,7 @@ namespace DCEP.Test
         {
             var seconds = 2;
             var eventsPerInterval = 100000;
-            var g = new PrimitiveEventGenerator(eventsPerInterval, TimeUnit.Second, new EventType("T"), null);
+            var g = new PrimitiveEventGenerator(eventsPerInterval, 1, 0, 0, 0, TimeUnit.Second, new EventType("T"), null);
             var sw = new Stopwatch();
             long count = 0;
             sw.Start();
@@ -72,7 +72,7 @@ namespace DCEP.Test
         {
             var seconds = 2;
             var eventsPerInterval = 100000;
-            var g = new PrimitiveEventGenerator(eventsPerInterval, TimeUnit.Second, new EventType("T"), null);
+            var g = new PrimitiveEventGenerator(eventsPerInterval, 1, 0, 0, 0, TimeUnit.Second, new EventType("T"), null);
             var sw = new Stopwatch();
             long count = 0;
             sw.Start();
