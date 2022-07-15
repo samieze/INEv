@@ -37,7 +37,7 @@ set +x
 echo
 echo "(STEP 3) Now the entire solution can be built."
 set -x
-
+$BUILDIT DCEP.Test/DCEP.Test.csproj /property:GenerateFullPaths=true
 $BUILDIT DCEP.Node/DCEP.Node.csproj /property:GenerateFullPaths=true
 $BUILDIT DCEP.Simulation/DCEP.Simulation.csproj /property:GenerateFullPaths=true
 $BUILDIT GeneratedSourceFiles/DCEP.AmbrosiaNodeAPIGenerated/latest/DCEP.AmbrosiaNodeAPIGenerated.csproj /property:GenerateFullPaths=true

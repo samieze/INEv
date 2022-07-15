@@ -43,7 +43,7 @@ if ! which Ambrosia 2> /dev/null; then
     exit 1
 fi
 
-if ! [ -e "DCEP.AmbrosiaNode" ]; then
+if ! [ -e "../../bin/DCEP.AmbrosiaNode" ]; then
     echo "Build products don't exist."
     exit 1
 fi
@@ -65,5 +65,5 @@ shift
 set -x
 AMBROSIA_INSTANCE_NAME=$SERVICENAME AMBROSIA_IMMORTALCOORDINATOR_PORT=$CRAPORT2 \
 COORDTAG=Coord$SERVICENAME AMBROSIA_IMMORTALCOORDINATOR_LOG=$slog  \
-  runAmbrosiaService.sh "$(realpath DCEP.AmbrosiaNode)" --receivePort=$SENDPORT --sendPort=$RECEIVEPORT --serviceName=$SERVICENAME "$@"
+  runAmbrosiaService.sh "$(realpath ../../bin/DCEP.AmbrosiaNode)" --receivePort=$SENDPORT --sendPort=$RECEIVEPORT --serviceName=$SERVICENAME "$@"
 set +x 

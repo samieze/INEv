@@ -26,7 +26,7 @@ if ! which Ambrosia 2> /dev/null; then
     exit 1
 fi
 
-if ! [ -e "DCEP.AmbrosiaNode.dll" ]; then
+if ! [ -e "publish/DCEP.AmbrosiaNode.dll" ]; then
     echo "Build products don't exist."
     echo "Did you run ./build_dotnetcore.sh yet and run this script from the publish folder?"
     exit 1
