@@ -3,7 +3,6 @@
 """
 Created on Fri Aug 27 14:16:13 2021
 
-@author: samira
 
 Latency bounded version of combination generation.
 """
@@ -52,7 +51,6 @@ def cheapRest(upstreamprojection, projection, partEvent, restRate): # this is no
     remainingEventsQ = [PrimEvent(x) for x in remainingEvents]
     for event in remainingEvents: # problem -> primitive events    
        #print(list(map(lambda x: str(x), [x for x in (projlist + remainingEventsQ) if event in x.leafs() and len(x.leafs()) < len(upstreamprojection.leafs()) and set(x.leafs()).issubset(set(upstreamprojection.leafs()))]))) # and set(x.leafs()).issubset(set(upstreamprojection.leafs()))])
-       #TODO: next line is highly critical...
        #cheapestProj =  sorted([x for x in (projlist + remainingEventsQ) if partEvent not in x.leafs() and not set(projection.leafs()).issubset(set(x.leafs())) and event in x.leafs() and len(x.leafs()) < len(upstreamprojection.leafs()) and set(x.leafs()).issubset(set(upstreamprojection.leafs()))], key = lambda x: optimisticTotalRate(x))[0]
        cheapestProj = PrimEvent(event[0]) # only MS combinations with exactly one complex event as input investigates
        remainingEvents = list(set(remainingEventsQ).difference(set(remainingEventsQ).intersection(set(cheapestProj.leafs()))))
@@ -166,7 +164,6 @@ def getBestChainCombis(query, shared, criticalMSTypes):
                 costs = sum(list(map(lambda x: totalRate(x), projection.leafs()))) * longestPath
                 combiDict[projection] = (projection.leafs(), [], 0 - costs, latencyEstimate(projection, projection.leafs(),hopfactor))
     
-    # TODO: BUG myMSDict has to be computed  only for allowed projections      
     for projection in sorted([x for x in myprojlist if len(x.leafs()) > 2], key = lambda x: len(x.leafs())):  # returns combination, that has only one input projection, the rest are primitive event types
             mycosts = 0
             for eventtype in myMSDict.keys():           
