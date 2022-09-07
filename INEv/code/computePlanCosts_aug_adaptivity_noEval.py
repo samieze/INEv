@@ -3,8 +3,6 @@
 """
 Created on Wed Aug 18 16:32:53 2021
 
-@author: samira
-
 
 Version of placement algorithm only used in adaptivity experiments; 
 Writes no new evaluation plan, as plan of original network config used in adaptivity file.
