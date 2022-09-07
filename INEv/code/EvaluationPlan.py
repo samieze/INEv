@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Tue Aug 31 13:22:58 2021
 
-@author: samira
 """
 class EvaluationPlan():
     def __init__ (self, projections, instances):
