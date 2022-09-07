@@ -3,7 +3,6 @@
 """
 Created on Wed Aug 18 16:32:53 2021
 
-@author: samira
 
 Used for experiments on benefit of sharing.
 
