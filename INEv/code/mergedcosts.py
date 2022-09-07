@@ -3,8 +3,6 @@
 """
 Created on Fri Jul  8 19:20:58 2022
 
-@author: samira
-
 Incrementally compute costs for INEv graph for query workload which does not consider sharing between queries.
 
 """
