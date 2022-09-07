@@ -3,8 +3,6 @@
 """
 Created on Fri Dec 10 13:18:01 2021
 
-@author: samira
-
 Generate evaluation plan that can be processed by DCEP Engine from encoding of INEv graph and centralized evaluation, including routing information, output selectors etc.
 
 """
