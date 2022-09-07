@@ -3,7 +3,6 @@
 """
 Created on Fri Feb  4 09:55:12 2022
 
-@author: samira
 
 Writes configuration file that is input to PPoP algorithm.
 
