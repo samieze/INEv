@@ -3,7 +3,6 @@
 """
 Created on Wed Sep 29 17:01:50 2021
 
-@author: samira
 
 Initialize all pair shortest paths for graph.
 
