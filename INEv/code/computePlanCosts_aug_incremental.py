@@ -92,7 +92,7 @@ def main():
     dependencies = compute_dependencies(unfolded)
     processingOrder = sorted(compute_dependencies(unfolded).keys(), key = lambda x : dependencies[x] ) # unfolded enthält kombi   
     costs = 0
-    #processingOrder = compute_dependencies_alt(unfolded) # alternative processing order // TODO: DEBUG
+    #processingOrder = compute_dependencies_alt(unfolded) # alternative processing order 
     for projection in processingOrder:  #parallelize computation for all projections at the same level
             if set(unfolded[projection]) == set(projection.leafs()): #initialize hop latency with maximum of children
                hopLatency[projection] = 0 
