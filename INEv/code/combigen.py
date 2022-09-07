@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Fri Aug 27 14:16:13 2021
 
-@author: samira
 
 Generate combination, initial output selectors for query workload and network.
 
