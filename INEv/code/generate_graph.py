@@ -3,7 +3,6 @@
 """
 Created on Fri Sep 24 17:12:21 2021
 
-@author: samira
 """
 import networkx as nx 
 import pickle
