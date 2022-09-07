@@ -3,7 +3,6 @@
 """
 Created on Tue Aug 18 13:15:09 2020
 
-@author: samira
 """
 
 #!/usr/bin/env python2
@@ -11,7 +10,6 @@ Created on Tue Aug 18 13:15:09 2020
 """
 Created on Tue Aug 18 11:56:39 2020
 
-@author: samira
 """
 
 import pandas as pd 
