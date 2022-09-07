@@ -3,8 +3,6 @@
 """
 Created on Fri Sep 17 15:46:49 2021
 
-@author: samira
-
 Generate beneficial projections for given query workload.
 
 """
