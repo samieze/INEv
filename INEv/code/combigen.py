@@ -50,7 +50,6 @@ def cheapRest(upstreamprojection, projection, partEvent, restRate): # this is no
     remainingEventsQ = [PrimEvent(x) for x in remainingEvents]
     for event in remainingEvents: # problem -> primitive events    
        #print(list(map(lambda x: str(x), [x for x in (projlist + remainingEventsQ) if event in x.leafs() and len(x.leafs()) < len(upstreamprojection.leafs()) and set(x.leafs()).issubset(set(upstreamprojection.leafs()))]))) # and set(x.leafs()).issubset(set(upstreamprojection.leafs()))])
-       #TODO: next line is highly critical...
        #cheapestProj =  sorted([x for x in (projlist + remainingEventsQ) if partEvent not in x.leafs() and not set(projection.leafs()).issubset(set(x.leafs())) and event in x.leafs() and len(x.leafs()) < len(upstreamprojection.leafs()) and set(x.leafs()).issubset(set(upstreamprojection.leafs()))], key = lambda x: optimisticTotalRate(x))[0]
        cheapestProj = PrimEvent(event[0]) # only MS combinations with exactly one complex event as input investigates
        remainingEvents = list(set(remainingEventsQ).difference(set(remainingEventsQ).intersection(set(cheapestProj.leafs()))))
