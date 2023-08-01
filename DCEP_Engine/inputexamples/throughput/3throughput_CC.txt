@@ -1,0 +1,886 @@
+1 1 1 3 6 9 13 17 23 49 
+1 1 1 3 6 9 13 17 23 49 
+1 1 1 3 6 9 13 17 23 49 
+1 1 1 3 6 9 13 17 23 49 
+1 1 1 3 6 9 13 17 23 49 
+1 1 1 3 6 9 13 17 23 49 
+1 1 1 3 6 9 13 17 23 49 
+1 1 1 3 6 9 13 17 23 49 
+1 1 1 3 6 9 13 17 23 49 
+1 1 1 3 6 9 13 17 23 49 
+1 1 1 3 6 9 13 17 23 49 
+1 1 1 3 6 9 13 17 23 49 
+1 1 1 3 6 9 13 17 23 49 
+1 1 1 3 6 9 13 17 23 49 
+1 1 1 3 6 9 13 17 23 49 
+1 1 1 3 6 9 13 17 23 49 
+1 1 1 3 6 9 13 17 23 49 
+1 1 1 3 6 9 13 17 23 49 
+1 1 1 3 6 9 13 17 23 49 
+1 1 1 3 6 9 13 17 23 49 
+-----------
+Randomized Rate-Based Primitive Event Generation
+-----------
+Single Selectivities:{'D': 1.0, 'J': 1.0, 'B': 1.0, 'G': 1.0, 'A': 1.0, 'D|DJ': 0.26384926720738844, 'J|DJ': 0.022254174554815733, 'D|BD': 0.06706570218752278, 'B|BD': 0.07249416113317443, 'G|DG': 1.0, 'D|DG': 1.0, 'A|AD': 0.14360069009883125, 'D|AD': 0.026800922861533263, 'B|BJ': 0.8597464735719093, 'J|BJ': 0.0026293293605897036, 'J|GJ': 1.0, 'G|GJ': 1.0, 'A|AJ': 1.0, 'J|AJ': 1.0, 'B|BG': 0.6503268617260145, 'G|BG': 0.01455779391157196, 'A|AB': 0.05415333799356649, 'B|AB': 0.1563397775514931, 'A|AG': 1.0, 'G|AG': 1.0, 'B|BDJ': 0.002811407543022331, 'D|BDJ': 0.029061239842366072, 'J|BDJ': 0.0007898567558803314, 'D|DGJ': 0.16262848653272308, 'G|DGJ': 0.39007036130110645, 'J|DGJ': 0.09256095133202354, 'J|ADJ': 0.004718941451791985, 'A|ADJ': 0.13248742666024008, 'D|ADJ': 0.03614551396280117, 'G|BDG': 0.010949047920907356, 'D|BDG': 0.026527605652351637, 'B|BDG': 0.15847339255081572, 'A|ABD': 0.11686087039897679, 'B|ABD': 0.026251585606293735, 'D|ABD': 5.163924037413967e-05, 'G|ADG': 0.9886281247243076, 'A|ADG': 0.12381486596740997, 'D|ADG': 0.03144130204276553, 'G|BGJ': 0.01224629498924205, 'B|BGJ': 0.2555955626950131, 'J|BGJ': 0.006837299870045768, 'A|ABJ': 0.11702928830429798, 'B|ABJ': 0.05720226188529139, 'J|ABJ': 0.0028589222820878586, 'G|AGJ': 1.0, 'A|AGJ': 1.0, 'J|AGJ': 1.0, 'A|ABG': 0.08609186441713437, 'G|ABG': 0.00908959183379499, 'B|ABG': 0.10242724374696575, 'D|BDGJ': 0.013364770323401994, 'J|BDGJ': 0.0007493579769951088, 'G|BDGJ': 0.003715256099145847, 'B|BDGJ': 0.016420030184192306, 'A|ABDJ': 0.07759155189959825, 'B|ABDJ': 0.0018847406690865906, 'J|ABDJ': 0.0004598664257475115, 'D|ABDJ': 3.1267239119985745e-05, 'J|ADGJ': 0.004118469648959635, 'A|ADGJ': 0.06596672685849246, 'G|ADGJ': 0.11076918374045154, 'D|ADGJ': 0.7509203904984961, 'G|ABDG': 0.005232689875974473, 'A|ABDG': 0.029084957413001843, 'D|ABDG': 3.219689521427427e-05, 'B|ABDG': 0.30607251981852307, 'J|ABGJ': 0.0013939275895906214, 'A|ABGJ': 0.0822998576193946, 'G|ABGJ': 0.004210311920252718, 'B|ABGJ': 0.3751317350069961, 'B|ABDGJ': 0.0015080896981069355, 'G|ABDGJ': 0.0021373050281724986, 'A|ABDGJ': 0.01823735953043049, 'J|ABDGJ': 4.92943324918815e-05, 'D|ABDGJ': 0.006870081794441505, 'C': 1.0, 'E': 1.0, 'I': 1.0, 'F': 1.0, 'C|CE': 0.960800573776611, 'E|CE': 0.00902585613650545, 'C|CI': 0.4693917676139393, 'I|CI': 0.018794296336864528, 'C|CF': 1.0, 'F|CF': 1.0, 'B|BC': 0.1367699769388326, 'C|BC': 0.060283025984169604, 'E|EI': 1.0, 'I|EI': 1.0, 'E|EF': 1.0, 'F|EF': 1.0, 'E|BE': 0.04409770875837052, 'B|BE': 0.060647456153327714, 'I|FI': 0.2623687742070606, 'F|FI': 0.006335458183861392, 'B|BI': 0.7006761229998341, 'I|BI': 0.012773541734724716, 'F|BF': 0.033182712268344995, 'B|BF': 0.23511232197652365, 'I|CEI': 0.015885251573140798, 'C|CEI': 0.17246556586948292, 'E|CEI': 0.02792458352931843, 'F|CEF': 0.27071196786847407, 'C|CEF': 0.10956684287683685, 'E|CEF': 0.29237151427108693, 'B|BCE': 0.022139388190544895, 'E|BCE': 0.004060798944287648, 'C|BCE': 0.00212695837083747, 'I|CFI': 0.014843726813403655, 'C|CFI': 0.15234747720381067, 'F|CFI': 0.006484455197312504, 'I|BCI': 0.007679638467508406, 'C|BCI': 0.0228397813181176, 'B|BCI': 0.003711447224617552, 'C|BCF': 0.052517561492814745, 'F|BCF': 0.024331242254667082, 'B|BCF': 0.05033896179193538, 'I|EFI': 0.10000109828889019, 'E|EFI': 0.7672156209185632, 'F|EFI': 0.02166546270137644, 'I|BEI': 0.005673252780147797, 'E|BEI': 0.020970951265422137, 'B|BEI': 0.20119028135294373, 'E|BEF': 0.014062309393287778, 'F|BEF': 0.023734413371009892, 'B|BEF': 0.06251449611862006, 'B|BFI': 0.058767286705852684, 'I|BFI': 0.006649429941163463, 'F|BFI': 0.0002970202382264238, 'F|CEFI': 0.0058790188071012805, 'E|CEFI': 0.023694393284039265, 'C|CEFI': 0.07987453609423181, 'I|CEFI': 0.011429167130896891, 'C|BCEI': 0.0007995287893167768, 'I|BCEI': 0.0012144518264600032, 'E|BCEI': 0.0025827659378411475, 'B|BCEI': 0.006020420584983924, 'F|BCEF': 0.014147262686475969, 'C|BCEF': 0.0019417820087268267, 'B|BCEF': 0.01159273284521202, 'E|BCEF': 0.004684515134310704, 'B|BCFI': 0.0025449892742714156, 'F|BCFI': 0.00010172633091008432, 'C|BCFI': 0.0097487041063093, 'I|BCFI': 0.0033449314916630516, 'B|BEFI': 0.010492570077306107, 'I|BEFI': 0.003483963678616763, 'E|BEFI': 0.003405701603823878, 'F|BEFI': 0.002493288991219954, 'E|BCEFI': 0.0010584161077099707, 'F|BCEFI': 8.579500533583236e-06, 'B|BCEFI': 9.923061365226344e-05, 'I|BCEFI': 0.0008308673233172742, 'C|BCEFI': 0.2615218172249903, 'H': 1.0, 'F|AF': 1.0, 'A|AF': 1.0, 'A|AH': 0.5124260733223541, 'H|AH': 0.005631844965615112, 'F|FH': 0.2565195814153804, 'H|FH': 0.004632904757762219, 'H|BH': 1.0, 'B|BH': 1.0, 'B|ABF': 0.11084734712102716, 'F|ABF': 0.009993394354788453, 'A|ABF': 0.05962709670460727, 'H|AFH': 0.0029692404023966747, 'A|AFH': 0.19766395428334832, 'F|AFH': 0.005843633425712569, 'H|ABH': 0.003969766846693473, 'B|ABH': 0.1141806801438033, 'A|ABH': 0.053903753246010135, 'H|BFH': 0.004294986180563489, 'F|BFH': 0.014963818374086828, 'B|BFH': 0.1442636671152328, 'A|ABFH': 0.02296591843459347, 'H|ABFH': 0.0013239674007370352, 'B|ABFH': 0.045692327573074856, 'F|ABFH': 0.00016305473190149087}
+-----------
+~~
+node0
+--
+Forward rules:
+D - [ETB:(D: node0) FROM:[node0] TO:[node1]] 
+J - [ETB:(J: node0) FROM:[node0] TO:[node1]] 
+B - [ETB:(B: node0) FROM:[node0] TO:[node1]] 
+G - [ETB:(G: node0) FROM:[node0] TO:[node1]] 
+A - [ETB:(A: node0) FROM:[node0] TO:[node1]] 
+C - [ETB:(C: node0) FROM:[node0] TO:[node1]] 
+E - [ETB:(E: node0) FROM:[node0] TO:[node1]] 
+I - [ETB:(I: node0) FROM:[node0] TO:[node1]] 
+F - [ETB:(F: node0) FROM:[node0] TO:[node1]] 
+H - [ETB:(H: node0) FROM:[node0] TO:[node1]] 
+
+--
+Projections to process:
+
+~~
+node1
+--
+Forward rules:
+D - [ETB:(D: node0) FROM:[node0] TO:[node2]] 
+D - [ETB:(D: node1) FROM:[node1] TO:[node2]] 
+J - [ETB:(J: node0) FROM:[node0] TO:[node2]] 
+J - [ETB:(J: node1) FROM:[node1] TO:[node2]] 
+B - [ETB:(B: node0) FROM:[node0] TO:[node2]] 
+B - [ETB:(B: node1) FROM:[node1] TO:[node2]] 
+G - [ETB:(G: node0) FROM:[node0] TO:[node2]] 
+G - [ETB:(G: node1) FROM:[node1] TO:[node2]] 
+A - [ETB:(A: node0) FROM:[node0] TO:[node2]] 
+A - [ETB:(A: node1) FROM:[node1] TO:[node2]] 
+C - [ETB:(C: node0) FROM:[node0] TO:[node2]] 
+C - [ETB:(C: node1) FROM:[node1] TO:[node2]] 
+E - [ETB:(E: node0) FROM:[node0] TO:[node2]] 
+E - [ETB:(E: node1) FROM:[node1] TO:[node2]] 
+I - [ETB:(I: node0) FROM:[node0] TO:[node2]] 
+I - [ETB:(I: node1) FROM:[node1] TO:[node2]] 
+F - [ETB:(F: node0) FROM:[node0] TO:[node2]] 
+F - [ETB:(F: node1) FROM:[node1] TO:[node2]] 
+H - [ETB:(H: node0) FROM:[node0] TO:[node2]] 
+H - [ETB:(H: node1) FROM:[node1] TO:[node2]] 
+
+--
+Projections to process:
+
+~~
+node2
+--
+Forward rules:
+D - [ETB:(D: node0) FROM:[node1] TO:[node4]] 
+D - [ETB:(D: node1) FROM:[node1] TO:[node4]] 
+D - [ETB:(D: node2) FROM:[node2] TO:[node4]] 
+J - [ETB:(J: node0) FROM:[node1] TO:[node4]] 
+J - [ETB:(J: node1) FROM:[node1] TO:[node4]] 
+J - [ETB:(J: node2) FROM:[node2] TO:[node4]] 
+B - [ETB:(B: node0) FROM:[node1] TO:[node4]] 
+B - [ETB:(B: node1) FROM:[node1] TO:[node4]] 
+B - [ETB:(B: node2) FROM:[node2] TO:[node4]] 
+G - [ETB:(G: node0) FROM:[node1] TO:[node4]] 
+G - [ETB:(G: node1) FROM:[node1] TO:[node4]] 
+G - [ETB:(G: node2) FROM:[node2] TO:[node4]] 
+A - [ETB:(A: node0) FROM:[node1] TO:[node4]] 
+A - [ETB:(A: node1) FROM:[node1] TO:[node4]] 
+A - [ETB:(A: node2) FROM:[node2] TO:[node4]] 
+C - [ETB:(C: node0) FROM:[node1] TO:[node4]] 
+C - [ETB:(C: node1) FROM:[node1] TO:[node4]] 
+C - [ETB:(C: node2) FROM:[node2] TO:[node4]] 
+E - [ETB:(E: node0) FROM:[node1] TO:[node4]] 
+E - [ETB:(E: node1) FROM:[node1] TO:[node4]] 
+E - [ETB:(E: node2) FROM:[node2] TO:[node4]] 
+I - [ETB:(I: node0) FROM:[node1] TO:[node4]] 
+I - [ETB:(I: node1) FROM:[node1] TO:[node4]] 
+I - [ETB:(I: node2) FROM:[node2] TO:[node4]] 
+F - [ETB:(F: node0) FROM:[node1] TO:[node4]] 
+F - [ETB:(F: node1) FROM:[node1] TO:[node4]] 
+F - [ETB:(F: node2) FROM:[node2] TO:[node4]] 
+H - [ETB:(H: node0) FROM:[node1] TO:[node4]] 
+H - [ETB:(H: node1) FROM:[node1] TO:[node4]] 
+H - [ETB:(H: node2) FROM:[node2] TO:[node4]] 
+
+--
+Projections to process:
+
+~~
+node3
+--
+Forward rules:
+D - [ETB:(D: node3) FROM:[node3] TO:[node4]] 
+J - [ETB:(J: node3) FROM:[node3] TO:[node4]] 
+B - [ETB:(B: node3) FROM:[node3] TO:[node4]] 
+G - [ETB:(G: node3) FROM:[node3] TO:[node4]] 
+A - [ETB:(A: node3) FROM:[node3] TO:[node4]] 
+C - [ETB:(C: node3) FROM:[node3] TO:[node4]] 
+E - [ETB:(E: node3) FROM:[node3] TO:[node4]] 
+I - [ETB:(I: node3) FROM:[node3] TO:[node4]] 
+F - [ETB:(F: node3) FROM:[node3] TO:[node4]] 
+H - [ETB:(H: node3) FROM:[node3] TO:[node4]] 
+
+--
+Projections to process:
+
+~~
+node4
+--
+Forward rules:
+D - [ETB:(D: node0) FROM:[node2] TO:[node5]] 
+D - [ETB:(D: node1) FROM:[node2] TO:[node5]] 
+D - [ETB:(D: node2) FROM:[node2] TO:[node5]] 
+D - [ETB:(D: node3) FROM:[node3] TO:[node5]] 
+D - [ETB:(D: node4) FROM:[node4] TO:[node5]] 
+J - [ETB:(J: node0) FROM:[node2] TO:[node5]] 
+J - [ETB:(J: node1) FROM:[node2] TO:[node5]] 
+J - [ETB:(J: node2) FROM:[node2] TO:[node5]] 
+J - [ETB:(J: node3) FROM:[node3] TO:[node5]] 
+J - [ETB:(J: node4) FROM:[node4] TO:[node5]] 
+B - [ETB:(B: node0) FROM:[node2] TO:[node5]] 
+B - [ETB:(B: node1) FROM:[node2] TO:[node5]] 
+B - [ETB:(B: node2) FROM:[node2] TO:[node5]] 
+B - [ETB:(B: node3) FROM:[node3] TO:[node5]] 
+B - [ETB:(B: node4) FROM:[node4] TO:[node5]] 
+G - [ETB:(G: node0) FROM:[node2] TO:[node5]] 
+G - [ETB:(G: node1) FROM:[node2] TO:[node5]] 
+G - [ETB:(G: node2) FROM:[node2] TO:[node5]] 
+G - [ETB:(G: node3) FROM:[node3] TO:[node5]] 
+G - [ETB:(G: node4) FROM:[node4] TO:[node5]] 
+A - [ETB:(A: node0) FROM:[node2] TO:[node5]] 
+A - [ETB:(A: node1) FROM:[node2] TO:[node5]] 
+A - [ETB:(A: node2) FROM:[node2] TO:[node5]] 
+A - [ETB:(A: node3) FROM:[node3] TO:[node5]] 
+A - [ETB:(A: node4) FROM:[node4] TO:[node5]] 
+C - [ETB:(C: node0) FROM:[node2] TO:[node5]] 
+C - [ETB:(C: node1) FROM:[node2] TO:[node5]] 
+C - [ETB:(C: node2) FROM:[node2] TO:[node5]] 
+C - [ETB:(C: node3) FROM:[node3] TO:[node5]] 
+C - [ETB:(C: node4) FROM:[node4] TO:[node5]] 
+E - [ETB:(E: node0) FROM:[node2] TO:[node5]] 
+E - [ETB:(E: node1) FROM:[node2] TO:[node5]] 
+E - [ETB:(E: node2) FROM:[node2] TO:[node5]] 
+E - [ETB:(E: node3) FROM:[node3] TO:[node5]] 
+E - [ETB:(E: node4) FROM:[node4] TO:[node5]] 
+I - [ETB:(I: node0) FROM:[node2] TO:[node5]] 
+I - [ETB:(I: node1) FROM:[node2] TO:[node5]] 
+I - [ETB:(I: node2) FROM:[node2] TO:[node5]] 
+I - [ETB:(I: node3) FROM:[node3] TO:[node5]] 
+I - [ETB:(I: node4) FROM:[node4] TO:[node5]] 
+F - [ETB:(F: node0) FROM:[node2] TO:[node5]] 
+F - [ETB:(F: node1) FROM:[node2] TO:[node5]] 
+F - [ETB:(F: node2) FROM:[node2] TO:[node5]] 
+F - [ETB:(F: node3) FROM:[node3] TO:[node5]] 
+F - [ETB:(F: node4) FROM:[node4] TO:[node5]] 
+H - [ETB:(H: node0) FROM:[node2] TO:[node5]] 
+H - [ETB:(H: node1) FROM:[node2] TO:[node5]] 
+H - [ETB:(H: node2) FROM:[node2] TO:[node5]] 
+H - [ETB:(H: node3) FROM:[node3] TO:[node5]] 
+H - [ETB:(H: node4) FROM:[node4] TO:[node5]] 
+
+--
+Projections to process:
+
+~~
+node5
+--
+Forward rules:
+D - [ETB:(D: node0) FROM:[node4] TO:[node6]] 
+D - [ETB:(D: node1) FROM:[node4] TO:[node6]] 
+D - [ETB:(D: node2) FROM:[node4] TO:[node6]] 
+D - [ETB:(D: node3) FROM:[node4] TO:[node6]] 
+D - [ETB:(D: node4) FROM:[node4] TO:[node6]] 
+D - [ETB:(D: node5) FROM:[node5] TO:[node6]] 
+J - [ETB:(J: node0) FROM:[node4] TO:[node6]] 
+J - [ETB:(J: node1) FROM:[node4] TO:[node6]] 
+J - [ETB:(J: node2) FROM:[node4] TO:[node6]] 
+J - [ETB:(J: node3) FROM:[node4] TO:[node6]] 
+J - [ETB:(J: node4) FROM:[node4] TO:[node6]] 
+J - [ETB:(J: node5) FROM:[node5] TO:[node6]] 
+B - [ETB:(B: node0) FROM:[node4] TO:[node6]] 
+B - [ETB:(B: node1) FROM:[node4] TO:[node6]] 
+B - [ETB:(B: node2) FROM:[node4] TO:[node6]] 
+B - [ETB:(B: node3) FROM:[node4] TO:[node6]] 
+B - [ETB:(B: node4) FROM:[node4] TO:[node6]] 
+B - [ETB:(B: node5) FROM:[node5] TO:[node6]] 
+G - [ETB:(G: node0) FROM:[node4] TO:[node6]] 
+G - [ETB:(G: node1) FROM:[node4] TO:[node6]] 
+G - [ETB:(G: node2) FROM:[node4] TO:[node6]] 
+G - [ETB:(G: node3) FROM:[node4] TO:[node6]] 
+G - [ETB:(G: node4) FROM:[node4] TO:[node6]] 
+G - [ETB:(G: node5) FROM:[node5] TO:[node6]] 
+A - [ETB:(A: node0) FROM:[node4] TO:[node6]] 
+A - [ETB:(A: node1) FROM:[node4] TO:[node6]] 
+A - [ETB:(A: node2) FROM:[node4] TO:[node6]] 
+A - [ETB:(A: node3) FROM:[node4] TO:[node6]] 
+A - [ETB:(A: node4) FROM:[node4] TO:[node6]] 
+A - [ETB:(A: node5) FROM:[node5] TO:[node6]] 
+C - [ETB:(C: node0) FROM:[node4] TO:[node6]] 
+C - [ETB:(C: node1) FROM:[node4] TO:[node6]] 
+C - [ETB:(C: node2) FROM:[node4] TO:[node6]] 
+C - [ETB:(C: node3) FROM:[node4] TO:[node6]] 
+C - [ETB:(C: node4) FROM:[node4] TO:[node6]] 
+C - [ETB:(C: node5) FROM:[node5] TO:[node6]] 
+E - [ETB:(E: node0) FROM:[node4] TO:[node6]] 
+E - [ETB:(E: node1) FROM:[node4] TO:[node6]] 
+E - [ETB:(E: node2) FROM:[node4] TO:[node6]] 
+E - [ETB:(E: node3) FROM:[node4] TO:[node6]] 
+E - [ETB:(E: node4) FROM:[node4] TO:[node6]] 
+E - [ETB:(E: node5) FROM:[node5] TO:[node6]] 
+I - [ETB:(I: node0) FROM:[node4] TO:[node6]] 
+I - [ETB:(I: node1) FROM:[node4] TO:[node6]] 
+I - [ETB:(I: node2) FROM:[node4] TO:[node6]] 
+I - [ETB:(I: node3) FROM:[node4] TO:[node6]] 
+I - [ETB:(I: node4) FROM:[node4] TO:[node6]] 
+I - [ETB:(I: node5) FROM:[node5] TO:[node6]] 
+F - [ETB:(F: node0) FROM:[node4] TO:[node6]] 
+F - [ETB:(F: node1) FROM:[node4] TO:[node6]] 
+F - [ETB:(F: node2) FROM:[node4] TO:[node6]] 
+F - [ETB:(F: node3) FROM:[node4] TO:[node6]] 
+F - [ETB:(F: node4) FROM:[node4] TO:[node6]] 
+F - [ETB:(F: node5) FROM:[node5] TO:[node6]] 
+H - [ETB:(H: node0) FROM:[node4] TO:[node6]] 
+H - [ETB:(H: node1) FROM:[node4] TO:[node6]] 
+H - [ETB:(H: node2) FROM:[node4] TO:[node6]] 
+H - [ETB:(H: node3) FROM:[node4] TO:[node6]] 
+H - [ETB:(H: node4) FROM:[node4] TO:[node6]] 
+H - [ETB:(H: node5) FROM:[node5] TO:[node6]] 
+
+--
+Projections to process:
+
+~~
+node6
+--
+Forward rules:
+D - [ETB:(D: node0) FROM:[node5] TO:[node7]] 
+D - [ETB:(D: node1) FROM:[node5] TO:[node7]] 
+D - [ETB:(D: node2) FROM:[node5] TO:[node7]] 
+D - [ETB:(D: node3) FROM:[node5] TO:[node7]] 
+D - [ETB:(D: node4) FROM:[node5] TO:[node7]] 
+D - [ETB:(D: node5) FROM:[node5] TO:[node7]] 
+D - [ETB:(D: node6) FROM:[node6] TO:[node7]] 
+J - [ETB:(J: node0) FROM:[node5] TO:[node7]] 
+J - [ETB:(J: node1) FROM:[node5] TO:[node7]] 
+J - [ETB:(J: node2) FROM:[node5] TO:[node7]] 
+J - [ETB:(J: node3) FROM:[node5] TO:[node7]] 
+J - [ETB:(J: node4) FROM:[node5] TO:[node7]] 
+J - [ETB:(J: node5) FROM:[node5] TO:[node7]] 
+J - [ETB:(J: node6) FROM:[node6] TO:[node7]] 
+B - [ETB:(B: node0) FROM:[node5] TO:[node7]] 
+B - [ETB:(B: node1) FROM:[node5] TO:[node7]] 
+B - [ETB:(B: node2) FROM:[node5] TO:[node7]] 
+B - [ETB:(B: node3) FROM:[node5] TO:[node7]] 
+B - [ETB:(B: node4) FROM:[node5] TO:[node7]] 
+B - [ETB:(B: node5) FROM:[node5] TO:[node7]] 
+B - [ETB:(B: node6) FROM:[node6] TO:[node7]] 
+G - [ETB:(G: node0) FROM:[node5] TO:[node7]] 
+G - [ETB:(G: node1) FROM:[node5] TO:[node7]] 
+G - [ETB:(G: node2) FROM:[node5] TO:[node7]] 
+G - [ETB:(G: node3) FROM:[node5] TO:[node7]] 
+G - [ETB:(G: node4) FROM:[node5] TO:[node7]] 
+G - [ETB:(G: node5) FROM:[node5] TO:[node7]] 
+G - [ETB:(G: node6) FROM:[node6] TO:[node7]] 
+A - [ETB:(A: node0) FROM:[node5] TO:[node7]] 
+A - [ETB:(A: node1) FROM:[node5] TO:[node7]] 
+A - [ETB:(A: node2) FROM:[node5] TO:[node7]] 
+A - [ETB:(A: node3) FROM:[node5] TO:[node7]] 
+A - [ETB:(A: node4) FROM:[node5] TO:[node7]] 
+A - [ETB:(A: node5) FROM:[node5] TO:[node7]] 
+A - [ETB:(A: node6) FROM:[node6] TO:[node7]] 
+C - [ETB:(C: node0) FROM:[node5] TO:[node7]] 
+C - [ETB:(C: node1) FROM:[node5] TO:[node7]] 
+C - [ETB:(C: node2) FROM:[node5] TO:[node7]] 
+C - [ETB:(C: node3) FROM:[node5] TO:[node7]] 
+C - [ETB:(C: node4) FROM:[node5] TO:[node7]] 
+C - [ETB:(C: node5) FROM:[node5] TO:[node7]] 
+C - [ETB:(C: node6) FROM:[node6] TO:[node7]] 
+E - [ETB:(E: node0) FROM:[node5] TO:[node7]] 
+E - [ETB:(E: node1) FROM:[node5] TO:[node7]] 
+E - [ETB:(E: node2) FROM:[node5] TO:[node7]] 
+E - [ETB:(E: node3) FROM:[node5] TO:[node7]] 
+E - [ETB:(E: node4) FROM:[node5] TO:[node7]] 
+E - [ETB:(E: node5) FROM:[node5] TO:[node7]] 
+E - [ETB:(E: node6) FROM:[node6] TO:[node7]] 
+I - [ETB:(I: node0) FROM:[node5] TO:[node7]] 
+I - [ETB:(I: node1) FROM:[node5] TO:[node7]] 
+I - [ETB:(I: node2) FROM:[node5] TO:[node7]] 
+I - [ETB:(I: node3) FROM:[node5] TO:[node7]] 
+I - [ETB:(I: node4) FROM:[node5] TO:[node7]] 
+I - [ETB:(I: node5) FROM:[node5] TO:[node7]] 
+I - [ETB:(I: node6) FROM:[node6] TO:[node7]] 
+F - [ETB:(F: node0) FROM:[node5] TO:[node7]] 
+F - [ETB:(F: node1) FROM:[node5] TO:[node7]] 
+F - [ETB:(F: node2) FROM:[node5] TO:[node7]] 
+F - [ETB:(F: node3) FROM:[node5] TO:[node7]] 
+F - [ETB:(F: node4) FROM:[node5] TO:[node7]] 
+F - [ETB:(F: node5) FROM:[node5] TO:[node7]] 
+F - [ETB:(F: node6) FROM:[node6] TO:[node7]] 
+H - [ETB:(H: node0) FROM:[node5] TO:[node7]] 
+H - [ETB:(H: node1) FROM:[node5] TO:[node7]] 
+H - [ETB:(H: node2) FROM:[node5] TO:[node7]] 
+H - [ETB:(H: node3) FROM:[node5] TO:[node7]] 
+H - [ETB:(H: node4) FROM:[node5] TO:[node7]] 
+H - [ETB:(H: node5) FROM:[node5] TO:[node7]] 
+H - [ETB:(H: node6) FROM:[node6] TO:[node7]] 
+
+--
+Projections to process:
+
+~~
+node7
+--
+Forward rules:
+D - [ETB:(D: node0) FROM:[node6] TO:[node8]] 
+D - [ETB:(D: node1) FROM:[node6] TO:[node8]] 
+D - [ETB:(D: node2) FROM:[node6] TO:[node8]] 
+D - [ETB:(D: node3) FROM:[node6] TO:[node8]] 
+D - [ETB:(D: node4) FROM:[node6] TO:[node8]] 
+D - [ETB:(D: node5) FROM:[node6] TO:[node8]] 
+D - [ETB:(D: node6) FROM:[node6] TO:[node8]] 
+D - [ETB:(D: node7) FROM:[node7] TO:[node8]] 
+J - [ETB:(J: node0) FROM:[node6] TO:[node8]] 
+J - [ETB:(J: node1) FROM:[node6] TO:[node8]] 
+J - [ETB:(J: node2) FROM:[node6] TO:[node8]] 
+J - [ETB:(J: node3) FROM:[node6] TO:[node8]] 
+J - [ETB:(J: node4) FROM:[node6] TO:[node8]] 
+J - [ETB:(J: node5) FROM:[node6] TO:[node8]] 
+J - [ETB:(J: node6) FROM:[node6] TO:[node8]] 
+J - [ETB:(J: node7) FROM:[node7] TO:[node8]] 
+B - [ETB:(B: node0) FROM:[node6] TO:[node8]] 
+B - [ETB:(B: node1) FROM:[node6] TO:[node8]] 
+B - [ETB:(B: node2) FROM:[node6] TO:[node8]] 
+B - [ETB:(B: node3) FROM:[node6] TO:[node8]] 
+B - [ETB:(B: node4) FROM:[node6] TO:[node8]] 
+B - [ETB:(B: node5) FROM:[node6] TO:[node8]] 
+B - [ETB:(B: node6) FROM:[node6] TO:[node8]] 
+B - [ETB:(B: node7) FROM:[node7] TO:[node8]] 
+G - [ETB:(G: node0) FROM:[node6] TO:[node8]] 
+G - [ETB:(G: node1) FROM:[node6] TO:[node8]] 
+G - [ETB:(G: node2) FROM:[node6] TO:[node8]] 
+G - [ETB:(G: node3) FROM:[node6] TO:[node8]] 
+G - [ETB:(G: node4) FROM:[node6] TO:[node8]] 
+G - [ETB:(G: node5) FROM:[node6] TO:[node8]] 
+G - [ETB:(G: node6) FROM:[node6] TO:[node8]] 
+G - [ETB:(G: node7) FROM:[node7] TO:[node8]] 
+A - [ETB:(A: node0) FROM:[node6] TO:[node8]] 
+A - [ETB:(A: node1) FROM:[node6] TO:[node8]] 
+A - [ETB:(A: node2) FROM:[node6] TO:[node8]] 
+A - [ETB:(A: node3) FROM:[node6] TO:[node8]] 
+A - [ETB:(A: node4) FROM:[node6] TO:[node8]] 
+A - [ETB:(A: node5) FROM:[node6] TO:[node8]] 
+A - [ETB:(A: node6) FROM:[node6] TO:[node8]] 
+A - [ETB:(A: node7) FROM:[node7] TO:[node8]] 
+C - [ETB:(C: node0) FROM:[node6] TO:[node8]] 
+C - [ETB:(C: node1) FROM:[node6] TO:[node8]] 
+C - [ETB:(C: node2) FROM:[node6] TO:[node8]] 
+C - [ETB:(C: node3) FROM:[node6] TO:[node8]] 
+C - [ETB:(C: node4) FROM:[node6] TO:[node8]] 
+C - [ETB:(C: node5) FROM:[node6] TO:[node8]] 
+C - [ETB:(C: node6) FROM:[node6] TO:[node8]] 
+C - [ETB:(C: node7) FROM:[node7] TO:[node8]] 
+E - [ETB:(E: node0) FROM:[node6] TO:[node8]] 
+E - [ETB:(E: node1) FROM:[node6] TO:[node8]] 
+E - [ETB:(E: node2) FROM:[node6] TO:[node8]] 
+E - [ETB:(E: node3) FROM:[node6] TO:[node8]] 
+E - [ETB:(E: node4) FROM:[node6] TO:[node8]] 
+E - [ETB:(E: node5) FROM:[node6] TO:[node8]] 
+E - [ETB:(E: node6) FROM:[node6] TO:[node8]] 
+E - [ETB:(E: node7) FROM:[node7] TO:[node8]] 
+I - [ETB:(I: node0) FROM:[node6] TO:[node8]] 
+I - [ETB:(I: node1) FROM:[node6] TO:[node8]] 
+I - [ETB:(I: node2) FROM:[node6] TO:[node8]] 
+I - [ETB:(I: node3) FROM:[node6] TO:[node8]] 
+I - [ETB:(I: node4) FROM:[node6] TO:[node8]] 
+I - [ETB:(I: node5) FROM:[node6] TO:[node8]] 
+I - [ETB:(I: node6) FROM:[node6] TO:[node8]] 
+I - [ETB:(I: node7) FROM:[node7] TO:[node8]] 
+F - [ETB:(F: node0) FROM:[node6] TO:[node8]] 
+F - [ETB:(F: node1) FROM:[node6] TO:[node8]] 
+F - [ETB:(F: node2) FROM:[node6] TO:[node8]] 
+F - [ETB:(F: node3) FROM:[node6] TO:[node8]] 
+F - [ETB:(F: node4) FROM:[node6] TO:[node8]] 
+F - [ETB:(F: node5) FROM:[node6] TO:[node8]] 
+F - [ETB:(F: node6) FROM:[node6] TO:[node8]] 
+F - [ETB:(F: node7) FROM:[node7] TO:[node8]] 
+H - [ETB:(H: node0) FROM:[node6] TO:[node8]] 
+H - [ETB:(H: node1) FROM:[node6] TO:[node8]] 
+H - [ETB:(H: node2) FROM:[node6] TO:[node8]] 
+H - [ETB:(H: node3) FROM:[node6] TO:[node8]] 
+H - [ETB:(H: node4) FROM:[node6] TO:[node8]] 
+H - [ETB:(H: node5) FROM:[node6] TO:[node8]] 
+H - [ETB:(H: node6) FROM:[node6] TO:[node8]] 
+H - [ETB:(H: node7) FROM:[node7] TO:[node8]] 
+
+--
+Projections to process:
+
+~~
+node8
+--
+Forward rules:
+
+--
+Projections to process:
+SELECT AND(B, A) FROM B; A WITH selectionRate= 0.008466320815585003
+SELECT AND(D, AND(B, A)) FROM D; AND(B, A) WITH selectionRate= 1.8711550696404925e-05
+SELECT AND(D, SEQ(J, AND(B, A))) FROM J; AND(D, AND(B, A)) WITH selectionRate= 1.3273418168467216e-05
+SELECT AND(D, SEQ(J, AND(B, G, A))) FROM G; AND(D, SEQ(J, AND(B, A))) WITH selectionRate= 0.009467324428166671
+SELECT SEQ(C, B) FROM C; B WITH selectionRate= 0.008244908073657924
+SELECT SEQ(C, AND(E, B)) FROM E; SEQ(C, B) WITH selectionRate= 2.3192644695963302e-05
+SELECT SEQ(C, AND(E, SEQ(I, B))) FROM SEQ(C, AND(E, B)); I WITH selectionRate= 7.895691809812863e-05
+SELECT SEQ(C, AND(E, SEQ(I, F, B))) FROM F; SEQ(C, AND(E, SEQ(I, B))) WITH selectionRate= 1.2968132729554798e-05
+SELECT SEQ(A, B) FROM B; A WITH selectionRate= 0.008466320815585003
+SELECT SEQ(A, B, H) FROM SEQ(A, B); H WITH selectionRate= 0.00288590420129042
+SELECT SEQ(A, F, B, H) FROM F; SEQ(A, B, H) WITH selectionRate= 9.271738335506828e-06
+
+~~
+node9
+--
+Forward rules:
+D - [ETB:(D: node9) FROM:[node9] TO:[node8]] 
+D - [ETB:(D: node10) FROM:[node10] TO:[node8]] 
+D - [ETB:(D: node11) FROM:[node10] TO:[node8]] 
+D - [ETB:(D: node12) FROM:[node10] TO:[node8]] 
+D - [ETB:(D: node13) FROM:[node10] TO:[node8]] 
+D - [ETB:(D: node14) FROM:[node10] TO:[node8]] 
+J - [ETB:(J: node9) FROM:[node9] TO:[node8]] 
+J - [ETB:(J: node10) FROM:[node10] TO:[node8]] 
+J - [ETB:(J: node11) FROM:[node10] TO:[node8]] 
+J - [ETB:(J: node12) FROM:[node10] TO:[node8]] 
+J - [ETB:(J: node13) FROM:[node10] TO:[node8]] 
+J - [ETB:(J: node14) FROM:[node10] TO:[node8]] 
+B - [ETB:(B: node9) FROM:[node9] TO:[node8]] 
+B - [ETB:(B: node10) FROM:[node10] TO:[node8]] 
+B - [ETB:(B: node11) FROM:[node10] TO:[node8]] 
+B - [ETB:(B: node12) FROM:[node10] TO:[node8]] 
+B - [ETB:(B: node13) FROM:[node10] TO:[node8]] 
+B - [ETB:(B: node14) FROM:[node10] TO:[node8]] 
+G - [ETB:(G: node9) FROM:[node9] TO:[node8]] 
+G - [ETB:(G: node10) FROM:[node10] TO:[node8]] 
+G - [ETB:(G: node11) FROM:[node10] TO:[node8]] 
+G - [ETB:(G: node12) FROM:[node10] TO:[node8]] 
+G - [ETB:(G: node13) FROM:[node10] TO:[node8]] 
+G - [ETB:(G: node14) FROM:[node10] TO:[node8]] 
+A - [ETB:(A: node9) FROM:[node9] TO:[node8]] 
+A - [ETB:(A: node10) FROM:[node10] TO:[node8]] 
+A - [ETB:(A: node11) FROM:[node10] TO:[node8]] 
+A - [ETB:(A: node12) FROM:[node10] TO:[node8]] 
+A - [ETB:(A: node13) FROM:[node10] TO:[node8]] 
+A - [ETB:(A: node14) FROM:[node10] TO:[node8]] 
+C - [ETB:(C: node9) FROM:[node9] TO:[node8]] 
+C - [ETB:(C: node10) FROM:[node10] TO:[node8]] 
+C - [ETB:(C: node11) FROM:[node10] TO:[node8]] 
+C - [ETB:(C: node12) FROM:[node10] TO:[node8]] 
+C - [ETB:(C: node13) FROM:[node10] TO:[node8]] 
+C - [ETB:(C: node14) FROM:[node10] TO:[node8]] 
+E - [ETB:(E: node9) FROM:[node9] TO:[node8]] 
+E - [ETB:(E: node10) FROM:[node10] TO:[node8]] 
+E - [ETB:(E: node11) FROM:[node10] TO:[node8]] 
+E - [ETB:(E: node12) FROM:[node10] TO:[node8]] 
+E - [ETB:(E: node13) FROM:[node10] TO:[node8]] 
+E - [ETB:(E: node14) FROM:[node10] TO:[node8]] 
+I - [ETB:(I: node9) FROM:[node9] TO:[node8]] 
+I - [ETB:(I: node10) FROM:[node10] TO:[node8]] 
+I - [ETB:(I: node11) FROM:[node10] TO:[node8]] 
+I - [ETB:(I: node12) FROM:[node10] TO:[node8]] 
+I - [ETB:(I: node13) FROM:[node10] TO:[node8]] 
+I - [ETB:(I: node14) FROM:[node10] TO:[node8]] 
+F - [ETB:(F: node9) FROM:[node9] TO:[node8]] 
+F - [ETB:(F: node10) FROM:[node10] TO:[node8]] 
+F - [ETB:(F: node11) FROM:[node10] TO:[node8]] 
+F - [ETB:(F: node12) FROM:[node10] TO:[node8]] 
+F - [ETB:(F: node13) FROM:[node10] TO:[node8]] 
+F - [ETB:(F: node14) FROM:[node10] TO:[node8]] 
+H - [ETB:(H: node9) FROM:[node9] TO:[node8]] 
+H - [ETB:(H: node10) FROM:[node10] TO:[node8]] 
+H - [ETB:(H: node11) FROM:[node10] TO:[node8]] 
+H - [ETB:(H: node12) FROM:[node10] TO:[node8]] 
+H - [ETB:(H: node13) FROM:[node10] TO:[node8]] 
+H - [ETB:(H: node14) FROM:[node10] TO:[node8]] 
+
+--
+Projections to process:
+
+~~
+node10
+--
+Forward rules:
+D - [ETB:(D: node10) FROM:[node10] TO:[node9]] 
+D - [ETB:(D: node11) FROM:[node11] TO:[node9]] 
+D - [ETB:(D: node12) FROM:[node11] TO:[node9]] 
+D - [ETB:(D: node13) FROM:[node11] TO:[node9]] 
+D - [ETB:(D: node14) FROM:[node11] TO:[node9]] 
+J - [ETB:(J: node10) FROM:[node10] TO:[node9]] 
+J - [ETB:(J: node11) FROM:[node11] TO:[node9]] 
+J - [ETB:(J: node12) FROM:[node11] TO:[node9]] 
+J - [ETB:(J: node13) FROM:[node11] TO:[node9]] 
+J - [ETB:(J: node14) FROM:[node11] TO:[node9]] 
+B - [ETB:(B: node10) FROM:[node10] TO:[node9]] 
+B - [ETB:(B: node11) FROM:[node11] TO:[node9]] 
+B - [ETB:(B: node12) FROM:[node11] TO:[node9]] 
+B - [ETB:(B: node13) FROM:[node11] TO:[node9]] 
+B - [ETB:(B: node14) FROM:[node11] TO:[node9]] 
+G - [ETB:(G: node10) FROM:[node10] TO:[node9]] 
+G - [ETB:(G: node11) FROM:[node11] TO:[node9]] 
+G - [ETB:(G: node12) FROM:[node11] TO:[node9]] 
+G - [ETB:(G: node13) FROM:[node11] TO:[node9]] 
+G - [ETB:(G: node14) FROM:[node11] TO:[node9]] 
+A - [ETB:(A: node10) FROM:[node10] TO:[node9]] 
+A - [ETB:(A: node11) FROM:[node11] TO:[node9]] 
+A - [ETB:(A: node12) FROM:[node11] TO:[node9]] 
+A - [ETB:(A: node13) FROM:[node11] TO:[node9]] 
+A - [ETB:(A: node14) FROM:[node11] TO:[node9]] 
+C - [ETB:(C: node10) FROM:[node10] TO:[node9]] 
+C - [ETB:(C: node11) FROM:[node11] TO:[node9]] 
+C - [ETB:(C: node12) FROM:[node11] TO:[node9]] 
+C - [ETB:(C: node13) FROM:[node11] TO:[node9]] 
+C - [ETB:(C: node14) FROM:[node11] TO:[node9]] 
+E - [ETB:(E: node10) FROM:[node10] TO:[node9]] 
+E - [ETB:(E: node11) FROM:[node11] TO:[node9]] 
+E - [ETB:(E: node12) FROM:[node11] TO:[node9]] 
+E - [ETB:(E: node13) FROM:[node11] TO:[node9]] 
+E - [ETB:(E: node14) FROM:[node11] TO:[node9]] 
+I - [ETB:(I: node10) FROM:[node10] TO:[node9]] 
+I - [ETB:(I: node11) FROM:[node11] TO:[node9]] 
+I - [ETB:(I: node12) FROM:[node11] TO:[node9]] 
+I - [ETB:(I: node13) FROM:[node11] TO:[node9]] 
+I - [ETB:(I: node14) FROM:[node11] TO:[node9]] 
+F - [ETB:(F: node10) FROM:[node10] TO:[node9]] 
+F - [ETB:(F: node11) FROM:[node11] TO:[node9]] 
+F - [ETB:(F: node12) FROM:[node11] TO:[node9]] 
+F - [ETB:(F: node13) FROM:[node11] TO:[node9]] 
+F - [ETB:(F: node14) FROM:[node11] TO:[node9]] 
+H - [ETB:(H: node10) FROM:[node10] TO:[node9]] 
+H - [ETB:(H: node11) FROM:[node11] TO:[node9]] 
+H - [ETB:(H: node12) FROM:[node11] TO:[node9]] 
+H - [ETB:(H: node13) FROM:[node11] TO:[node9]] 
+H - [ETB:(H: node14) FROM:[node11] TO:[node9]] 
+
+--
+Projections to process:
+
+~~
+node11
+--
+Forward rules:
+D - [ETB:(D: node11) FROM:[node11] TO:[node10]] 
+D - [ETB:(D: node12) FROM:[node12] TO:[node10]] 
+D - [ETB:(D: node13) FROM:[node12] TO:[node10]] 
+D - [ETB:(D: node14) FROM:[node12] TO:[node10]] 
+J - [ETB:(J: node11) FROM:[node11] TO:[node10]] 
+J - [ETB:(J: node12) FROM:[node12] TO:[node10]] 
+J - [ETB:(J: node13) FROM:[node12] TO:[node10]] 
+J - [ETB:(J: node14) FROM:[node12] TO:[node10]] 
+B - [ETB:(B: node11) FROM:[node11] TO:[node10]] 
+B - [ETB:(B: node12) FROM:[node12] TO:[node10]] 
+B - [ETB:(B: node13) FROM:[node12] TO:[node10]] 
+B - [ETB:(B: node14) FROM:[node12] TO:[node10]] 
+G - [ETB:(G: node11) FROM:[node11] TO:[node10]] 
+G - [ETB:(G: node12) FROM:[node12] TO:[node10]] 
+G - [ETB:(G: node13) FROM:[node12] TO:[node10]] 
+G - [ETB:(G: node14) FROM:[node12] TO:[node10]] 
+A - [ETB:(A: node11) FROM:[node11] TO:[node10]] 
+A - [ETB:(A: node12) FROM:[node12] TO:[node10]] 
+A - [ETB:(A: node13) FROM:[node12] TO:[node10]] 
+A - [ETB:(A: node14) FROM:[node12] TO:[node10]] 
+C - [ETB:(C: node11) FROM:[node11] TO:[node10]] 
+C - [ETB:(C: node12) FROM:[node12] TO:[node10]] 
+C - [ETB:(C: node13) FROM:[node12] TO:[node10]] 
+C - [ETB:(C: node14) FROM:[node12] TO:[node10]] 
+E - [ETB:(E: node11) FROM:[node11] TO:[node10]] 
+E - [ETB:(E: node12) FROM:[node12] TO:[node10]] 
+E - [ETB:(E: node13) FROM:[node12] TO:[node10]] 
+E - [ETB:(E: node14) FROM:[node12] TO:[node10]] 
+I - [ETB:(I: node11) FROM:[node11] TO:[node10]] 
+I - [ETB:(I: node12) FROM:[node12] TO:[node10]] 
+I - [ETB:(I: node13) FROM:[node12] TO:[node10]] 
+I - [ETB:(I: node14) FROM:[node12] TO:[node10]] 
+F - [ETB:(F: node11) FROM:[node11] TO:[node10]] 
+F - [ETB:(F: node12) FROM:[node12] TO:[node10]] 
+F - [ETB:(F: node13) FROM:[node12] TO:[node10]] 
+F - [ETB:(F: node14) FROM:[node12] TO:[node10]] 
+H - [ETB:(H: node11) FROM:[node11] TO:[node10]] 
+H - [ETB:(H: node12) FROM:[node12] TO:[node10]] 
+H - [ETB:(H: node13) FROM:[node12] TO:[node10]] 
+H - [ETB:(H: node14) FROM:[node12] TO:[node10]] 
+
+--
+Projections to process:
+
+~~
+node12
+--
+Forward rules:
+D - [ETB:(D: node12) FROM:[node12] TO:[node11]] 
+D - [ETB:(D: node13) FROM:[node13] TO:[node11]] 
+D - [ETB:(D: node14) FROM:[node13] TO:[node11]] 
+J - [ETB:(J: node12) FROM:[node12] TO:[node11]] 
+J - [ETB:(J: node13) FROM:[node13] TO:[node11]] 
+J - [ETB:(J: node14) FROM:[node13] TO:[node11]] 
+B - [ETB:(B: node12) FROM:[node12] TO:[node11]] 
+B - [ETB:(B: node13) FROM:[node13] TO:[node11]] 
+B - [ETB:(B: node14) FROM:[node13] TO:[node11]] 
+G - [ETB:(G: node12) FROM:[node12] TO:[node11]] 
+G - [ETB:(G: node13) FROM:[node13] TO:[node11]] 
+G - [ETB:(G: node14) FROM:[node13] TO:[node11]] 
+A - [ETB:(A: node12) FROM:[node12] TO:[node11]] 
+A - [ETB:(A: node13) FROM:[node13] TO:[node11]] 
+A - [ETB:(A: node14) FROM:[node13] TO:[node11]] 
+C - [ETB:(C: node12) FROM:[node12] TO:[node11]] 
+C - [ETB:(C: node13) FROM:[node13] TO:[node11]] 
+C - [ETB:(C: node14) FROM:[node13] TO:[node11]] 
+E - [ETB:(E: node12) FROM:[node12] TO:[node11]] 
+E - [ETB:(E: node13) FROM:[node13] TO:[node11]] 
+E - [ETB:(E: node14) FROM:[node13] TO:[node11]] 
+I - [ETB:(I: node12) FROM:[node12] TO:[node11]] 
+I - [ETB:(I: node13) FROM:[node13] TO:[node11]] 
+I - [ETB:(I: node14) FROM:[node13] TO:[node11]] 
+F - [ETB:(F: node12) FROM:[node12] TO:[node11]] 
+F - [ETB:(F: node13) FROM:[node13] TO:[node11]] 
+F - [ETB:(F: node14) FROM:[node13] TO:[node11]] 
+H - [ETB:(H: node12) FROM:[node12] TO:[node11]] 
+H - [ETB:(H: node13) FROM:[node13] TO:[node11]] 
+H - [ETB:(H: node14) FROM:[node13] TO:[node11]] 
+
+--
+Projections to process:
+
+~~
+node13
+--
+Forward rules:
+D - [ETB:(D: node13) FROM:[node13] TO:[node12]] 
+D - [ETB:(D: node14) FROM:[node14] TO:[node12]] 
+J - [ETB:(J: node13) FROM:[node13] TO:[node12]] 
+J - [ETB:(J: node14) FROM:[node14] TO:[node12]] 
+B - [ETB:(B: node13) FROM:[node13] TO:[node12]] 
+B - [ETB:(B: node14) FROM:[node14] TO:[node12]] 
+G - [ETB:(G: node13) FROM:[node13] TO:[node12]] 
+G - [ETB:(G: node14) FROM:[node14] TO:[node12]] 
+A - [ETB:(A: node13) FROM:[node13] TO:[node12]] 
+A - [ETB:(A: node14) FROM:[node14] TO:[node12]] 
+C - [ETB:(C: node13) FROM:[node13] TO:[node12]] 
+C - [ETB:(C: node14) FROM:[node14] TO:[node12]] 
+E - [ETB:(E: node13) FROM:[node13] TO:[node12]] 
+E - [ETB:(E: node14) FROM:[node14] TO:[node12]] 
+I - [ETB:(I: node13) FROM:[node13] TO:[node12]] 
+I - [ETB:(I: node14) FROM:[node14] TO:[node12]] 
+F - [ETB:(F: node13) FROM:[node13] TO:[node12]] 
+F - [ETB:(F: node14) FROM:[node14] TO:[node12]] 
+H - [ETB:(H: node13) FROM:[node13] TO:[node12]] 
+H - [ETB:(H: node14) FROM:[node14] TO:[node12]] 
+
+--
+Projections to process:
+
+~~
+node14
+--
+Forward rules:
+D - [ETB:(D: node14) FROM:[node14] TO:[node13]] 
+J - [ETB:(J: node14) FROM:[node14] TO:[node13]] 
+B - [ETB:(B: node14) FROM:[node14] TO:[node13]] 
+G - [ETB:(G: node14) FROM:[node14] TO:[node13]] 
+A - [ETB:(A: node14) FROM:[node14] TO:[node13]] 
+C - [ETB:(C: node14) FROM:[node14] TO:[node13]] 
+E - [ETB:(E: node14) FROM:[node14] TO:[node13]] 
+I - [ETB:(I: node14) FROM:[node14] TO:[node13]] 
+F - [ETB:(F: node14) FROM:[node14] TO:[node13]] 
+H - [ETB:(H: node14) FROM:[node14] TO:[node13]] 
+
+--
+Projections to process:
+
+~~
+node15
+--
+Forward rules:
+D - [ETB:(D: node15) FROM:[node15] TO:[node16]] 
+J - [ETB:(J: node15) FROM:[node15] TO:[node16]] 
+B - [ETB:(B: node15) FROM:[node15] TO:[node16]] 
+G - [ETB:(G: node15) FROM:[node15] TO:[node16]] 
+A - [ETB:(A: node15) FROM:[node15] TO:[node16]] 
+C - [ETB:(C: node15) FROM:[node15] TO:[node16]] 
+E - [ETB:(E: node15) FROM:[node15] TO:[node16]] 
+I - [ETB:(I: node15) FROM:[node15] TO:[node16]] 
+F - [ETB:(F: node15) FROM:[node15] TO:[node16]] 
+H - [ETB:(H: node15) FROM:[node15] TO:[node16]] 
+
+--
+Projections to process:
+
+~~
+node16
+--
+Forward rules:
+D - [ETB:(D: node15) FROM:[node15] TO:[node17]] 
+D - [ETB:(D: node16) FROM:[node16] TO:[node17]] 
+J - [ETB:(J: node15) FROM:[node15] TO:[node17]] 
+J - [ETB:(J: node16) FROM:[node16] TO:[node17]] 
+B - [ETB:(B: node15) FROM:[node15] TO:[node17]] 
+B - [ETB:(B: node16) FROM:[node16] TO:[node17]] 
+G - [ETB:(G: node15) FROM:[node15] TO:[node17]] 
+G - [ETB:(G: node16) FROM:[node16] TO:[node17]] 
+A - [ETB:(A: node15) FROM:[node15] TO:[node17]] 
+A - [ETB:(A: node16) FROM:[node16] TO:[node17]] 
+C - [ETB:(C: node15) FROM:[node15] TO:[node17]] 
+C - [ETB:(C: node16) FROM:[node16] TO:[node17]] 
+E - [ETB:(E: node15) FROM:[node15] TO:[node17]] 
+E - [ETB:(E: node16) FROM:[node16] TO:[node17]] 
+I - [ETB:(I: node15) FROM:[node15] TO:[node17]] 
+I - [ETB:(I: node16) FROM:[node16] TO:[node17]] 
+F - [ETB:(F: node15) FROM:[node15] TO:[node17]] 
+F - [ETB:(F: node16) FROM:[node16] TO:[node17]] 
+H - [ETB:(H: node15) FROM:[node15] TO:[node17]] 
+H - [ETB:(H: node16) FROM:[node16] TO:[node17]] 
+
+--
+Projections to process:
+
+~~
+node17
+--
+Forward rules:
+D - [ETB:(D: node15) FROM:[node16] TO:[node18]] 
+D - [ETB:(D: node16) FROM:[node16] TO:[node18]] 
+D - [ETB:(D: node17) FROM:[node17] TO:[node18]] 
+J - [ETB:(J: node15) FROM:[node16] TO:[node18]] 
+J - [ETB:(J: node16) FROM:[node16] TO:[node18]] 
+J - [ETB:(J: node17) FROM:[node17] TO:[node18]] 
+B - [ETB:(B: node15) FROM:[node16] TO:[node18]] 
+B - [ETB:(B: node16) FROM:[node16] TO:[node18]] 
+B - [ETB:(B: node17) FROM:[node17] TO:[node18]] 
+G - [ETB:(G: node15) FROM:[node16] TO:[node18]] 
+G - [ETB:(G: node16) FROM:[node16] TO:[node18]] 
+G - [ETB:(G: node17) FROM:[node17] TO:[node18]] 
+A - [ETB:(A: node15) FROM:[node16] TO:[node18]] 
+A - [ETB:(A: node16) FROM:[node16] TO:[node18]] 
+A - [ETB:(A: node17) FROM:[node17] TO:[node18]] 
+C - [ETB:(C: node15) FROM:[node16] TO:[node18]] 
+C - [ETB:(C: node16) FROM:[node16] TO:[node18]] 
+C - [ETB:(C: node17) FROM:[node17] TO:[node18]] 
+E - [ETB:(E: node15) FROM:[node16] TO:[node18]] 
+E - [ETB:(E: node16) FROM:[node16] TO:[node18]] 
+E - [ETB:(E: node17) FROM:[node17] TO:[node18]] 
+I - [ETB:(I: node15) FROM:[node16] TO:[node18]] 
+I - [ETB:(I: node16) FROM:[node16] TO:[node18]] 
+I - [ETB:(I: node17) FROM:[node17] TO:[node18]] 
+F - [ETB:(F: node15) FROM:[node16] TO:[node18]] 
+F - [ETB:(F: node16) FROM:[node16] TO:[node18]] 
+F - [ETB:(F: node17) FROM:[node17] TO:[node18]] 
+H - [ETB:(H: node15) FROM:[node16] TO:[node18]] 
+H - [ETB:(H: node16) FROM:[node16] TO:[node18]] 
+H - [ETB:(H: node17) FROM:[node17] TO:[node18]] 
+
+--
+Projections to process:
+
+~~
+node18
+--
+Forward rules:
+D - [ETB:(D: node15) FROM:[node17] TO:[node19]] 
+D - [ETB:(D: node16) FROM:[node17] TO:[node19]] 
+D - [ETB:(D: node17) FROM:[node17] TO:[node19]] 
+D - [ETB:(D: node18) FROM:[node18] TO:[node19]] 
+J - [ETB:(J: node15) FROM:[node17] TO:[node19]] 
+J - [ETB:(J: node16) FROM:[node17] TO:[node19]] 
+J - [ETB:(J: node17) FROM:[node17] TO:[node19]] 
+J - [ETB:(J: node18) FROM:[node18] TO:[node19]] 
+B - [ETB:(B: node15) FROM:[node17] TO:[node19]] 
+B - [ETB:(B: node16) FROM:[node17] TO:[node19]] 
+B - [ETB:(B: node17) FROM:[node17] TO:[node19]] 
+B - [ETB:(B: node18) FROM:[node18] TO:[node19]] 
+G - [ETB:(G: node15) FROM:[node17] TO:[node19]] 
+G - [ETB:(G: node16) FROM:[node17] TO:[node19]] 
+G - [ETB:(G: node17) FROM:[node17] TO:[node19]] 
+G - [ETB:(G: node18) FROM:[node18] TO:[node19]] 
+A - [ETB:(A: node15) FROM:[node17] TO:[node19]] 
+A - [ETB:(A: node16) FROM:[node17] TO:[node19]] 
+A - [ETB:(A: node17) FROM:[node17] TO:[node19]] 
+A - [ETB:(A: node18) FROM:[node18] TO:[node19]] 
+C - [ETB:(C: node15) FROM:[node17] TO:[node19]] 
+C - [ETB:(C: node16) FROM:[node17] TO:[node19]] 
+C - [ETB:(C: node17) FROM:[node17] TO:[node19]] 
+C - [ETB:(C: node18) FROM:[node18] TO:[node19]] 
+E - [ETB:(E: node15) FROM:[node17] TO:[node19]] 
+E - [ETB:(E: node16) FROM:[node17] TO:[node19]] 
+E - [ETB:(E: node17) FROM:[node17] TO:[node19]] 
+E - [ETB:(E: node18) FROM:[node18] TO:[node19]] 
+I - [ETB:(I: node15) FROM:[node17] TO:[node19]] 
+I - [ETB:(I: node16) FROM:[node17] TO:[node19]] 
+I - [ETB:(I: node17) FROM:[node17] TO:[node19]] 
+I - [ETB:(I: node18) FROM:[node18] TO:[node19]] 
+F - [ETB:(F: node15) FROM:[node17] TO:[node19]] 
+F - [ETB:(F: node16) FROM:[node17] TO:[node19]] 
+F - [ETB:(F: node17) FROM:[node17] TO:[node19]] 
+F - [ETB:(F: node18) FROM:[node18] TO:[node19]] 
+H - [ETB:(H: node15) FROM:[node17] TO:[node19]] 
+H - [ETB:(H: node16) FROM:[node17] TO:[node19]] 
+H - [ETB:(H: node17) FROM:[node17] TO:[node19]] 
+H - [ETB:(H: node18) FROM:[node18] TO:[node19]] 
+
+--
+Projections to process:
+
+~~
+node19
+--
+Forward rules:
+D - [ETB:(D: node15) FROM:[node18] TO:[node8]] 
+D - [ETB:(D: node16) FROM:[node18] TO:[node8]] 
+D - [ETB:(D: node17) FROM:[node18] TO:[node8]] 
+D - [ETB:(D: node18) FROM:[node18] TO:[node8]] 
+D - [ETB:(D: node19) FROM:[node19] TO:[node8]] 
+J - [ETB:(J: node15) FROM:[node18] TO:[node8]] 
+J - [ETB:(J: node16) FROM:[node18] TO:[node8]] 
+J - [ETB:(J: node17) FROM:[node18] TO:[node8]] 
+J - [ETB:(J: node18) FROM:[node18] TO:[node8]] 
+J - [ETB:(J: node19) FROM:[node19] TO:[node8]] 
+B - [ETB:(B: node15) FROM:[node18] TO:[node8]] 
+B - [ETB:(B: node16) FROM:[node18] TO:[node8]] 
+B - [ETB:(B: node17) FROM:[node18] TO:[node8]] 
+B - [ETB:(B: node18) FROM:[node18] TO:[node8]] 
+B - [ETB:(B: node19) FROM:[node19] TO:[node8]] 
+G - [ETB:(G: node15) FROM:[node18] TO:[node8]] 
+G - [ETB:(G: node16) FROM:[node18] TO:[node8]] 
+G - [ETB:(G: node17) FROM:[node18] TO:[node8]] 
+G - [ETB:(G: node18) FROM:[node18] TO:[node8]] 
+G - [ETB:(G: node19) FROM:[node19] TO:[node8]] 
+A - [ETB:(A: node15) FROM:[node18] TO:[node8]] 
+A - [ETB:(A: node16) FROM:[node18] TO:[node8]] 
+A - [ETB:(A: node17) FROM:[node18] TO:[node8]] 
+A - [ETB:(A: node18) FROM:[node18] TO:[node8]] 
+A - [ETB:(A: node19) FROM:[node19] TO:[node8]] 
+C - [ETB:(C: node15) FROM:[node18] TO:[node8]] 
+C - [ETB:(C: node16) FROM:[node18] TO:[node8]] 
+C - [ETB:(C: node17) FROM:[node18] TO:[node8]] 
+C - [ETB:(C: node18) FROM:[node18] TO:[node8]] 
+C - [ETB:(C: node19) FROM:[node19] TO:[node8]] 
+E - [ETB:(E: node15) FROM:[node18] TO:[node8]] 
+E - [ETB:(E: node16) FROM:[node18] TO:[node8]] 
+E - [ETB:(E: node17) FROM:[node18] TO:[node8]] 
+E - [ETB:(E: node18) FROM:[node18] TO:[node8]] 
+E - [ETB:(E: node19) FROM:[node19] TO:[node8]] 
+I - [ETB:(I: node15) FROM:[node18] TO:[node8]] 
+I - [ETB:(I: node16) FROM:[node18] TO:[node8]] 
+I - [ETB:(I: node17) FROM:[node18] TO:[node8]] 
+I - [ETB:(I: node18) FROM:[node18] TO:[node8]] 
+I - [ETB:(I: node19) FROM:[node19] TO:[node8]] 
+F - [ETB:(F: node15) FROM:[node18] TO:[node8]] 
+F - [ETB:(F: node16) FROM:[node18] TO:[node8]] 
+F - [ETB:(F: node17) FROM:[node18] TO:[node8]] 
+F - [ETB:(F: node18) FROM:[node18] TO:[node8]] 
+F - [ETB:(F: node19) FROM:[node19] TO:[node8]] 
+H - [ETB:(H: node15) FROM:[node18] TO:[node8]] 
+H - [ETB:(H: node16) FROM:[node18] TO:[node8]] 
+H - [ETB:(H: node17) FROM:[node18] TO:[node8]] 
+H - [ETB:(H: node18) FROM:[node18] TO:[node8]] 
+H - [ETB:(H: node19) FROM:[node19] TO:[node8]] 
+
+--
+Projections to process:
+

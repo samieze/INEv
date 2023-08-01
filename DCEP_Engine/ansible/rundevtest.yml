@@ -1,0 +1,60 @@
+﻿- hosts: nodes
+  vars:
+    PORT_BASEOFFSET : 2400
+    BASEPORTNUMBER : "{{ PORT_BASEOFFSET|int + 3|int * (C_NODENAME|int)}}"
+    CRA_PORT: "{{ BASEPORTNUMBER|int|string}}"
+    LOCAL_SEND_PORT: "{{(BASEPORTNUMBER|int + 1|int)|string}}"
+    LOCAL_RECEIVE_PORT: "{{(BASEPORTNUMBER|int + 2|int)|string}}"
+    SERVICENAME: "adcep{{C_NODENAME}}"
+  environment:
+#    AZURE_STORAGE_CONN_STRING: ""
+#    PATH: "{{ ansible_env.PATH }}:$HOME/dcepambrosiadir/AMBROSIA"
+#    AMBROSIATOOLS: "$HOME/dcepambrosiadir/AMBROSIA"
+#    AZURE_STORAGE_CONN_STRING: ""
+  tasks:
+    - name: Delete runs directory
+      file:
+        path: "$HOME/dcepambrosiadir/runs/"
+        state: absent
+    - name: Create runs directory
+      file:
+        path: "$HOME/dcepambrosiadir/runs/"
+        state: directory
+#    - name: Ansible delete multiple file example
+#      file:
+#        path: "$HOME/dcepambrosiadir/runs/{{ item }}"
+#        state: absent
+#      with_items:
+#        - output.txt
+#        - ambrosia_logs
+#    - name: cleanup temporary run files
+#      file:
+#        path: "~/dcepambrosiadir/runs/{{ item }}"
+#        state: absent
+#      with_fileglob:
+#        - "*.sh"
+#        - "healthMonitorContinue.*"
+#        - "*.log"
+#        - "*.stackdump"
+          
+    - shell: "echo Using AZURE_STORAGE_CONN_STRING with account $AZURE_STORAGE_CONN_STRING"
+      register: accountstr
+#    - debug:
+#---------------------------------        var: accountstr
+        
+    - name: Ambrosia Register Instance
+      command: "Ambrosia RegisterInstance -i {{SERVICENAME}} --rp {{LOCAL_RECEIVE_PORT}} --sp {{LOCAL_SEND_PORT}} -l ~/dcepambrosiadir/runs/ambrosia_logs/"
+
+    - name: runAmbrosiaService
+      shell: "runAmbrosiaService.sh ~/dcepambrosiadir/bin/DCEP.AmbrosiaNode --receivePort={{LOCAL_SEND_PORT}} --sendPort={{LOCAL_RECEIVE_PORT}} --serviceName={{SERVICENAME}}  ../inputdata/sampleC.txt -t Minute -d 0.1 -w 0.05 --doBenchmarkTo CSV > output.txt"
+      async: 2592000               # 60*60*24*30 – 1 month
+      poll: 0
+#      register: ambrosiaServiceSH
+      args:
+        chdir: "$HOME/dcepambrosiadir/runs/"
+        executable: /bin/bash
+      environment:
+        AMBROSIA_INSTANCE_NAME: "{{SERVICENAME}}"
+        AMBROSIA_IMMORTALCOORDINATOR_PORT: "{{CRAPORT}}"
+        COORDTAG: "Coord{{SERVICENAME}}"
+        AMBROSIA_IMMORTALCOORDINATOR_LOG: "{{SERVICENAME}}-coord.log"

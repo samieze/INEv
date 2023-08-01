@@ -1,0 +1,1335 @@
+1 0 0 1 0 1 0 0 1 
+1 0 0 1 0 1 0 0 1 
+1 0 0 1 0 1 0 0 1 
+1 0 0 1 0 1 0 0 1 
+1 0 0 1 0 1 0 0 1 
+1 0 0 1 0 1 0 0 1 
+1 0 0 1 0 1 0 0 1 
+1 0 0 1 0 1 0 0 1 
+1 0 0 1 0 1 0 0 1 
+1 0 0 1 0 1 0 0 1 
+1 0 0 1 0 1 0 0 1 
+1 0 0 1 0 1 0 0 1 
+1 0 0 1 0 1 0 0 1 
+1 0 0 1 0 1 0 0 1 
+1 0 0 1 0 1 0 0 1 
+1 0 0 1 0 1 0 0 1 
+1 0 0 1 0 1 0 0 1 
+1 0 0 1 0 1 0 0 1 
+1 0 0 1 0 1 0 0 1 
+1 0 0 1 0 1 0 0 1 
+-----------
+Dataset-Based Primitive Event Generation 
+hm_input_%NodeName%.txt 
+-----------
+Single Selectivities:{'A': 1.0, 'D': 1.0, 'I': 1.0, 'F': 1.0, 'A|AD': 0.3205746021627999, 'D|AD': 0.06238797417221232, 'A|AI': 0.7915157665220689, 'I|AI': 0.025267974241221087, 'A|AF': 0.6957604457552166, 'F|AF': 0.02874552602410576, 'I|DI': 0.5905854605367593, 'D|DI': 0.0338647009390018, 'D|DF': 0.06936789293146081, 'F|DF': 0.2883178247861885, 'I|FI': 0.7980407136724171, 'F|FI': 0.025061378019129082, 'D|ADI': 0.013860519222926438, 'A|ADI': 0.2746867990091853, 'I|ADI': 0.002101225676009484, 'A|ADF': 0.23292912610562672, 'F|ADF': 0.021763005548115756, 'D|ADF': 0.0015781465015087765, 'A|AFI': 0.564645086439816, 'I|AFI': 0.001284749846123926, 'F|AFI': 0.011027977196401497, 'I|DFI': 0.5627089548997274, 'D|DFI': 0.029848831809310233, 'F|DFI': 0.00047629806987199274, 'I|ADFI': 0.0009064722862753173, 'A|ADFI': 0.1628655434780699, 'F|ADFI': 0.00030656551121652166, 'D|ADFI': 0.001414076598956412}
+-----------
+~~
+node0
+--
+Forward rules:
+A - [ETB:(A: node0) FROM:[node0] TO:[node1;node19]] 
+A - [ETB:(A: node1) FROM:[node1] TO:[node19]] 
+A - [ETB:(A: node2) FROM:[node1] TO:[node19]] 
+A - [ETB:(A: node3) FROM:[node1] TO:[node19]] 
+A - [ETB:(A: node4) FROM:[node1] TO:[node19]] 
+A - [ETB:(A: node5) FROM:[node1] TO:[node19]] 
+A - [ETB:(A: node6) FROM:[node1] TO:[node19]] 
+A - [ETB:(A: node7) FROM:[node1] TO:[node19]] 
+A - [ETB:(A: node8) FROM:[node1] TO:[node19]] 
+A - [ETB:(A: node9) FROM:[node1] TO:[node19]] 
+A - [ETB:(A: node10) FROM:[node1] TO:[node19]] 
+A - [ETB:(A: node11) FROM:[node1] TO:[node19]] 
+A - [ETB:(A: node12) FROM:[node1] TO:[node19]] 
+A - [ETB:(A: node13) FROM:[node1] TO:[node19]] 
+A - [ETB:(A: node14) FROM:[node1] TO:[node19]] 
+A - [ETB:(A: node15) FROM:[node1] TO:[node19]] 
+A - [ETB:(A: node16) FROM:[node1] TO:[node19]] 
+A - [ETB:(A: node17) FROM:[node1] TO:[node19]] 
+A - [ETB:(A: node18) FROM:[node1] TO:[node19]] 
+A - [ETB:(A: node19) FROM:[node19] TO:[node1]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node0) FROM:[node0] TO:[node1;node19]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node1) FROM:[node1] TO:[node19]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node2) FROM:[node1] TO:[node19]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node3) FROM:[node1] TO:[node19]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node4) FROM:[node1] TO:[node19]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node5) FROM:[node1] TO:[node19]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node6) FROM:[node1] TO:[node19]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node7) FROM:[node1] TO:[node19]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node8) FROM:[node1] TO:[node19]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node9) FROM:[node1] TO:[node19]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node10) FROM:[node1] TO:[node19]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node11) FROM:[node1] TO:[node19]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node12) FROM:[node1] TO:[node19]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node13) FROM:[node1] TO:[node19]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node14) FROM:[node1] TO:[node19]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node15) FROM:[node1] TO:[node19]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node16) FROM:[node1] TO:[node19]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node17) FROM:[node1] TO:[node19]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node18) FROM:[node1] TO:[node19]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node19) FROM:[node19] TO:[node1]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node0);(I: ANY) FROM:[node0] TO:[node1;node19]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node1);(I: ANY) FROM:[node1] TO:[node19]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node2);(I: ANY) FROM:[node1] TO:[node19]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node3);(I: ANY) FROM:[node1] TO:[node19]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node4);(I: ANY) FROM:[node1] TO:[node19]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node5);(I: ANY) FROM:[node1] TO:[node19]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node6);(I: ANY) FROM:[node1] TO:[node19]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node7);(I: ANY) FROM:[node1] TO:[node19]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node8);(I: ANY) FROM:[node1] TO:[node19]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node9);(I: ANY) FROM:[node1] TO:[node19]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node10);(I: ANY) FROM:[node1] TO:[node19]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node11);(I: ANY) FROM:[node1] TO:[node19]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node12);(I: ANY) FROM:[node1] TO:[node19]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node13);(I: ANY) FROM:[node1] TO:[node19]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node14);(I: ANY) FROM:[node1] TO:[node19]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node15);(I: ANY) FROM:[node1] TO:[node19]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node16);(I: ANY) FROM:[node1] TO:[node19]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node17);(I: ANY) FROM:[node1] TO:[node19]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node18);(I: ANY) FROM:[node1] TO:[node19]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node19);(I: ANY) FROM:[node19] TO:[node1]] 
+
+--
+Projections to process:
+SELECT AND(A, I) FROM I; A WITH selectionRate= 0.02
+SELECT AND(A, SEQ(D, I)) FROM AND(A, I); D WITH selectionRate= 0.0004000000000000001
+SELECT AND(A, SEQ(D, I), F) FROM AND(A, SEQ(D, I)); F WITH selectionRate= 8e-04
+SELECT AND(A, I) FROM A; I|AI WITH selectionRate= 0.7915157665220689
+SELECT AND(A, I)|ADI FROM A; I|ADI WITH selectionRate= 0.7915157665220689
+SELECT AND(A, SEQ(D, I)) FROM D|ADI; AND(A, I)|ADI WITH selectionRate= 0.2746867990091853
+
+~~
+node1
+--
+Forward rules:
+A - [ETB:(A: node0) FROM:[node0] TO:[node2]] 
+A - [ETB:(A: node1) FROM:[node1] TO:[node0;node2]] 
+A - [ETB:(A: node2) FROM:[node2] TO:[node0]] 
+A - [ETB:(A: node3) FROM:[node2] TO:[node0]] 
+A - [ETB:(A: node4) FROM:[node2] TO:[node0]] 
+A - [ETB:(A: node5) FROM:[node2] TO:[node0]] 
+A - [ETB:(A: node6) FROM:[node2] TO:[node0]] 
+A - [ETB:(A: node7) FROM:[node2] TO:[node0]] 
+A - [ETB:(A: node8) FROM:[node2] TO:[node0]] 
+A - [ETB:(A: node9) FROM:[node2] TO:[node0]] 
+A - [ETB:(A: node10) FROM:[node2] TO:[node0]] 
+A - [ETB:(A: node11) FROM:[node2] TO:[node0]] 
+A - [ETB:(A: node12) FROM:[node2] TO:[node0]] 
+A - [ETB:(A: node13) FROM:[node2] TO:[node0]] 
+A - [ETB:(A: node14) FROM:[node2] TO:[node0]] 
+A - [ETB:(A: node15) FROM:[node2] TO:[node0]] 
+A - [ETB:(A: node16) FROM:[node2] TO:[node0]] 
+A - [ETB:(A: node17) FROM:[node2] TO:[node0]] 
+A - [ETB:(A: node18) FROM:[node2] TO:[node0]] 
+A - [ETB:(A: node19) FROM:[node0] TO:[node2]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node0) FROM:[node0] TO:[node2]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node1) FROM:[node1] TO:[node0;node2]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node2) FROM:[node2] TO:[node0]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node3) FROM:[node2] TO:[node0]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node4) FROM:[node2] TO:[node0]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node5) FROM:[node2] TO:[node0]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node6) FROM:[node2] TO:[node0]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node7) FROM:[node2] TO:[node0]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node8) FROM:[node2] TO:[node0]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node9) FROM:[node2] TO:[node0]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node10) FROM:[node2] TO:[node0]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node11) FROM:[node2] TO:[node0]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node12) FROM:[node2] TO:[node0]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node13) FROM:[node2] TO:[node0]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node14) FROM:[node2] TO:[node0]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node15) FROM:[node2] TO:[node0]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node16) FROM:[node2] TO:[node0]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node17) FROM:[node2] TO:[node0]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node18) FROM:[node2] TO:[node0]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node19) FROM:[node0] TO:[node2]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node0);(I: ANY) FROM:[node0] TO:[node2]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node1);(I: ANY) FROM:[node1] TO:[node0;node2]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node2);(I: ANY) FROM:[node2] TO:[node0]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node3);(I: ANY) FROM:[node2] TO:[node0]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node4);(I: ANY) FROM:[node2] TO:[node0]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node5);(I: ANY) FROM:[node2] TO:[node0]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node6);(I: ANY) FROM:[node2] TO:[node0]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node7);(I: ANY) FROM:[node2] TO:[node0]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node8);(I: ANY) FROM:[node2] TO:[node0]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node9);(I: ANY) FROM:[node2] TO:[node0]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node10);(I: ANY) FROM:[node2] TO:[node0]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node11);(I: ANY) FROM:[node2] TO:[node0]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node12);(I: ANY) FROM:[node2] TO:[node0]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node13);(I: ANY) FROM:[node2] TO:[node0]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node14);(I: ANY) FROM:[node2] TO:[node0]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node15);(I: ANY) FROM:[node2] TO:[node0]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node16);(I: ANY) FROM:[node2] TO:[node0]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node17);(I: ANY) FROM:[node2] TO:[node0]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node18);(I: ANY) FROM:[node2] TO:[node0]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node19);(I: ANY) FROM:[node0] TO:[node2]] 
+
+--
+Projections to process:
+SELECT AND(A, I) FROM I; A WITH selectionRate= 0.02
+SELECT AND(A, SEQ(D, I)) FROM AND(A, I); D WITH selectionRate= 0.0004000000000000001
+SELECT AND(A, SEQ(D, I), F) FROM AND(A, SEQ(D, I)); F WITH selectionRate= 8e-04
+SELECT AND(A, I) FROM A; I|AI WITH selectionRate= 0.7915157665220689
+SELECT AND(A, I)|ADI FROM A; I|ADI WITH selectionRate= 0.7915157665220689
+SELECT AND(A, SEQ(D, I)) FROM D|ADI; AND(A, I)|ADI WITH selectionRate= 0.2746867990091853
+
+~~
+node2
+--
+Forward rules:
+A - [ETB:(A: node0) FROM:[node1] TO:[node3]] 
+A - [ETB:(A: node1) FROM:[node1] TO:[node3]] 
+A - [ETB:(A: node2) FROM:[node2] TO:[node1;node3]] 
+A - [ETB:(A: node3) FROM:[node3] TO:[node1]] 
+A - [ETB:(A: node4) FROM:[node3] TO:[node1]] 
+A - [ETB:(A: node5) FROM:[node3] TO:[node1]] 
+A - [ETB:(A: node6) FROM:[node3] TO:[node1]] 
+A - [ETB:(A: node7) FROM:[node3] TO:[node1]] 
+A - [ETB:(A: node8) FROM:[node3] TO:[node1]] 
+A - [ETB:(A: node9) FROM:[node3] TO:[node1]] 
+A - [ETB:(A: node10) FROM:[node3] TO:[node1]] 
+A - [ETB:(A: node11) FROM:[node3] TO:[node1]] 
+A - [ETB:(A: node12) FROM:[node3] TO:[node1]] 
+A - [ETB:(A: node13) FROM:[node3] TO:[node1]] 
+A - [ETB:(A: node14) FROM:[node3] TO:[node1]] 
+A - [ETB:(A: node15) FROM:[node3] TO:[node1]] 
+A - [ETB:(A: node16) FROM:[node3] TO:[node1]] 
+A - [ETB:(A: node17) FROM:[node3] TO:[node1]] 
+A - [ETB:(A: node18) FROM:[node3] TO:[node1]] 
+A - [ETB:(A: node19) FROM:[node1] TO:[node3]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node0) FROM:[node1] TO:[node3]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node1) FROM:[node1] TO:[node3]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node2) FROM:[node2] TO:[node1;node3]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node3) FROM:[node3] TO:[node1]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node4) FROM:[node3] TO:[node1]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node5) FROM:[node3] TO:[node1]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node6) FROM:[node3] TO:[node1]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node7) FROM:[node3] TO:[node1]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node8) FROM:[node3] TO:[node1]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node9) FROM:[node3] TO:[node1]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node10) FROM:[node3] TO:[node1]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node11) FROM:[node3] TO:[node1]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node12) FROM:[node3] TO:[node1]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node13) FROM:[node3] TO:[node1]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node14) FROM:[node3] TO:[node1]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node15) FROM:[node3] TO:[node1]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node16) FROM:[node3] TO:[node1]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node17) FROM:[node3] TO:[node1]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node18) FROM:[node3] TO:[node1]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node19) FROM:[node1] TO:[node3]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node0);(I: ANY) FROM:[node1] TO:[node3]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node1);(I: ANY) FROM:[node1] TO:[node3]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node2);(I: ANY) FROM:[node2] TO:[node1;node3]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node3);(I: ANY) FROM:[node3] TO:[node1]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node4);(I: ANY) FROM:[node3] TO:[node1]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node5);(I: ANY) FROM:[node3] TO:[node1]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node6);(I: ANY) FROM:[node3] TO:[node1]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node7);(I: ANY) FROM:[node3] TO:[node1]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node8);(I: ANY) FROM:[node3] TO:[node1]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node9);(I: ANY) FROM:[node3] TO:[node1]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node10);(I: ANY) FROM:[node3] TO:[node1]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node11);(I: ANY) FROM:[node3] TO:[node1]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node12);(I: ANY) FROM:[node3] TO:[node1]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node13);(I: ANY) FROM:[node3] TO:[node1]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node14);(I: ANY) FROM:[node3] TO:[node1]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node15);(I: ANY) FROM:[node3] TO:[node1]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node16);(I: ANY) FROM:[node3] TO:[node1]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node17);(I: ANY) FROM:[node3] TO:[node1]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node18);(I: ANY) FROM:[node3] TO:[node1]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node19);(I: ANY) FROM:[node1] TO:[node3]] 
+
+--
+Projections to process:
+SELECT AND(A, I) FROM I; A WITH selectionRate= 0.02
+SELECT AND(A, SEQ(D, I)) FROM AND(A, I); D WITH selectionRate= 0.0004000000000000001
+SELECT AND(A, SEQ(D, I), F) FROM AND(A, SEQ(D, I)); F WITH selectionRate= 8e-04
+SELECT AND(A, I) FROM A; I|AI WITH selectionRate= 0.7915157665220689
+SELECT AND(A, I)|ADI FROM I|ADI; A WITH selectionRate= 0.7915157665220689
+SELECT AND(A, SEQ(D, I)) FROM D|ADI; AND(A, I)|ADI WITH selectionRate= 0.2746867990091853
+
+~~
+node3
+--
+Forward rules:
+A - [ETB:(A: node0) FROM:[node2] TO:[node4]] 
+A - [ETB:(A: node1) FROM:[node2] TO:[node4]] 
+A - [ETB:(A: node2) FROM:[node2] TO:[node4]] 
+A - [ETB:(A: node3) FROM:[node3] TO:[node2;node4]] 
+A - [ETB:(A: node4) FROM:[node4] TO:[node2]] 
+A - [ETB:(A: node5) FROM:[node4] TO:[node2]] 
+A - [ETB:(A: node6) FROM:[node4] TO:[node2]] 
+A - [ETB:(A: node7) FROM:[node4] TO:[node2]] 
+A - [ETB:(A: node8) FROM:[node4] TO:[node2]] 
+A - [ETB:(A: node9) FROM:[node4] TO:[node2]] 
+A - [ETB:(A: node10) FROM:[node4] TO:[node2]] 
+A - [ETB:(A: node11) FROM:[node4] TO:[node2]] 
+A - [ETB:(A: node12) FROM:[node4] TO:[node2]] 
+A - [ETB:(A: node13) FROM:[node4] TO:[node2]] 
+A - [ETB:(A: node14) FROM:[node4] TO:[node2]] 
+A - [ETB:(A: node15) FROM:[node4] TO:[node2]] 
+A - [ETB:(A: node16) FROM:[node4] TO:[node2]] 
+A - [ETB:(A: node17) FROM:[node4] TO:[node2]] 
+A - [ETB:(A: node18) FROM:[node4] TO:[node2]] 
+A - [ETB:(A: node19) FROM:[node2] TO:[node4]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node0) FROM:[node2] TO:[node4]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node1) FROM:[node2] TO:[node4]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node2) FROM:[node2] TO:[node4]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node3) FROM:[node3] TO:[node2;node4]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node4) FROM:[node4] TO:[node2]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node5) FROM:[node4] TO:[node2]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node6) FROM:[node4] TO:[node2]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node7) FROM:[node4] TO:[node2]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node8) FROM:[node4] TO:[node2]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node9) FROM:[node4] TO:[node2]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node10) FROM:[node4] TO:[node2]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node11) FROM:[node4] TO:[node2]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node12) FROM:[node4] TO:[node2]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node13) FROM:[node4] TO:[node2]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node14) FROM:[node4] TO:[node2]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node15) FROM:[node4] TO:[node2]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node16) FROM:[node4] TO:[node2]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node17) FROM:[node4] TO:[node2]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node18) FROM:[node4] TO:[node2]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node19) FROM:[node2] TO:[node4]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node0);(I: ANY) FROM:[node2] TO:[node4]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node1);(I: ANY) FROM:[node2] TO:[node4]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node2);(I: ANY) FROM:[node2] TO:[node4]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node3);(I: ANY) FROM:[node3] TO:[node2;node4]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node4);(I: ANY) FROM:[node4] TO:[node2]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node5);(I: ANY) FROM:[node4] TO:[node2]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node6);(I: ANY) FROM:[node4] TO:[node2]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node7);(I: ANY) FROM:[node4] TO:[node2]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node8);(I: ANY) FROM:[node4] TO:[node2]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node9);(I: ANY) FROM:[node4] TO:[node2]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node10);(I: ANY) FROM:[node4] TO:[node2]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node11);(I: ANY) FROM:[node4] TO:[node2]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node12);(I: ANY) FROM:[node4] TO:[node2]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node13);(I: ANY) FROM:[node4] TO:[node2]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node14);(I: ANY) FROM:[node4] TO:[node2]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node15);(I: ANY) FROM:[node4] TO:[node2]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node16);(I: ANY) FROM:[node4] TO:[node2]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node17);(I: ANY) FROM:[node4] TO:[node2]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node18);(I: ANY) FROM:[node4] TO:[node2]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node19);(I: ANY) FROM:[node2] TO:[node4]] 
+
+--
+Projections to process:
+SELECT AND(A, I) FROM I; A WITH selectionRate= 0.02
+SELECT AND(A, SEQ(D, I)) FROM AND(A, I); D WITH selectionRate= 0.0004000000000000001
+SELECT AND(A, SEQ(D, I), F) FROM AND(A, SEQ(D, I)); F WITH selectionRate= 8e-04
+SELECT AND(A, I) FROM A; I|AI WITH selectionRate= 0.7915157665220689
+SELECT AND(A, D)|ADI FROM D|ADI; A WITH selectionRate= 0.3205746021627999
+SELECT AND(A, SEQ(D, I)) FROM I|ADI; AND(A, D)|ADI WITH selectionRate= 0.2746867990091853
+
+~~
+node4
+--
+Forward rules:
+A - [ETB:(A: node0) FROM:[node3] TO:[node5]] 
+A - [ETB:(A: node1) FROM:[node3] TO:[node5]] 
+A - [ETB:(A: node2) FROM:[node3] TO:[node5]] 
+A - [ETB:(A: node3) FROM:[node3] TO:[node5]] 
+A - [ETB:(A: node4) FROM:[node4] TO:[node3;node5]] 
+A - [ETB:(A: node5) FROM:[node5] TO:[node3]] 
+A - [ETB:(A: node6) FROM:[node5] TO:[node3]] 
+A - [ETB:(A: node7) FROM:[node5] TO:[node3]] 
+A - [ETB:(A: node8) FROM:[node5] TO:[node3]] 
+A - [ETB:(A: node9) FROM:[node5] TO:[node3]] 
+A - [ETB:(A: node10) FROM:[node5] TO:[node3]] 
+A - [ETB:(A: node11) FROM:[node5] TO:[node3]] 
+A - [ETB:(A: node12) FROM:[node5] TO:[node3]] 
+A - [ETB:(A: node13) FROM:[node5] TO:[node3]] 
+A - [ETB:(A: node14) FROM:[node5] TO:[node3]] 
+A - [ETB:(A: node15) FROM:[node5] TO:[node3]] 
+A - [ETB:(A: node16) FROM:[node5] TO:[node3]] 
+A - [ETB:(A: node17) FROM:[node5] TO:[node3]] 
+A - [ETB:(A: node18) FROM:[node5] TO:[node3]] 
+A - [ETB:(A: node19) FROM:[node3] TO:[node5]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node0) FROM:[node3] TO:[node5]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node1) FROM:[node3] TO:[node5]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node2) FROM:[node3] TO:[node5]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node3) FROM:[node3] TO:[node5]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node4) FROM:[node4] TO:[node3;node5]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node5) FROM:[node5] TO:[node3]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node6) FROM:[node5] TO:[node3]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node7) FROM:[node5] TO:[node3]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node8) FROM:[node5] TO:[node3]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node9) FROM:[node5] TO:[node3]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node10) FROM:[node5] TO:[node3]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node11) FROM:[node5] TO:[node3]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node12) FROM:[node5] TO:[node3]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node13) FROM:[node5] TO:[node3]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node14) FROM:[node5] TO:[node3]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node15) FROM:[node5] TO:[node3]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node16) FROM:[node5] TO:[node3]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node17) FROM:[node5] TO:[node3]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node18) FROM:[node5] TO:[node3]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node19) FROM:[node3] TO:[node5]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node0);(I: ANY) FROM:[node3] TO:[node5]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node1);(I: ANY) FROM:[node3] TO:[node5]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node2);(I: ANY) FROM:[node3] TO:[node5]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node3);(I: ANY) FROM:[node3] TO:[node5]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node4);(I: ANY) FROM:[node4] TO:[node3;node5]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node5);(I: ANY) FROM:[node5] TO:[node3]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node6);(I: ANY) FROM:[node5] TO:[node3]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node7);(I: ANY) FROM:[node5] TO:[node3]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node8);(I: ANY) FROM:[node5] TO:[node3]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node9);(I: ANY) FROM:[node5] TO:[node3]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node10);(I: ANY) FROM:[node5] TO:[node3]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node11);(I: ANY) FROM:[node5] TO:[node3]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node12);(I: ANY) FROM:[node5] TO:[node3]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node13);(I: ANY) FROM:[node5] TO:[node3]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node14);(I: ANY) FROM:[node5] TO:[node3]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node15);(I: ANY) FROM:[node5] TO:[node3]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node16);(I: ANY) FROM:[node5] TO:[node3]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node17);(I: ANY) FROM:[node5] TO:[node3]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node18);(I: ANY) FROM:[node5] TO:[node3]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node19);(I: ANY) FROM:[node3] TO:[node5]] 
+
+--
+Projections to process:
+SELECT AND(A, I) FROM I; A WITH selectionRate= 0.02
+SELECT AND(A, SEQ(D, I)) FROM AND(A, I); D WITH selectionRate= 0.0004000000000000001
+SELECT AND(A, SEQ(D, I), F) FROM AND(A, SEQ(D, I)); F WITH selectionRate= 8e-04
+SELECT AND(A, I) FROM A; I|AI WITH selectionRate= 0.7915157665220689
+SELECT AND(A, I)|ADI FROM A; I|ADI WITH selectionRate= 0.7915157665220689
+SELECT AND(A, SEQ(D, I)) FROM D|ADI; AND(A, I)|ADI WITH selectionRate= 0.2746867990091853
+
+~~
+node5
+--
+Forward rules:
+A - [ETB:(A: node0) FROM:[node4] TO:[node6]] 
+A - [ETB:(A: node1) FROM:[node4] TO:[node6]] 
+A - [ETB:(A: node2) FROM:[node4] TO:[node6]] 
+A - [ETB:(A: node3) FROM:[node4] TO:[node6]] 
+A - [ETB:(A: node4) FROM:[node4] TO:[node6]] 
+A - [ETB:(A: node5) FROM:[node5] TO:[node4;node6]] 
+A - [ETB:(A: node6) FROM:[node6] TO:[node4]] 
+A - [ETB:(A: node7) FROM:[node6] TO:[node4]] 
+A - [ETB:(A: node8) FROM:[node6] TO:[node4]] 
+A - [ETB:(A: node9) FROM:[node6] TO:[node4]] 
+A - [ETB:(A: node10) FROM:[node6] TO:[node4]] 
+A - [ETB:(A: node11) FROM:[node6] TO:[node4]] 
+A - [ETB:(A: node12) FROM:[node6] TO:[node4]] 
+A - [ETB:(A: node13) FROM:[node6] TO:[node4]] 
+A - [ETB:(A: node14) FROM:[node6] TO:[node4]] 
+A - [ETB:(A: node15) FROM:[node6] TO:[node4]] 
+A - [ETB:(A: node16) FROM:[node6] TO:[node4]] 
+A - [ETB:(A: node17) FROM:[node6] TO:[node4]] 
+A - [ETB:(A: node18) FROM:[node6] TO:[node4]] 
+A - [ETB:(A: node19) FROM:[node4] TO:[node6]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node0) FROM:[node4] TO:[node6]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node1) FROM:[node4] TO:[node6]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node2) FROM:[node4] TO:[node6]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node3) FROM:[node4] TO:[node6]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node4) FROM:[node4] TO:[node6]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node5) FROM:[node5] TO:[node4;node6]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node6) FROM:[node6] TO:[node4]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node7) FROM:[node6] TO:[node4]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node8) FROM:[node6] TO:[node4]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node9) FROM:[node6] TO:[node4]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node10) FROM:[node6] TO:[node4]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node11) FROM:[node6] TO:[node4]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node12) FROM:[node6] TO:[node4]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node13) FROM:[node6] TO:[node4]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node14) FROM:[node6] TO:[node4]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node15) FROM:[node6] TO:[node4]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node16) FROM:[node6] TO:[node4]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node17) FROM:[node6] TO:[node4]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node18) FROM:[node6] TO:[node4]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node19) FROM:[node4] TO:[node6]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node0);(I: ANY) FROM:[node4] TO:[node6]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node1);(I: ANY) FROM:[node4] TO:[node6]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node2);(I: ANY) FROM:[node4] TO:[node6]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node3);(I: ANY) FROM:[node4] TO:[node6]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node4);(I: ANY) FROM:[node4] TO:[node6]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node5);(I: ANY) FROM:[node5] TO:[node4;node6]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node6);(I: ANY) FROM:[node6] TO:[node4]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node7);(I: ANY) FROM:[node6] TO:[node4]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node8);(I: ANY) FROM:[node6] TO:[node4]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node9);(I: ANY) FROM:[node6] TO:[node4]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node10);(I: ANY) FROM:[node6] TO:[node4]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node11);(I: ANY) FROM:[node6] TO:[node4]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node12);(I: ANY) FROM:[node6] TO:[node4]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node13);(I: ANY) FROM:[node6] TO:[node4]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node14);(I: ANY) FROM:[node6] TO:[node4]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node15);(I: ANY) FROM:[node6] TO:[node4]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node16);(I: ANY) FROM:[node6] TO:[node4]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node17);(I: ANY) FROM:[node6] TO:[node4]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node18);(I: ANY) FROM:[node6] TO:[node4]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node19);(I: ANY) FROM:[node4] TO:[node6]] 
+
+--
+Projections to process:
+SELECT AND(A, I) FROM I; A WITH selectionRate= 0.02
+SELECT AND(A, SEQ(D, I)) FROM AND(A, I); D WITH selectionRate= 0.0004000000000000001
+SELECT AND(A, SEQ(D, I), F) FROM AND(A, SEQ(D, I)); F WITH selectionRate= 8e-04
+SELECT AND(A, I) FROM A; I|AI WITH selectionRate= 0.7915157665220689
+SELECT SEQ(D, I)|ADI FROM D|ADI; I|ADI WITH selectionRate= 1
+SELECT AND(A, SEQ(D, I)) FROM A; SEQ(D, I)|ADI WITH selectionRate= 0.2746867990091853
+
+~~
+node6
+--
+Forward rules:
+A - [ETB:(A: node0) FROM:[node5] TO:[node7]] 
+A - [ETB:(A: node1) FROM:[node5] TO:[node7]] 
+A - [ETB:(A: node2) FROM:[node5] TO:[node7]] 
+A - [ETB:(A: node3) FROM:[node5] TO:[node7]] 
+A - [ETB:(A: node4) FROM:[node5] TO:[node7]] 
+A - [ETB:(A: node5) FROM:[node5] TO:[node7]] 
+A - [ETB:(A: node6) FROM:[node6] TO:[node5;node7]] 
+A - [ETB:(A: node7) FROM:[node7] TO:[node5]] 
+A - [ETB:(A: node8) FROM:[node7] TO:[node5]] 
+A - [ETB:(A: node9) FROM:[node7] TO:[node5]] 
+A - [ETB:(A: node10) FROM:[node7] TO:[node5]] 
+A - [ETB:(A: node11) FROM:[node7] TO:[node5]] 
+A - [ETB:(A: node12) FROM:[node7] TO:[node5]] 
+A - [ETB:(A: node13) FROM:[node7] TO:[node5]] 
+A - [ETB:(A: node14) FROM:[node7] TO:[node5]] 
+A - [ETB:(A: node15) FROM:[node7] TO:[node5]] 
+A - [ETB:(A: node16) FROM:[node7] TO:[node5]] 
+A - [ETB:(A: node17) FROM:[node7] TO:[node5]] 
+A - [ETB:(A: node18) FROM:[node7] TO:[node5]] 
+A - [ETB:(A: node19) FROM:[node5] TO:[node7]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node0) FROM:[node5] TO:[node7]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node1) FROM:[node5] TO:[node7]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node2) FROM:[node5] TO:[node7]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node3) FROM:[node5] TO:[node7]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node4) FROM:[node5] TO:[node7]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node5) FROM:[node5] TO:[node7]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node6) FROM:[node6] TO:[node5;node7]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node7) FROM:[node7] TO:[node5]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node8) FROM:[node7] TO:[node5]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node9) FROM:[node7] TO:[node5]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node10) FROM:[node7] TO:[node5]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node11) FROM:[node7] TO:[node5]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node12) FROM:[node7] TO:[node5]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node13) FROM:[node7] TO:[node5]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node14) FROM:[node7] TO:[node5]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node15) FROM:[node7] TO:[node5]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node16) FROM:[node7] TO:[node5]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node17) FROM:[node7] TO:[node5]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node18) FROM:[node7] TO:[node5]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node19) FROM:[node5] TO:[node7]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node0);(I: ANY) FROM:[node5] TO:[node7]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node1);(I: ANY) FROM:[node5] TO:[node7]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node2);(I: ANY) FROM:[node5] TO:[node7]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node3);(I: ANY) FROM:[node5] TO:[node7]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node4);(I: ANY) FROM:[node5] TO:[node7]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node5);(I: ANY) FROM:[node5] TO:[node7]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node6);(I: ANY) FROM:[node6] TO:[node5;node7]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node7);(I: ANY) FROM:[node7] TO:[node5]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node8);(I: ANY) FROM:[node7] TO:[node5]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node9);(I: ANY) FROM:[node7] TO:[node5]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node10);(I: ANY) FROM:[node7] TO:[node5]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node11);(I: ANY) FROM:[node7] TO:[node5]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node12);(I: ANY) FROM:[node7] TO:[node5]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node13);(I: ANY) FROM:[node7] TO:[node5]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node14);(I: ANY) FROM:[node7] TO:[node5]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node15);(I: ANY) FROM:[node7] TO:[node5]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node16);(I: ANY) FROM:[node7] TO:[node5]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node17);(I: ANY) FROM:[node7] TO:[node5]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node18);(I: ANY) FROM:[node7] TO:[node5]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node19);(I: ANY) FROM:[node5] TO:[node7]] 
+
+--
+Projections to process:
+SELECT AND(A, I) FROM I; A WITH selectionRate= 0.02
+SELECT AND(A, SEQ(D, I)) FROM AND(A, I); D WITH selectionRate= 0.0004000000000000001
+SELECT AND(A, SEQ(D, I), F) FROM AND(A, SEQ(D, I)); F WITH selectionRate= 8e-04
+SELECT AND(A, I) FROM A; I|AI WITH selectionRate= 0.7915157665220689
+SELECT SEQ(D, I)|ADI FROM I|ADI; D|ADI WITH selectionRate= 1
+SELECT AND(A, SEQ(D, I)) FROM A; SEQ(D, I)|ADI WITH selectionRate= 0.2746867990091853
+
+~~
+node7
+--
+Forward rules:
+A - [ETB:(A: node0) FROM:[node6] TO:[node12]] 
+A - [ETB:(A: node1) FROM:[node6] TO:[node12]] 
+A - [ETB:(A: node2) FROM:[node6] TO:[node12]] 
+A - [ETB:(A: node3) FROM:[node6] TO:[node12]] 
+A - [ETB:(A: node4) FROM:[node6] TO:[node12]] 
+A - [ETB:(A: node5) FROM:[node6] TO:[node12]] 
+A - [ETB:(A: node6) FROM:[node6] TO:[node12]] 
+A - [ETB:(A: node7) FROM:[node7] TO:[node12;node6]] 
+A - [ETB:(A: node8) FROM:[node12] TO:[node6]] 
+A - [ETB:(A: node9) FROM:[node12] TO:[node6]] 
+A - [ETB:(A: node10) FROM:[node12] TO:[node6]] 
+A - [ETB:(A: node11) FROM:[node12] TO:[node6]] 
+A - [ETB:(A: node12) FROM:[node12] TO:[node6]] 
+A - [ETB:(A: node13) FROM:[node12] TO:[node6]] 
+A - [ETB:(A: node14) FROM:[node12] TO:[node6]] 
+A - [ETB:(A: node15) FROM:[node12] TO:[node6]] 
+A - [ETB:(A: node16) FROM:[node12] TO:[node6]] 
+A - [ETB:(A: node17) FROM:[node12] TO:[node6]] 
+A - [ETB:(A: node18) FROM:[node12] TO:[node6]] 
+A - [ETB:(A: node19) FROM:[node6] TO:[node12]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node0) FROM:[node6] TO:[node12]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node1) FROM:[node6] TO:[node12]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node2) FROM:[node6] TO:[node12]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node3) FROM:[node6] TO:[node12]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node4) FROM:[node6] TO:[node12]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node5) FROM:[node6] TO:[node12]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node6) FROM:[node6] TO:[node12]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node7) FROM:[node7] TO:[node12;node6]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node8) FROM:[node12] TO:[node6]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node9) FROM:[node12] TO:[node6]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node10) FROM:[node12] TO:[node6]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node11) FROM:[node12] TO:[node6]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node12) FROM:[node12] TO:[node6]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node13) FROM:[node12] TO:[node6]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node14) FROM:[node12] TO:[node6]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node15) FROM:[node12] TO:[node6]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node16) FROM:[node12] TO:[node6]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node17) FROM:[node12] TO:[node6]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node18) FROM:[node12] TO:[node6]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node19) FROM:[node6] TO:[node12]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node0);(I: ANY) FROM:[node6] TO:[node12]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node1);(I: ANY) FROM:[node6] TO:[node12]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node2);(I: ANY) FROM:[node6] TO:[node12]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node3);(I: ANY) FROM:[node6] TO:[node12]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node4);(I: ANY) FROM:[node6] TO:[node12]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node5);(I: ANY) FROM:[node6] TO:[node12]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node6);(I: ANY) FROM:[node6] TO:[node12]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node7);(I: ANY) FROM:[node7] TO:[node12;node6]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node8);(I: ANY) FROM:[node12] TO:[node6]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node9);(I: ANY) FROM:[node12] TO:[node6]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node10);(I: ANY) FROM:[node12] TO:[node6]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node11);(I: ANY) FROM:[node12] TO:[node6]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node12);(I: ANY) FROM:[node12] TO:[node6]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node13);(I: ANY) FROM:[node12] TO:[node6]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node14);(I: ANY) FROM:[node12] TO:[node6]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node15);(I: ANY) FROM:[node12] TO:[node6]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node16);(I: ANY) FROM:[node12] TO:[node6]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node17);(I: ANY) FROM:[node12] TO:[node6]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node18);(I: ANY) FROM:[node12] TO:[node6]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node19);(I: ANY) FROM:[node6] TO:[node12]] 
+
+--
+Projections to process:
+SELECT AND(A, I) FROM I; A WITH selectionRate= 0.02
+SELECT AND(A, SEQ(D, I)) FROM AND(A, I); D WITH selectionRate= 0.0004000000000000001
+SELECT AND(A, SEQ(D, I), F) FROM AND(A, SEQ(D, I)); F WITH selectionRate= 8e-04
+SELECT AND(A, I) FROM A; I|AI WITH selectionRate= 0.7915157665220689
+SELECT SEQ(D, I)|ADI FROM D|ADI; I|ADI WITH selectionRate= 1
+SELECT AND(A, SEQ(D, I)) FROM A; SEQ(D, I)|ADI WITH selectionRate= 0.2746867990091853
+
+~~
+node8
+--
+Forward rules:
+A - [ETB:(A: node8) FROM:[node8] TO:[node9]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node8) FROM:[node8] TO:[node9]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node8);(I: ANY) FROM:[node8] TO:[node9]] 
+
+--
+Projections to process:
+SELECT AND(A, I) FROM I; A WITH selectionRate= 0.02
+SELECT AND(A, SEQ(D, I)) FROM AND(A, I); D WITH selectionRate= 0.0004000000000000001
+SELECT AND(A, SEQ(D, I), F) FROM AND(A, SEQ(D, I)); F WITH selectionRate= 8e-04
+SELECT AND(A, I) FROM A; I|AI WITH selectionRate= 0.7915157665220689
+SELECT AND(A, I)|ADI FROM A; I|ADI WITH selectionRate= 0.7915157665220689
+SELECT AND(A, SEQ(D, I)) FROM D|ADI; AND(A, I)|ADI WITH selectionRate= 0.2746867990091853
+
+~~
+node9
+--
+Forward rules:
+A - [ETB:(A: node0) FROM:[node10] TO:[node8]] 
+A - [ETB:(A: node1) FROM:[node10] TO:[node8]] 
+A - [ETB:(A: node2) FROM:[node10] TO:[node8]] 
+A - [ETB:(A: node3) FROM:[node10] TO:[node8]] 
+A - [ETB:(A: node4) FROM:[node10] TO:[node8]] 
+A - [ETB:(A: node5) FROM:[node10] TO:[node8]] 
+A - [ETB:(A: node6) FROM:[node10] TO:[node8]] 
+A - [ETB:(A: node7) FROM:[node10] TO:[node8]] 
+A - [ETB:(A: node8) FROM:[node8] TO:[node10]] 
+A - [ETB:(A: node9) FROM:[node9] TO:[node8;node10]] 
+A - [ETB:(A: node10) FROM:[node10] TO:[node8]] 
+A - [ETB:(A: node11) FROM:[node10] TO:[node8]] 
+A - [ETB:(A: node12) FROM:[node10] TO:[node8]] 
+A - [ETB:(A: node13) FROM:[node10] TO:[node8]] 
+A - [ETB:(A: node14) FROM:[node10] TO:[node8]] 
+A - [ETB:(A: node15) FROM:[node10] TO:[node8]] 
+A - [ETB:(A: node16) FROM:[node10] TO:[node8]] 
+A - [ETB:(A: node17) FROM:[node10] TO:[node8]] 
+A - [ETB:(A: node18) FROM:[node10] TO:[node8]] 
+A - [ETB:(A: node19) FROM:[node10] TO:[node8]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node0) FROM:[node10] TO:[node8]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node1) FROM:[node10] TO:[node8]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node2) FROM:[node10] TO:[node8]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node3) FROM:[node10] TO:[node8]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node4) FROM:[node10] TO:[node8]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node5) FROM:[node10] TO:[node8]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node6) FROM:[node10] TO:[node8]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node7) FROM:[node10] TO:[node8]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node8) FROM:[node8] TO:[node10]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node9) FROM:[node9] TO:[node8;node10]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node10) FROM:[node10] TO:[node8]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node11) FROM:[node10] TO:[node8]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node12) FROM:[node10] TO:[node8]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node13) FROM:[node10] TO:[node8]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node14) FROM:[node10] TO:[node8]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node15) FROM:[node10] TO:[node8]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node16) FROM:[node10] TO:[node8]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node17) FROM:[node10] TO:[node8]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node18) FROM:[node10] TO:[node8]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node19) FROM:[node10] TO:[node8]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node0);(I: ANY) FROM:[node10] TO:[node8]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node1);(I: ANY) FROM:[node10] TO:[node8]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node2);(I: ANY) FROM:[node10] TO:[node8]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node3);(I: ANY) FROM:[node10] TO:[node8]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node4);(I: ANY) FROM:[node10] TO:[node8]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node5);(I: ANY) FROM:[node10] TO:[node8]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node6);(I: ANY) FROM:[node10] TO:[node8]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node7);(I: ANY) FROM:[node10] TO:[node8]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node8);(I: ANY) FROM:[node8] TO:[node10]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node9);(I: ANY) FROM:[node9] TO:[node8;node10]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node10);(I: ANY) FROM:[node10] TO:[node8]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node11);(I: ANY) FROM:[node10] TO:[node8]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node12);(I: ANY) FROM:[node10] TO:[node8]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node13);(I: ANY) FROM:[node10] TO:[node8]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node14);(I: ANY) FROM:[node10] TO:[node8]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node15);(I: ANY) FROM:[node10] TO:[node8]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node16);(I: ANY) FROM:[node10] TO:[node8]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node17);(I: ANY) FROM:[node10] TO:[node8]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node18);(I: ANY) FROM:[node10] TO:[node8]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node19);(I: ANY) FROM:[node10] TO:[node8]] 
+
+--
+Projections to process:
+SELECT AND(A, I) FROM I; A WITH selectionRate= 0.02
+SELECT AND(A, SEQ(D, I)) FROM AND(A, I); D WITH selectionRate= 0.0004000000000000001
+SELECT AND(A, SEQ(D, I), F) FROM AND(A, SEQ(D, I)); F WITH selectionRate= 8e-04
+SELECT AND(A, I) FROM A; I|AI WITH selectionRate= 0.7915157665220689
+SELECT SEQ(D, I)|ADI FROM I|ADI; D|ADI WITH selectionRate= 1
+SELECT AND(A, SEQ(D, I)) FROM A; SEQ(D, I)|ADI WITH selectionRate= 0.2746867990091853
+
+~~
+node10
+--
+Forward rules:
+A - [ETB:(A: node0) FROM:[node11] TO:[node9]] 
+A - [ETB:(A: node1) FROM:[node11] TO:[node9]] 
+A - [ETB:(A: node2) FROM:[node11] TO:[node9]] 
+A - [ETB:(A: node3) FROM:[node11] TO:[node9]] 
+A - [ETB:(A: node4) FROM:[node11] TO:[node9]] 
+A - [ETB:(A: node5) FROM:[node11] TO:[node9]] 
+A - [ETB:(A: node6) FROM:[node11] TO:[node9]] 
+A - [ETB:(A: node7) FROM:[node11] TO:[node9]] 
+A - [ETB:(A: node8) FROM:[node9] TO:[node11]] 
+A - [ETB:(A: node9) FROM:[node9] TO:[node11]] 
+A - [ETB:(A: node10) FROM:[node10] TO:[node9;node11]] 
+A - [ETB:(A: node11) FROM:[node11] TO:[node9]] 
+A - [ETB:(A: node12) FROM:[node11] TO:[node9]] 
+A - [ETB:(A: node13) FROM:[node11] TO:[node9]] 
+A - [ETB:(A: node14) FROM:[node11] TO:[node9]] 
+A - [ETB:(A: node15) FROM:[node11] TO:[node9]] 
+A - [ETB:(A: node16) FROM:[node11] TO:[node9]] 
+A - [ETB:(A: node17) FROM:[node11] TO:[node9]] 
+A - [ETB:(A: node18) FROM:[node11] TO:[node9]] 
+A - [ETB:(A: node19) FROM:[node11] TO:[node9]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node0) FROM:[node11] TO:[node9]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node1) FROM:[node11] TO:[node9]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node2) FROM:[node11] TO:[node9]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node3) FROM:[node11] TO:[node9]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node4) FROM:[node11] TO:[node9]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node5) FROM:[node11] TO:[node9]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node6) FROM:[node11] TO:[node9]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node7) FROM:[node11] TO:[node9]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node8) FROM:[node9] TO:[node11]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node9) FROM:[node9] TO:[node11]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node10) FROM:[node10] TO:[node9;node11]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node11) FROM:[node11] TO:[node9]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node12) FROM:[node11] TO:[node9]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node13) FROM:[node11] TO:[node9]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node14) FROM:[node11] TO:[node9]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node15) FROM:[node11] TO:[node9]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node16) FROM:[node11] TO:[node9]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node17) FROM:[node11] TO:[node9]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node18) FROM:[node11] TO:[node9]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node19) FROM:[node11] TO:[node9]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node0);(I: ANY) FROM:[node11] TO:[node9]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node1);(I: ANY) FROM:[node11] TO:[node9]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node2);(I: ANY) FROM:[node11] TO:[node9]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node3);(I: ANY) FROM:[node11] TO:[node9]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node4);(I: ANY) FROM:[node11] TO:[node9]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node5);(I: ANY) FROM:[node11] TO:[node9]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node6);(I: ANY) FROM:[node11] TO:[node9]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node7);(I: ANY) FROM:[node11] TO:[node9]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node8);(I: ANY) FROM:[node9] TO:[node11]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node9);(I: ANY) FROM:[node9] TO:[node11]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node10);(I: ANY) FROM:[node10] TO:[node9;node11]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node11);(I: ANY) FROM:[node11] TO:[node9]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node12);(I: ANY) FROM:[node11] TO:[node9]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node13);(I: ANY) FROM:[node11] TO:[node9]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node14);(I: ANY) FROM:[node11] TO:[node9]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node15);(I: ANY) FROM:[node11] TO:[node9]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node16);(I: ANY) FROM:[node11] TO:[node9]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node17);(I: ANY) FROM:[node11] TO:[node9]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node18);(I: ANY) FROM:[node11] TO:[node9]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node19);(I: ANY) FROM:[node11] TO:[node9]] 
+
+--
+Projections to process:
+SELECT AND(A, I) FROM I; A WITH selectionRate= 0.02
+SELECT AND(A, SEQ(D, I)) FROM AND(A, I); D WITH selectionRate= 0.0004000000000000001
+SELECT AND(A, SEQ(D, I), F) FROM AND(A, SEQ(D, I)); F WITH selectionRate= 8e-04
+SELECT AND(A, I) FROM A; I|AI WITH selectionRate= 0.7915157665220689
+SELECT AND(A, I)|ADI FROM I|ADI; A WITH selectionRate= 0.7915157665220689
+SELECT AND(A, SEQ(D, I)) FROM D|ADI; AND(A, I)|ADI WITH selectionRate= 0.2746867990091853
+
+~~
+node11
+--
+Forward rules:
+A - [ETB:(A: node0) FROM:[node12] TO:[node10]] 
+A - [ETB:(A: node1) FROM:[node12] TO:[node10]] 
+A - [ETB:(A: node2) FROM:[node12] TO:[node10]] 
+A - [ETB:(A: node3) FROM:[node12] TO:[node10]] 
+A - [ETB:(A: node4) FROM:[node12] TO:[node10]] 
+A - [ETB:(A: node5) FROM:[node12] TO:[node10]] 
+A - [ETB:(A: node6) FROM:[node12] TO:[node10]] 
+A - [ETB:(A: node7) FROM:[node12] TO:[node10]] 
+A - [ETB:(A: node8) FROM:[node10] TO:[node12]] 
+A - [ETB:(A: node9) FROM:[node10] TO:[node12]] 
+A - [ETB:(A: node10) FROM:[node10] TO:[node12]] 
+A - [ETB:(A: node11) FROM:[node11] TO:[node10;node12]] 
+A - [ETB:(A: node12) FROM:[node12] TO:[node10]] 
+A - [ETB:(A: node13) FROM:[node12] TO:[node10]] 
+A - [ETB:(A: node14) FROM:[node12] TO:[node10]] 
+A - [ETB:(A: node15) FROM:[node12] TO:[node10]] 
+A - [ETB:(A: node16) FROM:[node12] TO:[node10]] 
+A - [ETB:(A: node17) FROM:[node12] TO:[node10]] 
+A - [ETB:(A: node18) FROM:[node12] TO:[node10]] 
+A - [ETB:(A: node19) FROM:[node12] TO:[node10]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node0) FROM:[node12] TO:[node10]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node1) FROM:[node12] TO:[node10]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node2) FROM:[node12] TO:[node10]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node3) FROM:[node12] TO:[node10]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node4) FROM:[node12] TO:[node10]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node5) FROM:[node12] TO:[node10]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node6) FROM:[node12] TO:[node10]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node7) FROM:[node12] TO:[node10]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node8) FROM:[node10] TO:[node12]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node9) FROM:[node10] TO:[node12]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node10) FROM:[node10] TO:[node12]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node11) FROM:[node11] TO:[node10;node12]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node12) FROM:[node12] TO:[node10]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node13) FROM:[node12] TO:[node10]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node14) FROM:[node12] TO:[node10]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node15) FROM:[node12] TO:[node10]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node16) FROM:[node12] TO:[node10]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node17) FROM:[node12] TO:[node10]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node18) FROM:[node12] TO:[node10]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node19) FROM:[node12] TO:[node10]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node0);(I: ANY) FROM:[node12] TO:[node10]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node1);(I: ANY) FROM:[node12] TO:[node10]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node2);(I: ANY) FROM:[node12] TO:[node10]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node3);(I: ANY) FROM:[node12] TO:[node10]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node4);(I: ANY) FROM:[node12] TO:[node10]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node5);(I: ANY) FROM:[node12] TO:[node10]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node6);(I: ANY) FROM:[node12] TO:[node10]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node7);(I: ANY) FROM:[node12] TO:[node10]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node8);(I: ANY) FROM:[node10] TO:[node12]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node9);(I: ANY) FROM:[node10] TO:[node12]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node10);(I: ANY) FROM:[node10] TO:[node12]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node11);(I: ANY) FROM:[node11] TO:[node10;node12]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node12);(I: ANY) FROM:[node12] TO:[node10]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node13);(I: ANY) FROM:[node12] TO:[node10]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node14);(I: ANY) FROM:[node12] TO:[node10]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node15);(I: ANY) FROM:[node12] TO:[node10]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node16);(I: ANY) FROM:[node12] TO:[node10]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node17);(I: ANY) FROM:[node12] TO:[node10]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node18);(I: ANY) FROM:[node12] TO:[node10]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node19);(I: ANY) FROM:[node12] TO:[node10]] 
+
+--
+Projections to process:
+SELECT AND(A, I) FROM I; A WITH selectionRate= 0.02
+SELECT AND(A, SEQ(D, I)) FROM AND(A, I); D WITH selectionRate= 0.0004000000000000001
+SELECT AND(A, SEQ(D, I), F) FROM AND(A, SEQ(D, I)); F WITH selectionRate= 8e-04
+SELECT AND(A, I) FROM A; I|AI WITH selectionRate= 0.7915157665220689
+SELECT SEQ(D, I)|ADI FROM I|ADI; D|ADI WITH selectionRate= 1
+SELECT AND(A, SEQ(D, I)) FROM A; SEQ(D, I)|ADI WITH selectionRate= 0.2746867990091853
+
+~~
+node12
+--
+Forward rules:
+A - [ETB:(A: node0) FROM:[node7] TO:[node11;node13]] 
+A - [ETB:(A: node1) FROM:[node7] TO:[node11;node13]] 
+A - [ETB:(A: node2) FROM:[node7] TO:[node11;node13]] 
+A - [ETB:(A: node3) FROM:[node7] TO:[node11;node13]] 
+A - [ETB:(A: node4) FROM:[node7] TO:[node11;node13]] 
+A - [ETB:(A: node5) FROM:[node7] TO:[node11;node13]] 
+A - [ETB:(A: node6) FROM:[node7] TO:[node11;node13]] 
+A - [ETB:(A: node7) FROM:[node7] TO:[node11;node13]] 
+A - [ETB:(A: node8) FROM:[node11] TO:[node13;node7]] 
+A - [ETB:(A: node9) FROM:[node11] TO:[node13;node7]] 
+A - [ETB:(A: node10) FROM:[node11] TO:[node13;node7]] 
+A - [ETB:(A: node11) FROM:[node11] TO:[node13;node7]] 
+A - [ETB:(A: node12) FROM:[node12] TO:[node11;node13;node7]] 
+A - [ETB:(A: node13) FROM:[node13] TO:[node11;node7]] 
+A - [ETB:(A: node14) FROM:[node13] TO:[node11;node7]] 
+A - [ETB:(A: node15) FROM:[node13] TO:[node11;node7]] 
+A - [ETB:(A: node16) FROM:[node13] TO:[node11;node7]] 
+A - [ETB:(A: node17) FROM:[node13] TO:[node11;node7]] 
+A - [ETB:(A: node18) FROM:[node13] TO:[node11;node7]] 
+A - [ETB:(A: node19) FROM:[node7] TO:[node11;node13]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node0) FROM:[node7] TO:[node11;node13]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node1) FROM:[node7] TO:[node11;node13]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node2) FROM:[node7] TO:[node11;node13]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node3) FROM:[node7] TO:[node11;node13]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node4) FROM:[node7] TO:[node11;node13]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node5) FROM:[node7] TO:[node11;node13]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node6) FROM:[node7] TO:[node11;node13]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node7) FROM:[node7] TO:[node11;node13]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node8) FROM:[node11] TO:[node13;node7]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node9) FROM:[node11] TO:[node13;node7]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node10) FROM:[node11] TO:[node13;node7]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node11) FROM:[node11] TO:[node13;node7]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node12) FROM:[node12] TO:[node11;node13;node7]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node13) FROM:[node13] TO:[node11;node7]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node14) FROM:[node13] TO:[node11;node7]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node15) FROM:[node13] TO:[node11;node7]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node16) FROM:[node13] TO:[node11;node7]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node17) FROM:[node13] TO:[node11;node7]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node18) FROM:[node13] TO:[node11;node7]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node19) FROM:[node7] TO:[node11;node13]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node0);(I: ANY) FROM:[node7] TO:[node11;node13]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node1);(I: ANY) FROM:[node7] TO:[node11;node13]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node2);(I: ANY) FROM:[node7] TO:[node11;node13]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node3);(I: ANY) FROM:[node7] TO:[node11;node13]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node4);(I: ANY) FROM:[node7] TO:[node11;node13]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node5);(I: ANY) FROM:[node7] TO:[node11;node13]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node6);(I: ANY) FROM:[node7] TO:[node11;node13]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node7);(I: ANY) FROM:[node7] TO:[node11;node13]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node8);(I: ANY) FROM:[node11] TO:[node13;node7]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node9);(I: ANY) FROM:[node11] TO:[node13;node7]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node10);(I: ANY) FROM:[node11] TO:[node13;node7]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node11);(I: ANY) FROM:[node11] TO:[node13;node7]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node12);(I: ANY) FROM:[node12] TO:[node11;node13;node7]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node13);(I: ANY) FROM:[node13] TO:[node11;node7]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node14);(I: ANY) FROM:[node13] TO:[node11;node7]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node15);(I: ANY) FROM:[node13] TO:[node11;node7]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node16);(I: ANY) FROM:[node13] TO:[node11;node7]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node17);(I: ANY) FROM:[node13] TO:[node11;node7]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node18);(I: ANY) FROM:[node13] TO:[node11;node7]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node19);(I: ANY) FROM:[node7] TO:[node11;node13]] 
+
+--
+Projections to process:
+SELECT AND(A, I) FROM I; A WITH selectionRate= 0.02
+SELECT AND(A, SEQ(D, I)) FROM AND(A, I); D WITH selectionRate= 0.0004000000000000001
+SELECT AND(A, SEQ(D, I), F) FROM AND(A, SEQ(D, I)); F WITH selectionRate= 8e-04
+SELECT AND(A, I) FROM A; I|AI WITH selectionRate= 0.7915157665220689
+SELECT SEQ(D, I)|ADI FROM I|ADI; D|ADI WITH selectionRate= 1
+SELECT AND(A, SEQ(D, I)) FROM A; SEQ(D, I)|ADI WITH selectionRate= 0.2746867990091853
+
+~~
+node13
+--
+Forward rules:
+A - [ETB:(A: node0) FROM:[node12] TO:[node14]] 
+A - [ETB:(A: node1) FROM:[node12] TO:[node14]] 
+A - [ETB:(A: node2) FROM:[node12] TO:[node14]] 
+A - [ETB:(A: node3) FROM:[node12] TO:[node14]] 
+A - [ETB:(A: node4) FROM:[node12] TO:[node14]] 
+A - [ETB:(A: node5) FROM:[node12] TO:[node14]] 
+A - [ETB:(A: node6) FROM:[node12] TO:[node14]] 
+A - [ETB:(A: node7) FROM:[node12] TO:[node14]] 
+A - [ETB:(A: node8) FROM:[node12] TO:[node14]] 
+A - [ETB:(A: node9) FROM:[node12] TO:[node14]] 
+A - [ETB:(A: node10) FROM:[node12] TO:[node14]] 
+A - [ETB:(A: node11) FROM:[node12] TO:[node14]] 
+A - [ETB:(A: node12) FROM:[node12] TO:[node14]] 
+A - [ETB:(A: node13) FROM:[node13] TO:[node12;node14]] 
+A - [ETB:(A: node14) FROM:[node14] TO:[node12]] 
+A - [ETB:(A: node15) FROM:[node14] TO:[node12]] 
+A - [ETB:(A: node16) FROM:[node14] TO:[node12]] 
+A - [ETB:(A: node17) FROM:[node14] TO:[node12]] 
+A - [ETB:(A: node18) FROM:[node14] TO:[node12]] 
+A - [ETB:(A: node19) FROM:[node12] TO:[node14]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node0) FROM:[node12] TO:[node14]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node1) FROM:[node12] TO:[node14]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node2) FROM:[node12] TO:[node14]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node3) FROM:[node12] TO:[node14]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node4) FROM:[node12] TO:[node14]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node5) FROM:[node12] TO:[node14]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node6) FROM:[node12] TO:[node14]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node7) FROM:[node12] TO:[node14]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node8) FROM:[node12] TO:[node14]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node9) FROM:[node12] TO:[node14]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node10) FROM:[node12] TO:[node14]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node11) FROM:[node12] TO:[node14]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node12) FROM:[node12] TO:[node14]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node13) FROM:[node13] TO:[node12;node14]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node14) FROM:[node14] TO:[node12]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node15) FROM:[node14] TO:[node12]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node16) FROM:[node14] TO:[node12]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node17) FROM:[node14] TO:[node12]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node18) FROM:[node14] TO:[node12]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node19) FROM:[node12] TO:[node14]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node0);(I: ANY) FROM:[node12] TO:[node14]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node1);(I: ANY) FROM:[node12] TO:[node14]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node2);(I: ANY) FROM:[node12] TO:[node14]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node3);(I: ANY) FROM:[node12] TO:[node14]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node4);(I: ANY) FROM:[node12] TO:[node14]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node5);(I: ANY) FROM:[node12] TO:[node14]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node6);(I: ANY) FROM:[node12] TO:[node14]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node7);(I: ANY) FROM:[node12] TO:[node14]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node8);(I: ANY) FROM:[node12] TO:[node14]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node9);(I: ANY) FROM:[node12] TO:[node14]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node10);(I: ANY) FROM:[node12] TO:[node14]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node11);(I: ANY) FROM:[node12] TO:[node14]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node12);(I: ANY) FROM:[node12] TO:[node14]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node13);(I: ANY) FROM:[node13] TO:[node12;node14]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node14);(I: ANY) FROM:[node14] TO:[node12]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node15);(I: ANY) FROM:[node14] TO:[node12]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node16);(I: ANY) FROM:[node14] TO:[node12]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node17);(I: ANY) FROM:[node14] TO:[node12]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node18);(I: ANY) FROM:[node14] TO:[node12]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node19);(I: ANY) FROM:[node12] TO:[node14]] 
+
+--
+Projections to process:
+SELECT AND(A, I) FROM I; A WITH selectionRate= 0.02
+SELECT AND(A, SEQ(D, I)) FROM AND(A, I); D WITH selectionRate= 0.0004000000000000001
+SELECT AND(A, SEQ(D, I), F) FROM AND(A, SEQ(D, I)); F WITH selectionRate= 8e-04
+SELECT AND(A, I) FROM A; I|AI WITH selectionRate= 0.7915157665220689
+SELECT AND(A, I)|ADI FROM I|ADI; A WITH selectionRate= 0.7915157665220689
+SELECT AND(A, SEQ(D, I)) FROM D|ADI; AND(A, I)|ADI WITH selectionRate= 0.2746867990091853
+
+~~
+node14
+--
+Forward rules:
+A - [ETB:(A: node0) FROM:[node13] TO:[node15]] 
+A - [ETB:(A: node1) FROM:[node13] TO:[node15]] 
+A - [ETB:(A: node2) FROM:[node13] TO:[node15]] 
+A - [ETB:(A: node3) FROM:[node13] TO:[node15]] 
+A - [ETB:(A: node4) FROM:[node13] TO:[node15]] 
+A - [ETB:(A: node5) FROM:[node13] TO:[node15]] 
+A - [ETB:(A: node6) FROM:[node13] TO:[node15]] 
+A - [ETB:(A: node7) FROM:[node13] TO:[node15]] 
+A - [ETB:(A: node8) FROM:[node13] TO:[node15]] 
+A - [ETB:(A: node9) FROM:[node13] TO:[node15]] 
+A - [ETB:(A: node10) FROM:[node13] TO:[node15]] 
+A - [ETB:(A: node11) FROM:[node13] TO:[node15]] 
+A - [ETB:(A: node12) FROM:[node13] TO:[node15]] 
+A - [ETB:(A: node13) FROM:[node13] TO:[node15]] 
+A - [ETB:(A: node14) FROM:[node14] TO:[node13;node15]] 
+A - [ETB:(A: node15) FROM:[node15] TO:[node13]] 
+A - [ETB:(A: node16) FROM:[node15] TO:[node13]] 
+A - [ETB:(A: node17) FROM:[node15] TO:[node13]] 
+A - [ETB:(A: node18) FROM:[node15] TO:[node13]] 
+A - [ETB:(A: node19) FROM:[node13] TO:[node15]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node0) FROM:[node13] TO:[node15]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node1) FROM:[node13] TO:[node15]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node2) FROM:[node13] TO:[node15]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node3) FROM:[node13] TO:[node15]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node4) FROM:[node13] TO:[node15]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node5) FROM:[node13] TO:[node15]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node6) FROM:[node13] TO:[node15]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node7) FROM:[node13] TO:[node15]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node8) FROM:[node13] TO:[node15]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node9) FROM:[node13] TO:[node15]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node10) FROM:[node13] TO:[node15]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node11) FROM:[node13] TO:[node15]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node12) FROM:[node13] TO:[node15]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node13) FROM:[node13] TO:[node15]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node14) FROM:[node14] TO:[node13;node15]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node15) FROM:[node15] TO:[node13]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node16) FROM:[node15] TO:[node13]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node17) FROM:[node15] TO:[node13]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node18) FROM:[node15] TO:[node13]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node19) FROM:[node13] TO:[node15]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node0);(I: ANY) FROM:[node13] TO:[node15]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node1);(I: ANY) FROM:[node13] TO:[node15]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node2);(I: ANY) FROM:[node13] TO:[node15]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node3);(I: ANY) FROM:[node13] TO:[node15]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node4);(I: ANY) FROM:[node13] TO:[node15]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node5);(I: ANY) FROM:[node13] TO:[node15]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node6);(I: ANY) FROM:[node13] TO:[node15]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node7);(I: ANY) FROM:[node13] TO:[node15]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node8);(I: ANY) FROM:[node13] TO:[node15]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node9);(I: ANY) FROM:[node13] TO:[node15]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node10);(I: ANY) FROM:[node13] TO:[node15]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node11);(I: ANY) FROM:[node13] TO:[node15]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node12);(I: ANY) FROM:[node13] TO:[node15]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node13);(I: ANY) FROM:[node13] TO:[node15]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node14);(I: ANY) FROM:[node14] TO:[node13;node15]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node15);(I: ANY) FROM:[node15] TO:[node13]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node16);(I: ANY) FROM:[node15] TO:[node13]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node17);(I: ANY) FROM:[node15] TO:[node13]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node18);(I: ANY) FROM:[node15] TO:[node13]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node19);(I: ANY) FROM:[node13] TO:[node15]] 
+
+--
+Projections to process:
+SELECT AND(A, I) FROM I; A WITH selectionRate= 0.02
+SELECT AND(A, SEQ(D, I)) FROM AND(A, I); D WITH selectionRate= 0.0004000000000000001
+SELECT AND(A, SEQ(D, I), F) FROM AND(A, SEQ(D, I)); F WITH selectionRate= 8e-04
+SELECT AND(A, I) FROM A; I|AI WITH selectionRate= 0.7915157665220689
+SELECT AND(A, I)|ADI FROM A; I|ADI WITH selectionRate= 0.7915157665220689
+SELECT AND(A, SEQ(D, I)) FROM D|ADI; AND(A, I)|ADI WITH selectionRate= 0.2746867990091853
+
+~~
+node15
+--
+Forward rules:
+A - [ETB:(A: node0) FROM:[node14] TO:[node16]] 
+A - [ETB:(A: node1) FROM:[node14] TO:[node16]] 
+A - [ETB:(A: node2) FROM:[node14] TO:[node16]] 
+A - [ETB:(A: node3) FROM:[node14] TO:[node16]] 
+A - [ETB:(A: node4) FROM:[node14] TO:[node16]] 
+A - [ETB:(A: node5) FROM:[node14] TO:[node16]] 
+A - [ETB:(A: node6) FROM:[node14] TO:[node16]] 
+A - [ETB:(A: node7) FROM:[node14] TO:[node16]] 
+A - [ETB:(A: node8) FROM:[node14] TO:[node16]] 
+A - [ETB:(A: node9) FROM:[node14] TO:[node16]] 
+A - [ETB:(A: node10) FROM:[node14] TO:[node16]] 
+A - [ETB:(A: node11) FROM:[node14] TO:[node16]] 
+A - [ETB:(A: node12) FROM:[node14] TO:[node16]] 
+A - [ETB:(A: node13) FROM:[node14] TO:[node16]] 
+A - [ETB:(A: node14) FROM:[node14] TO:[node16]] 
+A - [ETB:(A: node15) FROM:[node15] TO:[node16;node14]] 
+A - [ETB:(A: node16) FROM:[node16] TO:[node14]] 
+A - [ETB:(A: node17) FROM:[node16] TO:[node14]] 
+A - [ETB:(A: node18) FROM:[node16] TO:[node14]] 
+A - [ETB:(A: node19) FROM:[node14] TO:[node16]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node0) FROM:[node14] TO:[node16]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node1) FROM:[node14] TO:[node16]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node2) FROM:[node14] TO:[node16]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node3) FROM:[node14] TO:[node16]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node4) FROM:[node14] TO:[node16]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node5) FROM:[node14] TO:[node16]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node6) FROM:[node14] TO:[node16]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node7) FROM:[node14] TO:[node16]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node8) FROM:[node14] TO:[node16]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node9) FROM:[node14] TO:[node16]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node10) FROM:[node14] TO:[node16]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node11) FROM:[node14] TO:[node16]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node12) FROM:[node14] TO:[node16]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node13) FROM:[node14] TO:[node16]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node14) FROM:[node14] TO:[node16]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node15) FROM:[node15] TO:[node16;node14]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node16) FROM:[node16] TO:[node14]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node17) FROM:[node16] TO:[node14]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node18) FROM:[node16] TO:[node14]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node19) FROM:[node14] TO:[node16]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node0);(I: ANY) FROM:[node14] TO:[node16]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node1);(I: ANY) FROM:[node14] TO:[node16]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node2);(I: ANY) FROM:[node14] TO:[node16]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node3);(I: ANY) FROM:[node14] TO:[node16]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node4);(I: ANY) FROM:[node14] TO:[node16]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node5);(I: ANY) FROM:[node14] TO:[node16]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node6);(I: ANY) FROM:[node14] TO:[node16]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node7);(I: ANY) FROM:[node14] TO:[node16]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node8);(I: ANY) FROM:[node14] TO:[node16]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node9);(I: ANY) FROM:[node14] TO:[node16]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node10);(I: ANY) FROM:[node14] TO:[node16]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node11);(I: ANY) FROM:[node14] TO:[node16]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node12);(I: ANY) FROM:[node14] TO:[node16]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node13);(I: ANY) FROM:[node14] TO:[node16]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node14);(I: ANY) FROM:[node14] TO:[node16]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node15);(I: ANY) FROM:[node15] TO:[node16;node14]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node16);(I: ANY) FROM:[node16] TO:[node14]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node17);(I: ANY) FROM:[node16] TO:[node14]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node18);(I: ANY) FROM:[node16] TO:[node14]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node19);(I: ANY) FROM:[node14] TO:[node16]] 
+
+--
+Projections to process:
+SELECT AND(A, I) FROM I; A WITH selectionRate= 0.02
+SELECT AND(A, SEQ(D, I)) FROM AND(A, I); D WITH selectionRate= 0.0004000000000000001
+SELECT AND(A, SEQ(D, I), F) FROM AND(A, SEQ(D, I)); F WITH selectionRate= 8e-04
+SELECT AND(A, I) FROM A; I|AI WITH selectionRate= 0.7915157665220689
+SELECT AND(A, D)|ADI FROM D|ADI; A WITH selectionRate= 0.3205746021627999
+SELECT AND(A, SEQ(D, I)) FROM I|ADI; AND(A, D)|ADI WITH selectionRate= 0.2746867990091853
+
+~~
+node16
+--
+Forward rules:
+A - [ETB:(A: node0) FROM:[node15] TO:[node17]] 
+A - [ETB:(A: node1) FROM:[node15] TO:[node17]] 
+A - [ETB:(A: node2) FROM:[node15] TO:[node17]] 
+A - [ETB:(A: node3) FROM:[node15] TO:[node17]] 
+A - [ETB:(A: node4) FROM:[node15] TO:[node17]] 
+A - [ETB:(A: node5) FROM:[node15] TO:[node17]] 
+A - [ETB:(A: node6) FROM:[node15] TO:[node17]] 
+A - [ETB:(A: node7) FROM:[node15] TO:[node17]] 
+A - [ETB:(A: node8) FROM:[node15] TO:[node17]] 
+A - [ETB:(A: node9) FROM:[node15] TO:[node17]] 
+A - [ETB:(A: node10) FROM:[node15] TO:[node17]] 
+A - [ETB:(A: node11) FROM:[node15] TO:[node17]] 
+A - [ETB:(A: node12) FROM:[node15] TO:[node17]] 
+A - [ETB:(A: node13) FROM:[node15] TO:[node17]] 
+A - [ETB:(A: node14) FROM:[node15] TO:[node17]] 
+A - [ETB:(A: node15) FROM:[node15] TO:[node17]] 
+A - [ETB:(A: node16) FROM:[node16] TO:[node17;node15]] 
+A - [ETB:(A: node17) FROM:[node17] TO:[node15]] 
+A - [ETB:(A: node18) FROM:[node17] TO:[node15]] 
+A - [ETB:(A: node19) FROM:[node15] TO:[node17]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node0) FROM:[node15] TO:[node17]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node1) FROM:[node15] TO:[node17]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node2) FROM:[node15] TO:[node17]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node3) FROM:[node15] TO:[node17]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node4) FROM:[node15] TO:[node17]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node5) FROM:[node15] TO:[node17]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node6) FROM:[node15] TO:[node17]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node7) FROM:[node15] TO:[node17]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node8) FROM:[node15] TO:[node17]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node9) FROM:[node15] TO:[node17]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node10) FROM:[node15] TO:[node17]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node11) FROM:[node15] TO:[node17]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node12) FROM:[node15] TO:[node17]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node13) FROM:[node15] TO:[node17]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node14) FROM:[node15] TO:[node17]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node15) FROM:[node15] TO:[node17]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node16) FROM:[node16] TO:[node17;node15]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node17) FROM:[node17] TO:[node15]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node18) FROM:[node17] TO:[node15]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node19) FROM:[node15] TO:[node17]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node0);(I: ANY) FROM:[node15] TO:[node17]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node1);(I: ANY) FROM:[node15] TO:[node17]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node2);(I: ANY) FROM:[node15] TO:[node17]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node3);(I: ANY) FROM:[node15] TO:[node17]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node4);(I: ANY) FROM:[node15] TO:[node17]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node5);(I: ANY) FROM:[node15] TO:[node17]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node6);(I: ANY) FROM:[node15] TO:[node17]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node7);(I: ANY) FROM:[node15] TO:[node17]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node8);(I: ANY) FROM:[node15] TO:[node17]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node9);(I: ANY) FROM:[node15] TO:[node17]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node10);(I: ANY) FROM:[node15] TO:[node17]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node11);(I: ANY) FROM:[node15] TO:[node17]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node12);(I: ANY) FROM:[node15] TO:[node17]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node13);(I: ANY) FROM:[node15] TO:[node17]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node14);(I: ANY) FROM:[node15] TO:[node17]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node15);(I: ANY) FROM:[node15] TO:[node17]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node16);(I: ANY) FROM:[node16] TO:[node17;node15]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node17);(I: ANY) FROM:[node17] TO:[node15]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node18);(I: ANY) FROM:[node17] TO:[node15]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node19);(I: ANY) FROM:[node15] TO:[node17]] 
+
+--
+Projections to process:
+SELECT AND(A, I) FROM I; A WITH selectionRate= 0.02
+SELECT AND(A, SEQ(D, I)) FROM AND(A, I); D WITH selectionRate= 0.0004000000000000001
+SELECT AND(A, SEQ(D, I), F) FROM AND(A, SEQ(D, I)); F WITH selectionRate= 8e-04
+SELECT AND(A, I) FROM A; I|AI WITH selectionRate= 0.7915157665220689
+SELECT AND(A, D)|ADI FROM D|ADI; A WITH selectionRate= 0.3205746021627999
+SELECT AND(A, SEQ(D, I)) FROM I|ADI; AND(A, D)|ADI WITH selectionRate= 0.2746867990091853
+
+~~
+node17
+--
+Forward rules:
+A - [ETB:(A: node0) FROM:[node16] TO:[node18]] 
+A - [ETB:(A: node1) FROM:[node16] TO:[node18]] 
+A - [ETB:(A: node2) FROM:[node16] TO:[node18]] 
+A - [ETB:(A: node3) FROM:[node16] TO:[node18]] 
+A - [ETB:(A: node4) FROM:[node16] TO:[node18]] 
+A - [ETB:(A: node5) FROM:[node16] TO:[node18]] 
+A - [ETB:(A: node6) FROM:[node16] TO:[node18]] 
+A - [ETB:(A: node7) FROM:[node16] TO:[node18]] 
+A - [ETB:(A: node8) FROM:[node16] TO:[node18]] 
+A - [ETB:(A: node9) FROM:[node16] TO:[node18]] 
+A - [ETB:(A: node10) FROM:[node16] TO:[node18]] 
+A - [ETB:(A: node11) FROM:[node16] TO:[node18]] 
+A - [ETB:(A: node12) FROM:[node16] TO:[node18]] 
+A - [ETB:(A: node13) FROM:[node16] TO:[node18]] 
+A - [ETB:(A: node14) FROM:[node16] TO:[node18]] 
+A - [ETB:(A: node15) FROM:[node16] TO:[node18]] 
+A - [ETB:(A: node16) FROM:[node16] TO:[node18]] 
+A - [ETB:(A: node17) FROM:[node17] TO:[node16;node18]] 
+A - [ETB:(A: node18) FROM:[node18] TO:[node16]] 
+A - [ETB:(A: node19) FROM:[node16] TO:[node18]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node0) FROM:[node16] TO:[node18]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node1) FROM:[node16] TO:[node18]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node2) FROM:[node16] TO:[node18]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node3) FROM:[node16] TO:[node18]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node4) FROM:[node16] TO:[node18]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node5) FROM:[node16] TO:[node18]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node6) FROM:[node16] TO:[node18]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node7) FROM:[node16] TO:[node18]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node8) FROM:[node16] TO:[node18]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node9) FROM:[node16] TO:[node18]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node10) FROM:[node16] TO:[node18]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node11) FROM:[node16] TO:[node18]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node12) FROM:[node16] TO:[node18]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node13) FROM:[node16] TO:[node18]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node14) FROM:[node16] TO:[node18]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node15) FROM:[node16] TO:[node18]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node16) FROM:[node16] TO:[node18]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node17) FROM:[node17] TO:[node16;node18]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node18) FROM:[node18] TO:[node16]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node19) FROM:[node16] TO:[node18]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node0);(I: ANY) FROM:[node16] TO:[node18]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node1);(I: ANY) FROM:[node16] TO:[node18]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node2);(I: ANY) FROM:[node16] TO:[node18]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node3);(I: ANY) FROM:[node16] TO:[node18]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node4);(I: ANY) FROM:[node16] TO:[node18]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node5);(I: ANY) FROM:[node16] TO:[node18]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node6);(I: ANY) FROM:[node16] TO:[node18]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node7);(I: ANY) FROM:[node16] TO:[node18]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node8);(I: ANY) FROM:[node16] TO:[node18]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node9);(I: ANY) FROM:[node16] TO:[node18]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node10);(I: ANY) FROM:[node16] TO:[node18]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node11);(I: ANY) FROM:[node16] TO:[node18]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node12);(I: ANY) FROM:[node16] TO:[node18]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node13);(I: ANY) FROM:[node16] TO:[node18]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node14);(I: ANY) FROM:[node16] TO:[node18]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node15);(I: ANY) FROM:[node16] TO:[node18]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node16);(I: ANY) FROM:[node16] TO:[node18]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node17);(I: ANY) FROM:[node17] TO:[node16;node18]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node18);(I: ANY) FROM:[node18] TO:[node16]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node19);(I: ANY) FROM:[node16] TO:[node18]] 
+
+--
+Projections to process:
+SELECT AND(A, I) FROM I; A WITH selectionRate= 0.02
+SELECT AND(A, SEQ(D, I)) FROM AND(A, I); D WITH selectionRate= 0.0004000000000000001
+SELECT AND(A, SEQ(D, I), F) FROM AND(A, SEQ(D, I)); F WITH selectionRate= 8e-04
+SELECT AND(A, I) FROM A; I|AI WITH selectionRate= 0.7915157665220689
+SELECT AND(A, I)|ADI FROM I|ADI; A WITH selectionRate= 0.7915157665220689
+SELECT AND(A, SEQ(D, I)) FROM D|ADI; AND(A, I)|ADI WITH selectionRate= 0.2746867990091853
+
+~~
+node18
+--
+Forward rules:
+A - [ETB:(A: node18) FROM:[node18] TO:[node17]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node18) FROM:[node18] TO:[node17]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node18);(I: ANY) FROM:[node18] TO:[node17]] 
+
+--
+Projections to process:
+SELECT AND(A, I) FROM I; A WITH selectionRate= 0.02
+SELECT AND(A, SEQ(D, I)) FROM AND(A, I); D WITH selectionRate= 0.0004000000000000001
+SELECT AND(A, SEQ(D, I), F) FROM AND(A, SEQ(D, I)); F WITH selectionRate= 8e-04
+SELECT AND(A, I) FROM A; I|AI WITH selectionRate= 0.7915157665220689
+SELECT SEQ(D, I)|ADI FROM I|ADI; D|ADI WITH selectionRate= 1
+SELECT AND(A, SEQ(D, I)) FROM A; SEQ(D, I)|ADI WITH selectionRate= 0.2746867990091853
+
+~~
+node19
+--
+Forward rules:
+A - [ETB:(A: node19) FROM:[node19] TO:[node0]] 
+I|AND(A, I) - [ETB:(A: ANY);(I: node19) FROM:[node19] TO:[node0]] 
+I,D|AND(A, SEQ(D, I)) - [ETB:(A: ANY);(D: node19);(I: ANY) FROM:[node19] TO:[node0]] 
+
+--
+Projections to process:
+SELECT AND(A, I) FROM I; A WITH selectionRate= 0.02
+SELECT AND(A, SEQ(D, I)) FROM AND(A, I); D WITH selectionRate= 0.0004000000000000001
+SELECT AND(A, SEQ(D, I), F) FROM AND(A, SEQ(D, I)); F WITH selectionRate= 8e-04
+SELECT AND(A, I) FROM A; I|AI WITH selectionRate= 0.7915157665220689
+SELECT SEQ(D, I)|ADI FROM I|ADI; D|ADI WITH selectionRate= 1
+SELECT AND(A, SEQ(D, I)) FROM A; SEQ(D, I)|ADI WITH selectionRate= 0.2746867990091853
+
