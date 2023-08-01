@@ -3,7 +3,7 @@
 """
 Created on Tue Sep 28 11:20:18 2021
 
-
+@author: samira
 
 For a given hopfactor:
     Compute estimated latency of INEv graph and latency of centralized evaluation using mini diamonds. 

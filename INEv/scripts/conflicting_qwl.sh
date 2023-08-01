@@ -2,7 +2,7 @@
 
 cd ../code
 	
-   for k in 5 10 15 20 # qwl size
+   for k in 5 10 20 # qwl size
 	do 
 	for h in 6 10 15 20 25 #num event types
 		do
@@ -10,10 +10,10 @@ cd ../code
 		python3.8 generate_graph.py
 		python3.8 allPairs.py
 			a=0
-			while [ $a -lt 2 ]
+			while [ $a -lt 50 ]
 				do	
-				python3.8 generate_qwls.py $k 6		
-	                        python3.8 generate_selectivity.py 0.01
+				python3.8 generate_qwls.py 6  $k	
+	                        python3.8 generate_selectivity.py 
 				python3.8 write_config_single.py
 				python3.8 determine_all_single_selectivities.py
 				python3.8 generate_projections.py

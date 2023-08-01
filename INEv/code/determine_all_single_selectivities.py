@@ -9,7 +9,7 @@ import copy
 from itertools import permutations
 
 import pickle
-
+from write_config_single import *
 import tree
 
 NETWORK = 'network'

@@ -104,10 +104,10 @@ def main():
 
     
     #default values for simulation 
-    nwsize = 20
+    nwsize = 10
     node_event_ratio = 1.0
-    num_eventtypes = 10 
-    eventskew = 1.1
+    num_eventtypes = 20
+    eventskew = 1.3
     toFile = False
     swaps = 0   
     
@@ -118,15 +118,15 @@ def main():
         node_event_ratio = float(sys.argv[2]) # event node ratio
     if len(sys.argv) > 3: # event skew
         eventskew = float(sys.argv[3]) 
-    if len(sys.argv) > 4: # size event universe
+    if len(sys.argv) > 4: # size event universe        
         num_eventtypes = int(sys.argv[4])
     if len(sys.argv) > 4 and len(sys.argv) < 7 :   #write event types to file  
         #eventrates = generate_eventrates(eventskew,num_eventtypes)   
-        toFile = True
-    if len(sys.argv) > 6:     # generate event types from file and apply given number of swaps
+        toFile = False
+    if len(sys.argv) > 5:     # generate event types from file and apply given number of swaps
         eventrates = event_rates_file # get event rates for event types
         nodeassignment = event_node_assignment  # get node assignment, which node generates which event types
-        swaps = int(sys.argv[6]) # number of swaps
+        swaps = int(sys.argv[5]) # number of swaps
         toFile = False # do not save generated rates to file
         
     if len(sys.argv) > 6:        # for setting event types to min/max rates (kleene, nseq experiments)
@@ -137,18 +137,19 @@ def main():
         eventrates = swapRatesMax(eventtype, eventrates, param)   
     
     
-    eventrates = sorted(generate_eventrates(eventskew,num_eventtypes))
+    #eventrates = sorted(generate_eventrates(eventskew,num_eventtypes))
+    eventrates =  generate_eventrates(eventskew,num_eventtypes)
+    
         
-        
-    if toFile:
-        eventrates = sorted(generate_eventrates(eventskew,num_eventtypes))
-        nw= []
-        for node in range(nwsize):
-            nw.append(generate_events(eventrates, node_event_ratio))
-        print(nw)
-        nodeassignment = generate_assignment(nw, num_eventtypes)
-        with open('rates', 'wb') as rates_file:
-              pickle.dump((eventrates, nodeassignment), rates_file) 
+    #if toFile:
+    #    eventrates = sorted(generate_eventrates(eventskew,num_eventtypes))
+    #    nw= []
+    #    for node in range(nwsize):
+    #        nw.append(generate_events(eventrates, node_event_ratio))
+    #    
+    #    nodeassignment = generate_assignment(nw, num_eventtypes)
+    #    with open('rates', 'wb') as rates_file:
+    #          pickle.dump((eventrates, nodeassignment), rates_file) 
                 
     
     #if not toFile:
@@ -156,19 +157,32 @@ def main():
 
     #random.shuffle(eventrates)
     
-    eventrates = sorted(generate_eventrates(eventskew,num_eventtypes))
-        
+    #eventrates = sorted(generate_eventrates(eventskew,num_eventtypes))
+    #eventrates =  [990,666,107,200,320,152, 0.6, 0.6,13.3] #google 30
+    #eventrates  =  [1485,1000, 161, 300, 480, 229, 1, 1,20] #google 20
+    #eventrates = [2970, 2000, 322, 600, 960, 458,2, 2, 40] # google 10
+    
+    #eventrates =  [0.5, 6, 1, 136, 1000, 250, 0.5, 30, 60] # citibike 20
+    #eventrates = [1,12,2,272, 2000, 500, 1, 60, 120] # citibike 10
+    ##eventrates = [0.3, 4, 0.6, 91, 666, 166, 0.3, 20, 40] # citibike 30
+
+    #eventrates = [2,20,30,6,10,1,2, 2, 40] 
+    
     nw = []    
     for node in range(nwsize):
         nw.append(generate_events(eventrates, node_event_ratio))
         
+    print(nw)     
     while not allEvents(nw):
-        
+        nw = []    
+
         for node in range(nwsize):
             nw.append(generate_events(eventrates, node_event_ratio))
 
-    
-    #export eventskew, node_eventratio, networksize, maximal difference in rates
+
+    ## INSERT NETWORK HERE
+    #nw = [[2970, 2000, 322, 600, 960, 458, 2, 2, 40],[2970, 2000, 322, 600, 960, 458, 2, 2, 40],[2970, 2000, 322, 600, 960, 458, 2, 2, 40],[2970, 2000, 322, 600, 960, 458, 2, 2, 40],[2970, 2000, 322, 600, 960, 458, 2, 2, 40],[2970, 2000, 322, 600, 960, 458, 2, 2, 40],[2970, 2000, 322, 600, 960, 458, 2, 2, 40],[2970, 2000, 322, 600, 960, 458, 2, 2, 40],[2970, 2000, 322, 600, 960, 458, 2, 2, 40],[2970, 2000, 322, 600, 960, 458, 2, 2, 40]]
+
     networkExperimentData = [eventskew, num_eventtypes, node_event_ratio, nwsize, min(eventrates)/max(eventrates)]
     with open('networkExperimentData', 'wb') as networkExperimentDataFile:
         pickle.dump(networkExperimentData, networkExperimentDataFile)

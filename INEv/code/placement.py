@@ -3,6 +3,7 @@
 """
 Created on Tue Aug 10 13:16:11 2021
 
+@author: samira
 """
 import multiprocessing
 from processCombination import *

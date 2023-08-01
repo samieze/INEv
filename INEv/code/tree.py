@@ -401,7 +401,11 @@ class PrimEvent(Tree):
         return rates[filter_numbers(self.evtype)]
 
 #print(SEQ(KL(AND(PrimEvent(('A')))), KL(SEQ(PrimEvent('B'), KL(PrimEvent('D'))))).stripKL_simple())
+
 q = AND(PrimEvent('A'), SEQ(KL(PrimEvent('E')),  NSEQ(PrimEvent('B'), PrimEvent('D'), PrimEvent('E'))), PrimEvent('F'))
+
+
+
 negated = NSEQ(PrimEvent('B'), PrimEvent('D'), PrimEvent('E')).get_negated()[0]
 #äprint(q.stripKL_simple().evaluate())
 #print(q)

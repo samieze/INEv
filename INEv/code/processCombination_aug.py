@@ -3,6 +3,7 @@
 """
 Created on Mon Aug 16 11:47:10 2021
 
+@author: samira
 """
 from functools import reduce
 from generate_projections import *

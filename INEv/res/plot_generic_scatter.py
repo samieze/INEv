@@ -3,6 +3,7 @@
 """
 Created on Mon Nov 29 16:43:03 2021
 
+@author: samira
 """
 import matplotlib.pyplot as plt
 import pandas as pd 
@@ -64,7 +65,7 @@ def main():
     plt.xlabel("Projections")
     plt.ylabel("Computation Time in s")   
     plt.savefig("figs/"+str(myargs.outname), format = 'pdf',  bbox_inches='tight')
-    plt.show()
+    #plt.show()
 
 def myparse_args(parser):
      

@@ -3,6 +3,7 @@
 """
 Created on Mon Nov 29 16:43:03 2021
 
+@author: samira
 """
 import matplotlib.pyplot as plt
 import pandas as pd 
@@ -38,7 +39,7 @@ def main():
     
     ###  use specfied columnnames for x and y axis
     if not mycolumns:
-        print("Mismatch of schemes")
+        print("Mismatch of schemas")
         return
     
     if myargs.xC in list(mycolumns):
@@ -63,6 +64,7 @@ def main():
     plt.yscale("log")
     
     
+
     # arrange x-Ticks
     myX_o = sorted(list(set(df1[X_Column].tolist()))) # to extract x-ticks use values of "X"- column -> normalize X values ? 
     myX = range(0, len(myX_o)) # counting of x ticks
@@ -84,10 +86,9 @@ def main():
     
     plt.xticks(myX, myX_o)    
     #plt.xscale("log")
-    plt.ylim(top=1)
-
+    
     plt.savefig("figs/"+str(myargs.outname), format = 'pdf',  bbox_inches='tight')
-    plt.show()
+    #plt.show()
 
 def myparse_args(parser):
      

@@ -3,6 +3,8 @@
 """
 Created on Fri Dec 10 13:18:01 2021
 
+@author: samira
+
 Generate evaluation plan that can be processed by DCEP Engine from encoding of INEv graph and centralized evaluation, including routing information, output selectors etc.
 
 """
@@ -91,7 +93,8 @@ def processInstance(instance):
         elif type(path[0]) == int:
             routingTuples.append(traverseList(instance.sources, path))
         else:
-            routingTuples.append(traverseListTuples(instance.sources,  path))           
+            routingTuples.append(traverseListTuples(instance.sources,  path))         
+    print(instance, routingTuples)    # -> [entry of routingdict]   
     for path in routingTuples:
         for mytuple in path:
             if not mytuple[0] in instanceDict.keys():
@@ -125,7 +128,6 @@ for i in myplan.projections:
                     forwardingDict[instance.projname][instance.name] = {}
                 if list(instance.routingDict.keys()):    
                     forwardingDict[instance.projname][instance.name] = processInstance(instance)
-                    
                     
 
 # filterdict: proj: [filter, remainingproj, resultingcombination]
@@ -401,9 +403,9 @@ def generatePlan():
     text  = ""
     text +=networkText() + "\n"
     text +="-----------\n"
-    text +="Randomized Rate-Based Primitive Event Generation\n"
-    #text +="Dataset-Based Primitive Event Generation \n"
-    #text +="hm_input_%NodeName%.txt \n"
+    #text +="Randomized Rate-Based Primitive Event Generation\n"
+    text +="Dataset-Based Primitive Event Generation \n"
+    text +="hm_input_%NodeName%.txt \n"
     text +="-----------\n"
     text += singleSelecText() + "\n"
     text +="-----------\n"
@@ -425,9 +427,9 @@ def generateCentralPlan():
     text  = ""
     text +=networkText() + "\n"
     text +="-----------\n"
-    text +="Randomized Rate-Based Primitive Event Generation\n"
-    #text +="Dataset-Based Primitive Event Generation \n"
-    #text +="hm_input_%NodeName%.txt \n"
+    #text +="Randomized Rate-Based Primitive Event Generation\n"
+    text +="Dataset-Based Primitive Event Generation \n"
+    text +="hm_input_%NodeName%.txt \n"
     text +="-----------\n"
     text += singleSelecText() + "\n"
     text +="-----------\n"
@@ -450,12 +452,12 @@ def filterUsed():
     
 if filterUsed() or not filterUsed():
     
-    f = open("plans/" + str(ID) + filterUsed() +"_MS.txt", "w")   
+    f = open("../plans/" + str(ID) + filterUsed() +"_MS.txt", "w")   
    
     f.write(generatePlan()) 
     f.close()
         
-    f = open("plans/" + str(ID) +"_CC.txt", "w")   
+    f = open("../plans/" + str(ID) +"_CC.txt", "w")   
     f.write(generateCentralPlan()) 
     f.close()
 

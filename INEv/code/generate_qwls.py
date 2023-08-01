@@ -310,8 +310,9 @@ def makeLongBalanced(count, length):
     return wl
 
 def main():
-    count = 5
+    count = 3
     length = 5
+    negated = 3
     if len(sys.argv) > 1: 
         length  = int(sys.argv[1])
     if len(sys.argv) > 2:
@@ -327,14 +328,25 @@ def main():
     wl = generate_workload(count, length)
     
     
-    # if negated:
-    #      wl = [AND(PrimEvent('D'),SEQ(PrimEvent('B'), KL(PrimEvent('A')), PrimEvent('C')),PrimEvent('E'))]
-    # else:
-    #      wl = [AND(PrimEvent('D'),SEQ(PrimEvent('B'),  PrimEvent('A'), PrimEvent('C')),PrimEvent('E'))]
+    if negated==1:
+          wl = [AND(PrimEvent('D'),SEQ(PrimEvent('B'), KL(PrimEvent('A')), PrimEvent('C')),PrimEvent('E'))]
+    elif negated == 0:
+          wl = [AND(PrimEvent('D'),SEQ(PrimEvent('B'),  PrimEvent('A'), PrimEvent('C')),PrimEvent('E'))]
+    elif negated==2:
+          wl = [AND(PrimEvent('D'),NSEQ(PrimEvent('B'),  PrimEvent('A'), PrimEvent('C')),PrimEvent('E'))]
         
     
+    #wl = [AND(PrimEvent('E'), PrimEvent('F'), PrimEvent('G'),PrimEvent('H'))] # final 1 bikecity
+    #wl =  [SEQ(PrimEvent('C'), PrimEvent('D'), PrimEvent('E'),PrimEvent('I'))]  # final 2 bikecity
+    #wl = [AND(PrimEvent('A'), SEQ(PrimEvent('D'), PrimEvent('I')),PrimEvent('F'))] #final 3 bikecity
+    #wl = [SEQ(PrimEvent('A'), AND(PrimEvent('B'), PrimEvent('I')),PrimEvent('E')), AND(PrimEvent('E'), PrimEvent('F'), PrimEvent('C'),PrimEvent('H'))] #final 4 bikecity
 
-    
+    #wl = [SEQ(PrimEvent('A'), SEQ(PrimEvent('H'), PrimEvent('B')),PrimEvent('I'))] # Google double update Q1
+    #wl = [SEQ(PrimEvent('A'), PrimEvent('B'), PrimEvent('G'),PrimEvent('F'), PrimEvent('I'))] # Google Lost Job  Q2
+    #wl = [SEQ(PrimEvent('I'), PrimEvent('B'), PrimEvent('H'), PrimEvent('G')), SEQ(PrimEvent('I'), PrimEvent('D'), PrimEvent('H'), PrimEvent('G'))] # Google Q3 failed update
+    #wl = [SEQ(PrimEvent('B'),PrimEvent('C'), PrimEvent('F'),PrimEvent('H'))] # Google Q4 unlucky
+
+    #wl = [SEQ(PrimEvent('E'),PrimEvent('A'), PrimEvent('B'), PrimEvent('C'),PrimEvent('D'),PrimEvent('F'), PrimEvent('G'), PrimEvent('H'), PrimEvent('I'))]
     
     with open('current_wl', 'wb') as wl_file:
         pickle.dump(wl, wl_file)

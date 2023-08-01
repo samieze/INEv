@@ -3,6 +3,8 @@
 """
 Created on Thu Sep 16 15:26:50 2021
 
+@author: samira
+
 Write input file for single-selectivity generator.
 Single selectivities are used for estimating the costs of different output selectors.
 """

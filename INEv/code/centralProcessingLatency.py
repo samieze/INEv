@@ -3,6 +3,8 @@
 """
 Created on Wed Jan 19 10:20:16 2022
 
+@author: samira
+
 Compute processing latency of centralized evaluation using mini-diamonds to reduce number of partial matches during processing.
 Centralized processing latency is used as bound for latency bounded INEv graph computation.
 

@@ -3,6 +3,8 @@
 """
 Created on Fri Jul  8 19:20:58 2022
 
+@author: samira
+
 Incrementally compute costs for INEv graph for query workload which does not consider sharing between queries.
 
 """
@@ -102,6 +104,9 @@ def merge_myRouting(newRouting, oldRouting):
 
 with open('EvaluationPlan', 'rb') as EvaluationPlan_file: 
               myplan = pickle.load(EvaluationPlan_file)[0]
+              
+with open('ExperimentResults',  'rb') as result_file:
+            results = pickle.load(result_file)              
 def main():
 
     
@@ -111,33 +116,30 @@ def main():
     cur_projRates = {}    
     cur_NumETbs = {}
     
-    
+    Last = False
     myID = 0
     iteration = 0 
-    qwlLength = 15
-    notFirst = True 
-    run = 0
-    skew = 0
+    qwlLength = 5
+    notFirst = False
+ 
+    # if len(sys.argv) > 1:
+    #     myID = int(sys.argv[1])
     if len(sys.argv) > 1:
-        myID = int(sys.argv[1])
+        iteration = int(sys.argv[1])
     if len(sys.argv) > 2:
-        iteration = int(sys.argv[2])
-    if len(sys.argv) > 3:
-        qwlLength = int(sys.argv[3])  
-    if len(sys.argv) > 4:
-        run = int(sys.argv[4])     
-    if len(sys.argv) > 5:
-        skew = float(sys.argv[5])     
+        qwlLength = int(sys.argv[2])  
+
+    
    
     if iteration == 0:
         notFirst = False
         Last = False
-    elif iteration < qwlLength :
+    elif iteration + 1 < qwlLength :
         notFirst = True
         Last = False
-    elif qwlLength  == iteration :
-         Last = True
-         notFirst = True
+    elif qwlLength == iteration + 1:
+        Last = True
+        notFirst = True
     
     
     if notFirst:
@@ -149,7 +151,7 @@ def main():
               
     
     print("Old_Costs", getCosts(cur_routingDict,  cur_projRates, cur_NumETbs))
-    
+    print("IIIIIIIINNNNNNNNNNNFOOOOOOOOOOOOO", iteration, qwlLength, Last)
     
     singleNodeRoutes =  {}
     
@@ -177,24 +179,26 @@ def main():
     if not Last:
         with open('partialInev', 'wb') as partialInev_file: 
               pickle.dump((myRouting, myprojrates, cur_NumETbs),partialInev_file)
+              
+    mergedCosts =  getCosts(myRouting,  myprojrates, cur_NumETbs)
+    print("Merged Costs",  mergedCosts) 
     
-    print("Merged Costs", getCosts(myRouting,  myprojrates, cur_NumETbs)) 
-    
-    myResult  = [myID, getCosts(myRouting,  myprojrates, cur_NumETbs), run, skew]
-    schema = ["ID", "UnsharedRatio", "Run", "Skew"]       
+    # get ExperimentDataFrom original Costs
+    myResult  = [results[0], mergedCosts, results[1], qwlLength]
+    schema = ["ID", "UnsharedRatio", "SharedCosts", "wl_Size"]       
        
     if Last: # if current wl has desired length, save costs of graph (combination and placement for each query computed in isolation)
-            new = False
-            try:
-                f = open("multi-query/unsharedCosts_15.csv")   
-            except FileNotFoundError:
-                new = True           
+             new = False
+             try:
+                 f = open("../res/window_size.csv")   
+             except FileNotFoundError:
+                 new = True           
             
-            with open("multi-query/unsharedCosts_15.csv", "a") as result:
-              writer = csv.writer(result)  
-              if new:
-                  writer.writerow(schema)              
-              writer.writerow(myResult)
+             with open("../res/window_size.csv", "a") as result:
+                 writer = csv.writer(result)  
+                 if new:
+                     writer.writerow(schema)              
+                 writer.writerow(myResult)
               
 
 if __name__ == "__main__":

@@ -3,6 +3,7 @@
 """
 Created on Thu Aug 12 12:33:55 2021
 
+@author: samira
 """
 
 def column(matrix, i):

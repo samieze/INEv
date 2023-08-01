@@ -3,6 +3,7 @@
 """
 Created on Wed Aug 18 16:32:53 2021
 
+@author: samira
 """
 from placement_aug import *
 import time
@@ -15,7 +16,7 @@ maxDist = max([max(x) for x in allPairs])
 def getLowerBound(query): # lower bound -> for multiple projections, keep track of events sent as single sink and do not add up
     MS = []
     for e in query.leafs():        
-        myprojs= [p for p in list(set(projsPerQuery[query]).difference(set([query]))) if totalRate(p)<rates[e] and not e in p.leafs()] #TODO define over paths
+        myprojs= [p for p in list(set(projsPerQuery[query]).difference(set([query]))) if totalRate(p)<rates[e] and not e in p.leafs()]
         if myprojs:
             MS.append(e)
         for p in [x for x in projsPerQuery[query] if e in x.leafs()]:
@@ -30,7 +31,7 @@ def getLowerBound(query): # lower bound -> for multiple projections, keep track 
     minimalProjs = sorted([totalRate(p) for p in projsPerQuery[query] if not p==query])[:len(list(set(MS)))-1]
     if not len(nonMS) == len(query.leafs()):
         minimalRate +=  sum(minimalProjs) * longestPath
-    return minimalRate#, nonMS)  #TODO FINISHHH"""
+    return minimalRate#, nonMS) 
 
 
 def normalize(x, data):
@@ -42,15 +43,18 @@ def main():
     
   
     Filters = []
+    writeExperimentData = 0
     
     filename = "None"
     noFilter = 0 # NO FILTER
     
-    
+    #only write experiment data for shared costs, use ID and total costs for writing results of shared/seperate window
     if len(sys.argv) > 1:
-        filename = sys.argv[1]
-    if len(sys.argv) > 2:
-        noFilter = int(sys.argv[2])
+         filename = sys.argv[1]
+    # if len(sys.argv) > 1:
+    #     
+    # if len(sys.argv) > 2:
+    #     noFilter = int(sys.argv[2])
         
     ccosts = NEWcomputeCentralCosts(wl)
     #print("central costs : " + str(ccosts))
@@ -79,7 +83,7 @@ def main():
     dependencies = compute_dependencies(unfolded)
     processingOrder = sorted(compute_dependencies(unfolded).keys(), key = lambda x : dependencies[x] ) # unfolded enthält kombi   
     costs = 0
-    #processingOrder = compute_dependencies_alt(unfolded) # alternative processing order // TODO: DEBUG
+    #processingOrder = compute_dependencies_alt(unfolded) # alternative processing order //
     for projection in processingOrder:  #parallelize computation for all projections at the same level
             if set(unfolded[projection]) == set(projection.leafs()): #initialize hop latency with maximum of children
                hopLatency[projection] = 0 
@@ -133,18 +137,18 @@ def main():
                 print("SiS " + str(projection) + "PC: " + str(additional)  + " Hops: " + str(result[2]))
                 
     mycosts = costs/ccosts[0]
-    print("Muse Transmission " + str(costs) )
-    lowerBound = 0
-   # for query in wl:
-      #  lowerBound += getLowerBound(query)
+    print("INEv Transmission " + str(costs) )
+    if len(wl)>1 or wl[0].hasKleene() or wl[0].hasNegation():
+        lowerBound = 0
+    else:
+      for query in wl:
+        lowerBound= getLowerBound(query)
     print("Lower Bound: " + str(lowerBound / ccosts[0]))
 
     print("Transmission Ratio: " + str(mycosts))
-    print("MuSE Depth: " + str(float(max(list(dependencies.values()))+1)/2))
+    print("INEv Depth: " + str(float(max(list(dependencies.values()))+1)/2))
     
-   # hoplatency = max([hopLatency[x] for x in wl if x in hopLatency.keys()]) # in case layers remove queries
     
-   # print("Hop Latency: " + str(hoplatency))
     
     
     
@@ -165,20 +169,11 @@ def main():
                       
     ID = int(np.random.uniform(0,10000000))
     hopfactor = processingLatencyParams[2]
-   # museLatency = processingLatencyParams[0]  + hoplatency * hopfactor
-   # centralLatency = processingLatencyParams[1] + centralHopLatency * hopfactor - hopfactor * longestPath * 1.5
   
-    #totalLatencyRatio = museLatency/centralLatency
     
-   # print("total LatencyRatio: " + str(totalLatencyRatio))
     
-    f = open("out.txt","w")
-    if Filters:        
-        f.write("VAR=true")       
-    else:
-        f.write("VAR=false") 
-    f.close
-    hoplatency = 0    # ACHTUNG vorrübergehend bevor saubere umstelung auf KL und NSEQ
+   
+    hoplatency = 0    
     totalLatencyRatio = 0
     myResult = [ID, mycosts,  Filters, networkParams[3], networkParams[0], networkParams[2], len(wl), combigenParams[3], selectivityParams[0], selectivityParams[1], combigenParams[1], longestPath, totaltime, hoplatency, float(max(list(dependencies.values()))/2), totalLatencyRatio, ccosts[0], lowerBound / ccosts[0], networkParams[1]]
     schema = ["ID", "TransmissionRatio", "FilterUsed", "Nodes", "EventSkew", "EventNodeRatio", "WorkloadSize", "NumberProjections", "MinimalSelectivity", "MedianSelectivity","CombigenComputationTime", "Efficiency", "PlacementComputationTime", "HopCount", "Depth", "ProcessingLatencyRatio", "CentralTransmission", "LowerBound", "EventTypes"] 
@@ -186,15 +181,15 @@ def main():
  
     new = False
     try:
-        f = open("../res/"+str(filename)+".csv")   
+         f = open("../res/"+str(filename)+".csv")   
     except FileNotFoundError:
-        new = True           
+         new = True           
         
     with open("../res/"+str(filename)+".csv", "a") as result:
-      writer = csv.writer(result)  
-      if new:
-          writer.writerow(schema)              
-      writer.writerow(myResult)
+       writer = csv.writer(result)  
+       if new:
+           writer.writerow(schema)              
+       writer.writerow(myResult)
       
     with open('EvaluationPlan',  'wb') as EvaluationPlan_file:
         pickle.dump([myPlan, ID, MSPlacements], EvaluationPlan_file)
@@ -205,6 +200,14 @@ def main():
     with open('ExperimentID',  'wb') as ExperimentID_file:
         pickle.dump([ID,ccosts[0]], ExperimentID_file)
     
+    if writeExperimentData:
+        with open('ExperimentResults',  'wb') as ExperimentID_file: 
+            pickle.dump([ID,costs], ExperimentID_file)  # write only INEv Costs and ID for timewindow exp
+
+    #for q in wl:
+    #    print(projrates[q][1])
+#    with open('ExperimentResults',  'wb') as ExperimentID_file: -> for adaptivity & topology?
+#        pickle.dump([ID,mycosts,ccosts[0]], ExperimentID_file)  
 
 if __name__ == "__main__":
     main()                    

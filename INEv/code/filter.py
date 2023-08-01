@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
+Created on Fri Aug 20 13:03:07 2021
+
+@author: samira
 
 Output selector related methods.
 """
