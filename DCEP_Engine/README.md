@@ -1,35 +1,16 @@
-# DCEP Ambrosia
-Distributed Complex Event Processing with Microsoft Ambrosia
+# DCEP Engine
+Light-Weight Distributed Complex Event Processing Engine.
 
-## Related Links
-- https://github.com/microsoft/AMBROSIA
+
 
 ## Run
 
-The distributed query processor can be used within a simulation and with Ambrosia.
+Our distributed query processor can be started using the follwing command from inside the directory `/bin` to run query *Q1* of our case study:
 
-
-### using Ambrosia
-Running our distributed query processor with Ambrosia requires a full installation and setup of Ambrosia as described in https://github.com/microsoft/AMBROSIA.
-More concretely, we recommend running the **hello world** example (https://github.com/microsoft/AMBROSIA/tree/master/Samples/HelloWorld) first before starting DCEP-Ambrosia.
-
-Before the DCEP Ambrosia engine can be started, the connection string from the Azure account must be exported. To do this, you have to login into your Azure account, click on the previously created storage account and then click on "Access keys". The connection string must then be copied and exported within the command line using the command "export". Make sure that the part after AZURE_STORAGE_CONN_STRING=".." is put in quotation marks, i.e.,
-
-`export AZURE_STORAGE_CONN_STRING="DefaultEndpointsProtocol=https;AccountName=ExampleUser;AccountKey=AOSIDJiojsad48nj34EKMRkxBaQPW0Puy14mk32m4nvmPZ1y/6Ohx8lzE124ok4116Vm0L3d/M941BPyTo412nj4A==;EndpointSuffix=core.windows.net"`
-
-To start the Ambrosia implementation for 20 nodes using the input example `Q1_douleUpdate.txt`, run the following command from inside the directory `/bin`:
-
-`../bin/run_all_linux.sh ../inputexamples/google_cluster/Q1_doubleUpdate/Q1_douleUpdate.txt -t Minute -w 30 -d 10 --name doubleUpdate > output.txt`
+`../bin/DCEP.Simulation ../inputexamples/google_cluster/Q1_doubleUpdate/Q1_doubleUpdate.txt -t Minute -w 30 -d 10 --name doubleUpdate > output.txt`
 
 The last lines of the created file `output.txt` contain the totally generated primitve events and projections, as well as number of events sent.
-
-### using Simulation
-
-Likewise, our distributed query processor can be started as a simulation using the follwing command from inside the directory `/bin`:
-
-`../bin/DCEP.Simulation ../inputexamples/google_cluster/Q1_doubleUpdate/Q1_douleUpdate.txt -t Minute -w 30 -d 10 --name doubleUpdate > output.txt`
-
-The last lines of the created file `output.txt` contain the totally generated primitve events and projections, as well as number of events sent.
+Input files for the distributed query evaluation using our DCEP engine can be generated within the `../INEv` folder.
 
 #### Parameters
 
@@ -45,17 +26,6 @@ Parameter | Meaning
 -f | Optional. The factor each event output rate is multiplied with.
 --doBenchmarkTo | Optional. Set to 'CSV' to write performance metrics into the /out/benchmark/ directory.
 --name | Required. Used as a custom identifier for benchmark file names in /out/benchmark/.
-
-### How to build
-- Before building the project, install the .NET SDK version 5.0.404.
-
-To build this project, the script `../scripts/build_dotnetcore.sh` needs execution permissions (e.g., using Linux `cd ../scripts` and `chmod +x build_dotnetcore.sh`). Afterward, the script must be run from the main directory:
-
-`cd ../DCEP Ambrosia` and type `./scripts/buildotnet_core.sh`.
-
-After the project has been built successfully, a `/publish` folder is created in the directory that contains two folders, `/bin` and `/inputdata`. Inside the `/bin` folder are all files needed to run the engine, and inside `/inputdata` are all input files. Now, the engine can be started using the following command:
-
-`../publish/bin/DCEP.Simulation ../inputexamples/google_cluster/Q1_doubleUpdate/Q1_douleUpdate.txt -t Minute -w 30 -d 10 --name doubleUpdate > output.txt`
 
 
 ### Case Study Parameters
