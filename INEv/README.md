@@ -3,11 +3,11 @@
 This folder contains the algorithms used to construct INEv graphs for a given network, query workload, network topology and set of selectivities. To this end, it also contains generators for networks and workloads for given characteristics.
 
 ## Scripts
-The scripts contained can reproduce the following subset of the experiments presented in the paper, e.g.:
-- *\_qwl execute set a of experiments for query workloads of varying sizes for networks with different event rate distributions (./eventSkew_qwl), event node distributions (./eventNode) and number of nodes (./nwSize)
+The scripts contained can reproduce a subset of the experiments presented in the paper, e.g.:
+- *\_qwl execute a set of experiments for query workloads of varying sizes for networks with different event rate distributions (./eventSkew_qwl), event node distributions (./eventNode) and number of nodes (./nwSize)
 - conflicting_qwl to reproduce performance of multi-query scenario with varying overlap in event types between queries
 
-Using the `eventSkew_qwl_plan.sh`, saves for each experiment the resulting INEv graphs as well as their counter part for a centralized evaluation in the `plans/` folder. 
+Using the `eventSkew_qwl_plan.sh`, saves for each resulting INEv graph as well as for its centralized counter part an evaluation plan in the `plans/` folder. 
 
 Please note, that only only one script can be executed at a time.
 
