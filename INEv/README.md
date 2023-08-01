@@ -1,6 +1,6 @@
 # INEv Algorithms
 
-
+This folder contains the algorithms used to construct INEv graphs for a given network, query workload, network topology and set of selectivities.
 
 ## Scripts
 Scripts for reproducing experiments presented in paper.
