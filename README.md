@@ -7,12 +7,11 @@ This repository contains the queries and realworld data sets used in our case st
 
 #### INEv
 
-The directory `INEv` contains the implementation of our algorithms and the scripts used to conduct the experiments presented in the paper.
+The directory `INEv` contains the implementation of our algorithms and some of the scripts used to conduct the experiments presented in the paper.
 
-#### DCEP_Ambrosia
+#### DCEP_Engine
 
-The directory `DCEP_Ambrosia` contains the implementation of light-weight distributed complex event processing engine using Microsoft Ambrosia for fault-tolerant communication. The query processor can alternatively be started as a simulation which does not require to locally set up Ambrosia.
-The input files used to conduct our case study as well as input files for the execution of in-network evaluation based on INEv graphs constructed for synthetic data can be found in `DCEP_Ambrosia/inputexamples`.
+The directory `DCEP_Engine` contains the implementation of a light-weight distributed complex event processing engine. INEv graphs constructed in the INEv directory along with their network and query workload specification can be evaluated with the engine by passing the respective evaluation plan as parameter. The input files used to conduct our case study as well as input files for the execution of in-network evaluation based on INEv graphs constructed for synthetic data can be found in `DCEP_Ambrosia/inputexamples`.
 
 #### CaseStudy
 
