@@ -23,9 +23,21 @@ with open("None.csv") as csvfile:
                 
                 
 def extractLatency(line):
-    pt = datetime.strptime(line[-16:][:-4],'%H:%M:%S.%f')
+    if line.startswith("-"):
+        line = line[1:]
+        sign = -1
+    else:
+        sign = 1
+
+    ts = line[:15]
+
+    try:
+        pt = datetime.strptime(ts,'%H:%M:%S.%f')
+    except ValueError:
+        pt = datetime.strptime(ts, '%H:%M:%S')
+
     total_msseconds = pt.second*1000 + pt.minute*60000 + pt.hour*3600000 + pt.microsecond/1000
-    return total_msseconds
+    return sign * total_msseconds
 
 def usable(latencies):
     if sorted(latencies) == latencies:
@@ -45,7 +57,7 @@ def getLR(ccValues, msValues):
 def getLatencies(file_name):
     latencies = []
     with open(file_name) as csvfile:
-        reader = csv.reader(csvfile)
+        reader = csv.reader(csvfile, delimiter=";")
         for row in reader:             
              if row and "Complex" in row[0]:
                  latencies.append(extractLatency(row[len(row)-1]))

@@ -14,30 +14,50 @@ This script rents raspberry pis from the service provider mythic beasts (https:/
 - Generate a new api key at https://www.mythic-beasts.com/customer/api-users/create (Select only 'Rasperry Pi provisioning' at the bottom of the page. Click 'Create API Key'.)
 - Add the API_KEY and th API_SECRET to the appropriate lines of the file `.env`
 
-### Create and activate virtual environment: 
-
-- ```python3 -m venv venv```
-- ```source venv/bin/activate```
-### Install python modules to virtual environment: 
-
-- ```pip install -r requirements.txt```
-
-
+### Create a python virtual environment and install python modules to it:
+  ```
+  python3 -m venv venv
+  source venv/bin/activate
+  pip install -r requirements.txt
+  ```
 ## Usage
-
 ### Provisioning (renting) Pis
-Run provisionsPis.py. This will generate three files:
 
+Activate the python virtual environment:
+```
+source venv/bin/activate
+```
+
+Run `python provisionsPis.py`. This will generate three files:
 - config-local (SSH configuration to access the raspberry pis remotely)
 - config (SSH configuration for the PIs to reach one another)
 - IPs.txt (contains IP addresses of the raspberry PIs)
 
-Add the key sm22-repro to your ~/.ssh folder.
+Run install-generated-files.sh to copy these files to the appropriate locations within the project.
 
-Copy the contents of config-local into your ssh configuration (by default at ~/.ssh/config).
+This will:
+  - Copy config to ../deploy/.ssh/config.
+  - Overwrite ../deploy/publish/IPs.txt and ../flink-experiment/IPs.txt with the IPs.txt
 
-Copy config to ../deploy/.ssh/config.
+Configure your local ssh client to communicate with the PIs. 
+
+  -  Add the key sm22-repro to your ~/.ssh folder
+  -  Append the contents of config-local into your ssh configuration (usually ~/.ssh/config). 
+
+	You can run setup-local-ssh.sh to attempt to do this automatically.
+
+Finally deactivate the python virtual environment to avoid interering with other local python programs:
+```
+deactivate
+```
 
 ### Unprovisioning (cancelling) rented Pis
 
-Comment out the line 'provision' and 'analyze' in the main function and comment 'unprovision', then run the script.
+Comment out the line 'provision' and 'analyze' in the main() function of provisionPis.py, and uncomment the line begining with 'unprovision'. Then run the python script:
+
+```
+source venv/bin/activate
+python provisionPis.py
+deactivate
+```
+

@@ -3,13 +3,15 @@
 ## Prepare your local machine
  - This assumes Ubuntu 22.10 with bash
  - Install dependencies:
-`sudo apt install python3 python3-venv rsync ansible-core`
+`sudo apt install python3 python3-venv rsync ansible-core rename`
+ - Install required python packages (numpy, matplotlib, pandas):
+`pip3 install -r ../local_experiments/requirements.txt`
 
 ## Preparing the cluster
 ### Option 1: Obtain and set up hardware using mythic beasts
 We used 10 Raspberry Pis rented from the cloud service provider mythic beasts (https://mythic-beasts.com) for the experiments. 
 
-Refer to the file README.md in the `provisonMythicBeasts` folder for a script for instructions on how to reproduce this setup using a mythic beasts account.
+Refer to the file README.md in the `provisonMythicBeasts` folder for instructions on how to reproduce this setup using a mythic beasts account.
  
 ### Option 2: Set up your own pi cluster
 - Set up 10x Raspberry Pi 4 1.5GHz 4GB RAM running Raspbian Buster 10 32 bit, in a 1 GBit Ethernet LAN
@@ -17,18 +19,18 @@ Refer to the file README.md in the `provisonMythicBeasts` folder for a script fo
 
 - Subsitute IP-Adresses in IPs.txt with the external IP addresses of all pis.
 
-### Configure IPs
 - Overwrite deploy/publish/IPs.txt and flink-experiment/IPs.txt with the IPs.txt file you created in the last step. 
-- If not using mythic beasts, set the IPs in deploy/.ssh/config according to your IPs.txt (otherwise this is already done)
+
+- Set the IPs in deploy/.ssh/config according to your IPs.txt 
 
 ### Install software on Pis and setup ssh connectivity between PIs
 - In the folder ./ansible, run the `setup-pis.yaml` playbook to cofigure the system:
 
 `ansible-playbook ./setup-pis.yaml`
 
-This will install required packages on the pis, ensure the pis have appropriate local hostnames (pi0...pi9), and ensure that all pis are reachable with passwordless ssh from pi0 under the names pi0 to pi9.  Finally it will copy the folders ./deploy to /root folder of the pis.
+This will install required packages on the pis, ensure the pis have appropriate local hostnames (pi0...pi9), and ensure that all pis are reachable with passwordless ssh from pi0 under the names pi0 to pi9.  Finally it will copy the contents of ./deploy into the /root folder of the pis.
 
-Ansible may take up to half an hour to run. If there are errors it may help to run the playbook again. The playbook is idempotent so it is not a problem to run them multiple times, and should run faster on the second run.
+Ansible may take up to half an hour to run. If there are errors it may help to run the playbook again. The playbook is idempotent so it is not a problem to run it multiple times, and it should run faster the second time.
 
 ## Run Latency-Throughput Experiment for Synthetic Data
 
