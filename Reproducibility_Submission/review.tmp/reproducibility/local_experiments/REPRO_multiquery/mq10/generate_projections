@@ -1,0 +1,153 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Sep 17 15:46:49 2021
+
+@author: samira
+"""
+import subsets as sbs 
+#from processCombination import *
+from filter import *
+
+with open('current_wl',  'rb') as  wl_file:
+    wl = pickle.load(wl_file)
+    
+with open('selectivities', 'rb') as selectivity_file:
+    selectivities = pickle.load(selectivity_file) 
+
+
+    
+def returnPartitioning(proj, combi):
+    ''' returns list containing partitioning input type of proj generated with combi '''
+    myevents = [x for x in combi if len(x) == 1]
+    myevents = sorted(myevents, key = lambda x: rates[x], reverse = True)
+    if myevents:
+        if isPartitioning(myevents[0], combi, proj):         
+                    return [myevents[0]]
+    return []
+
+def isPartitioning(element, combi, proj):
+       ''' returns true if element partitioning input of proj generated with combi '''
+       # for event in proj.leafs():
+       #     etbs*= len(IndexEventNodes[event])
+       #etbs = returnETBs(proj, network)
+       mysum =  0    
+       for i in combi:   
+           
+           if i in rates.keys():        
+              additional = rates[i] * instances[i]              
+              mysum += additional
+              
+           else:
+               additional = projrates[i][1] * getNumETBs(i)              
+               mysum += additional #  len(returnETBs(projection, network))
+              
+       mysum -= rates[element] * instances[element]
+       mysum += projrates[proj][1] * getNumETBs(proj) # additional constraint about ratio of partitioning event type and outputrate of projection
+       if rates[element] > mysum : 
+           return True
+
+       else: 
+           return False    
+       
+    
+def min_max_doubles(query,projevents):
+    doubles = getdoubles_k(projevents)
+    leafs = map(lambda x: filter_numbers(x), query.leafs())
+    for event in doubles.keys():
+        if not doubles[event] == leafs.count(event):
+            return False
+    return True
+ 
+    
+def settoproj(evlist,query):
+    """ take query and list of prim events and return projection"""
+    leaflist = []
+    evlist = sepnumbers(evlist)    
+    for i in evlist:   
+        leaflist.append(PrimEvent(i))        
+    newproj = query.getsubop(leaflist)  
+    return newproj
+
+def isBeneficial(projection, rate):
+    """ determines for a projection based on the if it is beneficial """
+    totalProjrate = rate * getNumETBs(projection)
+    sumrates = sum(map(lambda x: rates[x] * float(len(nodes[x])), projection.leafs()))
+    if sumrates > totalProjrate:
+        return True
+    else:
+        return False
+
+def totalRate(projection):
+    if projection in projlist: # is complex event
+        return projrates[projection][1] * getNumETBs(projection)
+    else:
+        return rates[projection] * len(nodes(projection))
+
+def optimisticTotalRate(projection): # USE FILTERED RATE FOR ESTIMATION 
+    if projection in projlist: # is complex event
+        return projFilterDict[projection][getMaximalFilter(projFilterDict, projection)][0] * getNumETBs(projection)
+    else:
+        return rates[projection.leafs()[0]] * len(nodes[projection.leafs()[0]])
+    
+def return_selectivity(proj):
+    
+    """ return selectivity for arbitrary projection """
+    proj = list(map(lambda x: filter_numbers(x), proj))
+    two_temp = sbs.printcombination(proj,2)    
+    selectivity = 1
+    for two_s in two_temp:       
+        if two_s in selectivities.keys():           
+           if selectivities[two_s]!= 1:
+               selectivity *= selectivities[two_s]
+    return selectivity
+
+def generate_projections(query):  
+    """ generates list of benecifical projection """    
+    projections = []
+    projrates = {}
+    match = query.leafs()
+    projlist = match
+    for i in range(2, len(match)):
+           iset =  sbs.boah(match, i) 
+           for k in range(len(iset)):                   
+                    curcom = list(iset[k].split(","))  
+                    projevents = rename_without_numbers("".join(sorted(list(set(curcom))))) #A1BC becomes ABC and A1B1CA2 becomes A1BCA2                    
+                    mysubop = settoproj(curcom, query) 
+                    mysubop = mysubop.rename_leafs(sepnumbers(projevents)) #renaming on tree > A1BC becomes ABC and A1B1CA2 becomes A1BCA2                                                                  
+                    outrate = mysubop.evaluate()                          
+                    selectivity =  return_selectivity(curcom)
+                    rate = outrate * selectivity                            
+                    placement_options = isBeneficial(mysubop, rate)  
+                    
+                    if placement_options and min_max_doubles(query, projevents):  # if the projection is beneficial (yields a placement option) and minmax?                         
+                                projrates[mysubop] = (selectivity, rate)                    
+                                projections.append(mysubop) # do something to prevent a1a2b and a2a3b to be appended to dictionary
+                                
+    projections.append(query)
+    outrate = query.evaluate()                          
+    selectivity =  return_selectivity(query.leafs())
+    rate = outrate * selectivity                            
+    projrates[query] = (selectivity, rate) 
+
+    return projections, projrates
+
+def returnSubProjections(proj, projlist): # beware of primitive events with multiple occurrences!
+    """ return list of projection keys that can be used in a combination of a given projection"""    
+    myprojlist = [x for x in projlist if len(x.leafs()) <= len(proj.leafs()) and set(x.leafs()).issubset(set(proj.leafs()))]
+    outputlist = []                          
+    for i in myprojlist:
+                if not proj == i:
+                 if i.can_be_used(proj):    
+                     outputlist.append(i)
+
+    return outputlist
+
+query = wl[0]
+newprojs = generate_projections(wl[0])
+projlist = newprojs[0]
+projrates = newprojs[1]
+
+
+with open('projrates',  'wb') as projratesfile:
+    pickle.dump(projrates, projratesfile)

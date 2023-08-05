@@ -1,0 +1,3 @@
+metrics.reporters: slf4j
+metrics.reporter.slf4j.factory.class: org.apache.flink.metrics.slf4j.Slf4jReporterFactory
+metrics.reporter.slf4j.interval: 2 SECONDS

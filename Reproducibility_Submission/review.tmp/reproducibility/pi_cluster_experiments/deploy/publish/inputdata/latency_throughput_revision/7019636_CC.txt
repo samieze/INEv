@@ -1,0 +1,169 @@
+15 3 0 380 0 0 0 1 0 0 
+0 3 4 0 0 0 1 0 0 0 
+0 0 4 380 0 0 1 1 0 25 
+15 0 4 380 0 0 0 0 0 25 
+0 0 0 0 0 0 1 1 0 25 
+15 0 4 380 0 0 0 0 0 0 
+0 0 4 0 0 0 0 0 0 0 
+15 0 0 380 0 0 0 0 0 0 
+0 3 4 0 0 0 0 0 0 25 
+15 0 4 380 425 0 1 1 0 25 
+-----------
+Randomized Rate-Based Primitive Event Generation
+-----------
+Single Selectivities:{'J': 1.0, 'E': 1.0, 'D': 1.0, 'B': 1.0, 'J|EJ': 0.7981236072543867, 'E|EJ': 0.06824649950193604, 'J|DJ': 1.0, 'D|DJ': 1.0, 'J|BJ': 0.608560975651882, 'B|BJ': 0.11541530614505177, 'D|DE': 0.705544422608996, 'E|DE': 0.058142087094188014, 'B|BE': 0.11477921990594113, 'E|BE': 0.7988412323446127, 'D|BD': 0.23072009467624716, 'B|BD': 0.37531945658525756, 'J|DEJ': 0.014648223024966885, 'D|DEJ': 0.621394251200298, 'E|DEJ': 0.24547843332615846, 'E|BEJ': 0.05378476806268053, 'J|BEJ': 0.019746298854057348, 'B|BEJ': 0.3302910309272411, 'D|BDJ': 0.13940739947065595, 'J|BDJ': 0.11722671474218473, 'B|BDJ': 0.37217019286329917, 'B|BDE': 0.1343032328177866, 'D|BDE': 0.05694688870019159, 'E|BDE': 0.042586186745332155, 'D|BDEJ': 0.030444635582871415, 'J|BDEJ': 0.009421781615205294, 'E|BDEJ': 0.02784008493567948, 'B|BDEJ': 0.15603746903621443, 'G': 1.0, 'G|EG': 0.6890668578980504, 'E|EG': 0.07156369035279155, 'B|BG': 0.18035116546922297, 'G|BG': 0.3152513266573951, 'E|BEG': 0.00594375078069585, 'G|BEG': 0.25914873489301865, 'B|BEG': 0.16689526806106386, 'H': 1.0, 'A': 1.0, 'C': 1.0, 'H|AH': 0.9090129346080673, 'A|AH': 0.05115485409888621, 'H|CH': 0.45824123875162537, 'C|CH': 0.048759695255085445, 'H|HJ': 0.42297037773910917, 'J|HJ': 0.15315305657554393, 'A|AC': 0.7484463646417248, 'C|AC': 0.08211845030620589, 'J|AJ': 0.46131445508864827, 'A|AJ': 0.1266025760617725, 'J|CJ': 1.0, 'C|CJ': 1.0, 'H|ACH': 0.4098367840834872, 'C|ACH': 0.037525387079033135, 'A|ACH': 0.004152191535220536, 'A|AHJ': 0.04920729668472418, 'H|AHJ': 0.3335831228120969, 'J|AHJ': 0.010717625170498757, 'H|CHJ': 0.3390585166492572, 'J|CHJ': 0.06284795248281477, 'C|CHJ': 0.06792427063324136, 'A|ACJ': 0.07765351761943226, 'J|ACJ': 0.3169211733949194, 'C|ACJ': 0.14585745966071959, 'J|ACHJ': 0.002613160153415454, 'A|ACHJ': 0.0026709636523898376, 'H|ACHJ': 0.06298721096458541, 'C|ACHJ': 0.5495438329415602}
+-----------
+~~
+node0
+--
+Forward rules:
+J - [ETB:(J: node2) FROM:[node1] TO:[node9]] 
+J - [ETB:(J: node3) FROM:[node1] TO:[node9]] 
+D - [ETB:(D: node0) FROM:[node0] TO:[node9]] 
+D - [ETB:(D: node2) FROM:[node1] TO:[node9]] 
+D - [ETB:(D: node3) FROM:[node1] TO:[node9]] 
+B - [ETB:(B: node0) FROM:[node0] TO:[node9]] 
+B - [ETB:(B: node1) FROM:[node1] TO:[node9]] 
+G - [ETB:(G: node1) FROM:[node1] TO:[node9]] 
+G - [ETB:(G: node2) FROM:[node1] TO:[node9]] 
+H - [ETB:(H: node0) FROM:[node0] TO:[node9]] 
+H - [ETB:(H: node2) FROM:[node1] TO:[node9]] 
+A - [ETB:(A: node0) FROM:[node0] TO:[node9]] 
+A - [ETB:(A: node3) FROM:[node1] TO:[node9]] 
+C - [ETB:(C: node1) FROM:[node1] TO:[node9]] 
+C - [ETB:(C: node2) FROM:[node1] TO:[node9]] 
+C - [ETB:(C: node3) FROM:[node1] TO:[node9]] 
+
+--
+Projections to process:
+
+~~
+node1
+--
+Forward rules:
+J - [ETB:(J: node2) FROM:[node2] TO:[node0]] 
+J - [ETB:(J: node3) FROM:[node2] TO:[node0]] 
+D - [ETB:(D: node2) FROM:[node2] TO:[node0]] 
+D - [ETB:(D: node3) FROM:[node2] TO:[node0]] 
+B - [ETB:(B: node1) FROM:[node1] TO:[node0]] 
+G - [ETB:(G: node1) FROM:[node1] TO:[node0]] 
+G - [ETB:(G: node2) FROM:[node2] TO:[node0]] 
+H - [ETB:(H: node2) FROM:[node2] TO:[node0]] 
+A - [ETB:(A: node3) FROM:[node2] TO:[node0]] 
+C - [ETB:(C: node1) FROM:[node1] TO:[node0]] 
+C - [ETB:(C: node2) FROM:[node2] TO:[node0]] 
+C - [ETB:(C: node3) FROM:[node2] TO:[node0]] 
+
+--
+Projections to process:
+
+~~
+node2
+--
+Forward rules:
+J - [ETB:(J: node2) FROM:[node2] TO:[node1]] 
+J - [ETB:(J: node3) FROM:[node3] TO:[node1]] 
+D - [ETB:(D: node2) FROM:[node2] TO:[node1]] 
+D - [ETB:(D: node3) FROM:[node3] TO:[node1]] 
+G - [ETB:(G: node2) FROM:[node2] TO:[node1]] 
+H - [ETB:(H: node2) FROM:[node2] TO:[node1]] 
+A - [ETB:(A: node3) FROM:[node3] TO:[node1]] 
+C - [ETB:(C: node2) FROM:[node2] TO:[node1]] 
+C - [ETB:(C: node3) FROM:[node3] TO:[node1]] 
+
+--
+Projections to process:
+
+~~
+node3
+--
+Forward rules:
+J - [ETB:(J: node3) FROM:[node3] TO:[node2]] 
+D - [ETB:(D: node3) FROM:[node3] TO:[node2]] 
+A - [ETB:(A: node3) FROM:[node3] TO:[node2]] 
+C - [ETB:(C: node3) FROM:[node3] TO:[node2]] 
+
+--
+Projections to process:
+
+~~
+node4
+--
+Forward rules:
+J - [ETB:(J: node4) FROM:[node4] TO:[node5]] 
+G - [ETB:(G: node4) FROM:[node4] TO:[node5]] 
+H - [ETB:(H: node4) FROM:[node4] TO:[node5]] 
+
+--
+Projections to process:
+
+~~
+node5
+--
+Forward rules:
+J - [ETB:(J: node4) FROM:[node4] TO:[node8]] 
+D - [ETB:(D: node5) FROM:[node5] TO:[node8]] 
+G - [ETB:(G: node4) FROM:[node4] TO:[node8]] 
+H - [ETB:(H: node4) FROM:[node4] TO:[node8]] 
+A - [ETB:(A: node5) FROM:[node5] TO:[node8]] 
+C - [ETB:(C: node5) FROM:[node5] TO:[node8]] 
+
+--
+Projections to process:
+
+~~
+node6
+--
+Forward rules:
+C - [ETB:(C: node6) FROM:[node6] TO:[node7]] 
+
+--
+Projections to process:
+
+~~
+node7
+--
+Forward rules:
+D - [ETB:(D: node7) FROM:[node7] TO:[node8]] 
+A - [ETB:(A: node7) FROM:[node7] TO:[node8]] 
+C - [ETB:(C: node6) FROM:[node6] TO:[node8]] 
+
+--
+Projections to process:
+
+~~
+node8
+--
+Forward rules:
+J - [ETB:(J: node4) FROM:[node5] TO:[node9]] 
+J - [ETB:(J: node8) FROM:[node8] TO:[node9]] 
+D - [ETB:(D: node5) FROM:[node5] TO:[node9]] 
+D - [ETB:(D: node7) FROM:[node7] TO:[node9]] 
+B - [ETB:(B: node8) FROM:[node8] TO:[node9]] 
+G - [ETB:(G: node4) FROM:[node5] TO:[node9]] 
+H - [ETB:(H: node4) FROM:[node5] TO:[node9]] 
+A - [ETB:(A: node5) FROM:[node5] TO:[node9]] 
+A - [ETB:(A: node7) FROM:[node7] TO:[node9]] 
+C - [ETB:(C: node5) FROM:[node5] TO:[node9]] 
+C - [ETB:(C: node6) FROM:[node7] TO:[node9]] 
+C - [ETB:(C: node8) FROM:[node8] TO:[node9]] 
+
+--
+Projections to process:
+
+~~
+node9
+--
+Forward rules:
+
+--
+Projections to process:
+SELECT SEQ(J, B) FROM B; J WITH selectionRate= 0.07023725131279336
+SELECT SEQ(J, AND(E, B)) FROM E; SEQ(J, B) WITH selectionRate= 0.0049942960064277
+SELECT SEQ(J, AND(E, D, B)) FROM D; SEQ(J, AND(E, B)) WITH selectionRate= 0.0035522332944525636
+SELECT SEQ(G, B) FROM G; B WITH selectionRate= 0.05685594417837992
+SELECT SEQ(E, G, B) FROM E; SEQ(G, B) WITH selectionRate= 0.004521451032213913
+SELECT SEQ(H, C) FROM H; C WITH selectionRate= 0.022343703154842104
+SELECT SEQ(H, AND(A, C)) FROM A; SEQ(H, C) WITH selectionRate= 0.0028579744477477283
+SELECT SEQ(H, AND(A, C, J)) FROM J; SEQ(H, AND(A, C)) WITH selectionRate= 0.0037833387423599333
+

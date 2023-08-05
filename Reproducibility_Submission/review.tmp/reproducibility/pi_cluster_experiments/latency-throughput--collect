@@ -1,0 +1,18 @@
+#!/bin/bash
+SCRIPT_DIR="$(realpath "$(dirname "$0")")"
+SRC="/root/publish/inputdata/latency_throughput_revision/results" #results folder on (each of) the pis
+DST="$SCRIPT_DIR/results-lt" #final results folder location
+
+EXPERIMENTS=(1539294 159823 1760538 2044060 2283428 2333799 2993699 3048756 3487303 4169565 4216043 4253129 4335269 4458057 4534045 4983802 5186997 5398168 5536775 5561997 6016817 6270657 6638974 7019636 8043516 8246193 9025015 9303418 9581457 9709975)
+
+set -x
+
+for experiment in "${EXPERIMENTS[@]}"; do
+    mkdir -p "$DST/$experiment"
+    for ((i=0;i<10;i++)); do
+        rsync -rlptDv --progress "pi$i:$SRC/$experiment/*" "$DST/$experiment/" || break
+    done
+    rmdir --ignore-fail-on-non-empty "$DST/$experiment"
+done
+
+#"./$SCRIPT_DIR/latency-throughput--create-final-folder" "$DST" "$DST.final"

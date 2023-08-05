@@ -1,0 +1,25 @@
+#!/bin/bash
+#!/bin/bash
+
+for dataset in "citibike"; do
+    for partitioning in 5 10 20 30 50; do
+        for query in 1 2 3 4; do
+
+                echo "starting "$approach"_"$dataset"_Q"$query"_"$partitioning".txt"
+
+                # Using timeout to kill the process after 30 minutes (1800 seconds)
+                timeout 45m ./bin/DCEP.Simulation $dataset/$partitioning/muse/muse_"$dataset"_Q"$query"_"$partitioning".txt -w 1 -d 43 -t Minute --name bla > muse_"$dataset"_Q"$query"_"$partitioning"_out.txt &
+
+		timeout 45m ./bin/DCEP.Simulation $dataset/$partitioning/inev/inev_"$dataset"_Q"$query"_"$partitioning".txt -w 1 -d 43 -t Minute --name bla > inev_"$dataset"_Q"$query"_"$partitioning"_out.txt
+
+            done
+        done
+
+done
+			
+#cp *muse.txt ../res
+#cp *inev.txt ../res
+
+
+			
+

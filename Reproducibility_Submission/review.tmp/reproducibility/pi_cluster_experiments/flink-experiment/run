@@ -1,0 +1,8 @@
+#!/bin/bash
+source common.sh
+
+generateConfig
+kill_processes
+install
+run 
+collect_results
