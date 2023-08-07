@@ -446,18 +446,18 @@ def generateCentralPlan():
     
 def filterUsed():
     if filterDict.keys():
-        return "_filter"
+        return "_os"
     else:
         return ""
     
 if filterUsed() or not filterUsed():
     
-    f = open("../plans/" + str(ID) + filterUsed() +"_MS.txt", "w")   
+    f = open("../plans/" + str(ID) + filterUsed() +"_INEv.txt", "w")   
    
     f.write(generatePlan()) 
     f.close()
         
-    f = open("../plans/" + str(ID) +"_CC.txt", "w")   
+    f = open("../plans/" + str(ID) +"_Centralized.txt", "w")   
     f.write(generateCentralPlan()) 
     f.close()
 

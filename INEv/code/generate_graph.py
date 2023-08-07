@@ -20,24 +20,13 @@ def main():
   # percentage = 50
    outdegree = 3
    experiment = 'None'
-   G = nx.Graph()
-   G = nx.connected_watts_strogatz_graph(len(nw),outdegree,0.2)
+   
      
    if len(sys.argv) > 1: 
-      percentage = float(sys.argv[1])      
-   if len(sys.argv) >2 :
-     if int(sys.argv[2]) == 0:
-          G = remove_edges(G, percentage)
-          experiment = 'remove'
-     elif int(sys.argv[2]) == 1:
-          G = add_edges(G, percentage)
-          experiment = 'add'
-     elif int(sys.argv[2]) == 2:
-          G = permute_edges(G, percentage)  
-          experiment = 'permute'
+      outdegree = int(sys.argv[1])      
+   G = nx.Graph()
+   G = nx.connected_watts_strogatz_graph(len(nw),outdegree,0.2)   
           
-   print(G.edges)
-  # G = permute_edges(G, percentage)  
    print(G.edges)
 
  

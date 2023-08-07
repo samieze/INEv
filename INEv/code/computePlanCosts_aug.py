@@ -45,7 +45,7 @@ def main():
     Filters = []
     writeExperimentData = 0
     
-    filename = "None"
+    filename = "results"
     noFilter = 0 # NO FILTER
     
     #only write experiment data for shared costs, use ID and total costs for writing results of shared/seperate window
