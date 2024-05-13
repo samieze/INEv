@@ -31,11 +31,12 @@ plt.plot(mygroup.groupby(['Change'])['TransmissionRatioINEV'].median(), marker="
 plt.yscale("log")
 plt.legend()   
 
-plt.savefig("../res/figs/Fig_11c_changing_topology.pdf", format = 'pdf',  bbox_inches='tight')
-
 plt.rcParams.update({'font.size':17})
 plt.xlabel("% Changed Edges")
 plt.ylabel("TransmissionRatio")
+plt.savefig("../res/figs/Fig_11c_changing_topology.pdf", format = 'pdf',  bbox_inches='tight')
+
+
 # labels = ['ratioBrokenProjs', 'ratioBrokenPlacements']  
     
 # # arrange x-Ticks
