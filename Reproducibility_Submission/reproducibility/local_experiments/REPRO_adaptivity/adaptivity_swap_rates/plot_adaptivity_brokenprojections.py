@@ -34,7 +34,7 @@ def main():
     plt.ylabel("Invalidity")
     #plt.yscale("log")
     labels = ['Projections', 'MNPlacements']  
-    markers = ["o","x","o"]
+    markers = ["x","o","o"]
         
     # arrange x-Ticks
           
@@ -42,9 +42,10 @@ def main():
     myX = list((map(lambda x: x/len(list(set(merged['Percentage'].tolist()))), list(set(merged['Percentage'].tolist()))))) # counting of x ticks
     #todo, relative x achse
     k = 0
+    colors = [ 'tab:blue','tab:orange']
     for i in ['ratioBrokenProjs', 'ratioBrokenPlacements']:
                print(merged.groupby('Percentage')[i].median())
-               plt.plot(merged.groupby('Percentage')[i].median(),  label = labels[k], marker = markers[k], markersize = 10)
+               plt.plot(merged.groupby('Percentage')[i].median(),  label = labels[k], marker = markers[k], markersize = 10, color = colors[k])
                k+=1
     
     plt.legend()   
