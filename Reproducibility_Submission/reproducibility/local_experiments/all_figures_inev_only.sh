@@ -14,5 +14,6 @@ cd ../../REPRO_wlorder/scripts
 ./combined.sh &
 cd ../../REPRO_adaptivity/scripts
 ./combined.sh &
-
+cd ../../REPRO_computation_time/scripts
+./combined.sh &
 

@@ -11,8 +11,8 @@ echo "Lower Bound"
 ./lower_bound.sh
 echo "NSEQ, KLEENE"
 ./negated_unnegated.sh
-echo "Computation Time"
-./computation_time.sh
+#echo "Computation Time"
+#./computation_time.sh
 cd ../res
 ./plots.sh
 cd figs
