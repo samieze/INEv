@@ -1,0 +1,281 @@
+{
+    "0": {
+     "forwarding_table": {
+         "1": "node1:5005", 
+         "2": "node1:5005", 
+         "3": "node1:5005", 
+         "4": "node1:5005", 
+         "5": "node1:5005", 
+         "6": "node9:5005", 
+         "7": "node9:5005", 
+         "8": "node9:5005", 
+         "9": "node9:5005"
+        }, 
+    "connection": [
+        "node0:5005",
+        "node1:5005",
+        "node2:5005",
+        "node3:5005",
+        "node4:5005",
+        "node5:5005",
+        "node6:5005",
+        "node7:5005",
+        "node8:5005",
+        "node9:5005"
+    ],
+    "input_file": "hm_input_0.txt",
+    "own_ID": "0"
+    },
+    
+    "1": {
+     "forwarding_table": {
+         "0": "node0:5005", 
+         "2": "node5:5005", 
+         "3": "node5:5005", 
+         "4": "node5:5005", 
+         "5": "node5:5005", 
+         "6": "node5:5005", 
+         "7": "node5:5005", 
+         "8": "node5:5005", 
+         "9": "node0:5005"
+        }, 
+    "connection": [
+        "node0:5005",
+        "node1:5005",
+        "node2:5005",
+        "node3:5005",
+        "node4:5005",
+        "node5:5005",
+        "node6:5005",
+        "node7:5005",
+        "node8:5005",
+        "node9:5005"
+    ],
+    "input_file": "hm_input_1.txt",
+    "own_ID": "1"
+    },
+    
+    "2": {
+     "forwarding_table": {
+         "0": "node3:5005", 
+         "1": "node3:5005", 
+         "3": "node3:5005", 
+         "4": "node3:5005", 
+         "5": "node3:5005", 
+         "6": "node3:5005", 
+         "7": "node3:5005", 
+         "8": "node3:5005", 
+         "9": "node3:5005"
+        }, 
+    "connection": [
+        "node0:5005",
+        "node1:5005",
+        "node2:5005",
+        "node3:5005",
+        "node4:5005",
+        "node5:5005",
+        "node6:5005",
+        "node7:5005",
+        "node8:5005",
+        "node9:5005"
+    ],
+    "input_file": "hm_input_2.txt",
+    "own_ID": "2"
+    },
+    
+    "3": {
+     "forwarding_table": {
+         "0": "node4:5005", 
+         "1": "node4:5005", 
+         "2": "node2:5005", 
+         "4": "node4:5005", 
+         "5": "node4:5005", 
+         "6": "node4:5005", 
+         "7": "node4:5005", 
+         "8": "node4:5005", 
+         "9": "node4:5005"
+        }, 
+    "connection": [
+        "node0:5005",
+        "node1:5005",
+        "node2:5005",
+        "node3:5005",
+        "node4:5005",
+        "node5:5005",
+        "node6:5005",
+        "node7:5005",
+        "node8:5005",
+        "node9:5005"
+    ],
+    "input_file": "hm_input_3.txt",
+    "own_ID": "3"
+    },
+    
+    "4": {
+     "forwarding_table": {
+         "0": "node5:5005", 
+         "1": "node5:5005", 
+         "2": "node3:5005", 
+         "3": "node3:5005", 
+         "5": "node5:5005", 
+         "6": "node5:5005", 
+         "7": "node5:5005", 
+         "8": "node5:5005", 
+         "9": "node5:5005"
+        }, 
+    "connection": [
+        "node0:5005",
+        "node1:5005",
+        "node2:5005",
+        "node3:5005",
+        "node4:5005",
+        "node5:5005",
+        "node6:5005",
+        "node7:5005",
+        "node8:5005",
+        "node9:5005"
+    ],
+    "input_file": "hm_input_4.txt",
+    "own_ID": "4"
+    },
+    
+    "5": {
+     "forwarding_table": {
+         "0": "node1:5005", 
+         "1": "node1:5005", 
+         "2": "node4:5005", 
+         "3": "node4:5005", 
+         "4": "node4:5005", 
+         "6": "node8:5005", 
+         "7": "node8:5005", 
+         "8": "node8:5005", 
+         "9": "node8:5005"
+        }, 
+    "connection": [
+        "node0:5005",
+        "node1:5005",
+        "node2:5005",
+        "node3:5005",
+        "node4:5005",
+        "node5:5005",
+        "node6:5005",
+        "node7:5005",
+        "node8:5005",
+        "node9:5005"
+    ],
+    "input_file": "hm_input_5.txt",
+    "own_ID": "5"
+    },
+    
+    "6": {
+     "forwarding_table": {
+         "0": "node7:5005", 
+         "1": "node7:5005", 
+         "2": "node7:5005", 
+         "3": "node7:5005", 
+         "4": "node7:5005", 
+         "5": "node7:5005", 
+         "7": "node7:5005", 
+         "8": "node7:5005", 
+         "9": "node7:5005"
+        }, 
+    "connection": [
+        "node0:5005",
+        "node1:5005",
+        "node2:5005",
+        "node3:5005",
+        "node4:5005",
+        "node5:5005",
+        "node6:5005",
+        "node7:5005",
+        "node8:5005",
+        "node9:5005"
+    ],
+    "input_file": "hm_input_6.txt",
+    "own_ID": "6"
+    }, 
+    
+    "7": {
+     "forwarding_table": {
+         "0": "node8:5005", 
+         "1": "node8:5005", 
+         "2": "node8:5005", 
+         "3": "node8:5005", 
+         "4": "node8:5005", 
+         "5": "node8:5005", 
+         "6": "node6:5005", 
+         "8": "node8:5005", 
+         "9": "node8:5005"
+        }, 
+    "connection": [
+        "node0:5005",
+        "node1:5005",
+        "node2:5005",
+        "node3:5005",
+        "node4:5005",
+        "node5:5005",
+        "node6:5005",
+        "node7:5005",
+        "node8:5005",
+        "node9:5005"
+    ],
+    "input_file": "hm_input_7.txt",
+    "own_ID": "7"
+    },
+    
+    "8": {
+     "forwarding_table": {
+         "0": "node9:5005", 
+         "1": "node5:5005", 
+         "2": "node5:5005", 
+         "3": "node5:5005", 
+         "4": "node5:5005", 
+         "5": "node5:5005", 
+         "6": "node7:5005", 
+         "7": "node7:5005", 
+         "9": "node9:5005"
+        }, 
+    "connection": [
+        "node0:5005",
+        "node1:5005",
+        "node2:5005",
+        "node3:5005",
+        "node4:5005",
+        "node5:5005",
+        "node6:5005",
+        "node7:5005",
+        "node8:5005",
+        "node9:5005"
+    ],
+    "input_file": "hm_input_8.txt",
+    "own_ID": "8"
+    },
+     
+    "9": {
+     "forwarding_table": {
+         "0": "node0:5005", 
+         "1": "node0:5005", 
+         "2": "node8:5005", 
+         "3": "node8:5005", 
+         "4": "node8:5005", 
+         "5": "node8:5005", 
+         "6": "node8:5005", 
+         "7": "node8:5005", 
+         "8": "node8:5005"
+        }, 
+    "connection": [
+        "node0:5005",
+        "node1:5005",
+        "node2:5005",
+        "node3:5005",
+        "node4:5005",
+        "node5:5005",
+        "node6:5005",
+        "node7:5005",
+        "node8:5005",
+        "node9:5005"
+    ],
+    "input_file": "hm_input_9.txt",
+    "own_ID": "9"
+    }
+}

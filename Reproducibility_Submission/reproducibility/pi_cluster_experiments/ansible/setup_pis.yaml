@@ -1,0 +1,54 @@
+---
+- name: Initial setup of pis
+  hosts: pis
+  remote_user: root
+  tasks: 
+
+  - name: Set hostname to ansible hostname
+    hostname:
+      name: "{{ inventory_hostname }}"
+  
+  - name: Ensure own hostname is in /etc/hosts bound to ipv6localhost
+    ansible.builtin.lineinfile:
+      path: /etc/hosts
+      regexp: '^::1 {{ ansible_hostname }}'
+      line: '::1 {{ ansible_hostname }}'
+      state: present
+  
+  - name: Ensure own hostname is in /etc/hosts bound to ipv4 localhost
+    ansible.builtin.lineinfile:
+      path: /etc/hosts
+      regexp: '^127.0.0.1 {{ ansible_hostname }}'
+      line: '127.0.0.1 {{ ansible_hostname }}'
+      state: present
+
+  - name: Install dependencies 
+    ansible.builtin.apt:
+      name: vim, rsync, bc, net-tools, shellcheck, byobu, openjdk-8-jdk, lsof, zsh, bash
+      state: present
+  
+  - name: set shell to bash
+    user:
+      name: root
+      shell: /bin/bash
+
+  - name: Copy publish folder
+    synchronize:
+      src: "{{ playbook_dir }}/../deploy/publish/"
+      dest: /root/publish
+      archive: yes
+      owner: no
+      group: no
+      delete: yes
+      set_remote_user: no
+
+  - name: Ensure mutual passwordless ssh connectivity
+    synchronize:
+      src: "{{ playbook_dir }}/../deploy/.ssh/"
+      dest: /root/.ssh
+      archive: yes
+      owner: no
+      group: no
+      delete: yes
+      set_remote_user: no
+  

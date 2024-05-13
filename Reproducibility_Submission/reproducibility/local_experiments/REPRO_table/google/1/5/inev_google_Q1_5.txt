@@ -1,0 +1,107 @@
+2970 2000 0 0 0 0 0 2 40 
+2970 2000 0 0 0 0 0 2 40 
+2970 2000 0 0 0 0 0 2 40 
+2970 2000 0 0 0 0 0 2 40 
+2970 2000 0 0 0 0 0 2 40 
+-----------
+Dataset-Based Primitive Event Generation 
+hm_input_%NodeName%.txt 
+-----------
+Single Selectivities:{'A': 1.0, 'H': 1.0, 'B': 1.0, 'I': 1.0, 'H|AH': 0.759077407696289, 'A|AH': 0.026347774017800977, 'B|AB': 0.42947672696325323, 'A|AB': 0.04656829752200108, 'I|AI': 0.07013476669719623, 'A|AI': 0.2851652745399314, 'H|BH': 0.3668887737626532, 'B|BH': 0.05451243382262318, 'I|HI': 0.13846686475490824, 'H|HI': 0.1444388882163309, 'I|BI': 0.9656702812968142, 'B|BI': 0.02071100290374648, 'A|ABH': 0.012777702023189015, 'H|ABH': 0.28708932733612375, 'B|ABH': 0.002180821816627009, 'I|AHI': 0.05382559197516597, 'H|AHI': 0.1382152881702876, 'A|AHI': 0.001075338236389154, 'B|ABI': 0.020409975777513745, 'A|ABI': 0.02584583598232818, 'I|ABI': 0.015165506297619778, 'I|BHI': 0.05262238262778797, 'H|BHI': 0.13193970616775114, 'B|BHI': 0.0011522427025805278, 'I|ABHI': 0.007529591761909231, 'H|ABHI': 0.10096298259281314, 'B|ABHI': 0.0003796004131672117, 'A|ABHI': 0.0002217786295149989}
+-----------
+~~
+node0
+--
+Forward rules:
+H - [ETB:(H: node0) FROM:[node0] TO:[node1;node4]] 
+H - [ETB:(H: node1) FROM:[node1] TO:[node4]] 
+H - [ETB:(H: node2) FROM:[node1] TO:[node4]] 
+H - [ETB:(H: node3) FROM:[node1] TO:[node4]] 
+H - [ETB:(H: node4) FROM:[node4] TO:[node1]] 
+SEQ(H, I) - [ETB:(H: ANY);(I: node0) FROM:[node0] TO:[node1;node4]] 
+SEQ(H, I) - [ETB:(H: ANY);(I: node1) FROM:[node1] TO:[node4]] 
+SEQ(H, I) - [ETB:(H: ANY);(I: node2) FROM:[node1] TO:[node4]] 
+SEQ(H, I) - [ETB:(H: ANY);(I: node3) FROM:[node1] TO:[node4]] 
+SEQ(H, I) - [ETB:(H: ANY);(I: node4) FROM:[node4] TO:[node1]] 
+I,B|SEQ(SEQ(H, B), I) - [ETB:(H: ANY);(B: node0);(I: ANY) FROM:[node0] TO:[node1]] 
+I,B|SEQ(SEQ(H, B), I) - [ETB:(H: ANY);(B: node4);(I: ANY) FROM:[node4] TO:[node1]] 
+A,I|SEQ(A, H, I) - [ETB:(A: node0);(H: ANY);(I: ANY) FROM:[node0] TO:[node1]] 
+A,I|SEQ(A, H, I) - [ETB:(A: node4);(H: ANY);(I: ANY) FROM:[node4] TO:[node1]] 
+
+--
+Projections to process:
+SELECT SEQ(H, I) FROM H; I WITH selectionRate= 0.02
+SELECT SEQ(A, H, I) FROM A; SEQ(H, I) WITH selectionRate= 0.0004000000000000001
+SELECT SEQ(SEQ(H, B), I) FROM SEQ(H, I); B WITH selectionRate= 0.0004000000000000001
+
+~~
+node1
+--
+Forward rules:
+H - [ETB:(H: node0) FROM:[node0] TO:[node2;node3]] 
+H - [ETB:(H: node1) FROM:[node1] TO:[node0;node2;node3]] 
+H - [ETB:(H: node2) FROM:[node2] TO:[node0;node3]] 
+H - [ETB:(H: node3) FROM:[node3] TO:[node0;node2]] 
+H - [ETB:(H: node4) FROM:[node0] TO:[node2;node3]] 
+SEQ(H, I) - [ETB:(H: ANY);(I: node0) FROM:[node0] TO:[node2;node3]] 
+SEQ(H, I) - [ETB:(H: ANY);(I: node1) FROM:[node1] TO:[node0;node2;node3]] 
+SEQ(H, I) - [ETB:(H: ANY);(I: node2) FROM:[node2] TO:[node0;node3]] 
+SEQ(H, I) - [ETB:(H: ANY);(I: node3) FROM:[node3] TO:[node0;node2]] 
+SEQ(H, I) - [ETB:(H: ANY);(I: node4) FROM:[node0] TO:[node2;node3]] 
+
+--
+Projections to process:
+SELECT SEQ(H, I) FROM H; I WITH selectionRate= 0.02
+SELECT SEQ(A, H, I) FROM A; SEQ(H, I) WITH selectionRate= 0.0004000000000000001
+SELECT SEQ(SEQ(H, B), I) FROM SEQ(H, I); B WITH selectionRate= 0.0004000000000000001
+SELECT SEQ(A, SEQ(H, B), I) FROM SEQ(SEQ(H, B), I); SEQ(A, H, I) WITH selectionRate= 0.9999999999999998
+SELECT SEQ(H, I)|HBI FROM I|HBI; H WITH selectionRate= 0.1444388882163309
+SELECT SEQ(SEQ(H, B), I) FROM B|HBI; SEQ(H, I)|HBI WITH selectionRate= 0.13193970616775114
+SELECT SEQ(A, H)|AHI FROM A|AHI; H WITH selectionRate= 0.759077407696289
+SELECT SEQ(A, H, I) FROM I|AHI; SEQ(A, H)|AHI WITH selectionRate= 0.1382152881702876
+
+~~
+node2
+--
+Forward rules:
+H - [ETB:(H: node2) FROM:[node2] TO:[node1]] 
+SEQ(H, I) - [ETB:(H: ANY);(I: node2) FROM:[node2] TO:[node1]] 
+I,B|SEQ(SEQ(H, B), I) - [ETB:(H: ANY);(B: node2);(I: ANY) FROM:[node2] TO:[node1]] 
+A,I|SEQ(A, H, I) - [ETB:(A: node2);(H: ANY);(I: ANY) FROM:[node2] TO:[node1]] 
+
+--
+Projections to process:
+SELECT SEQ(H, I) FROM H; I WITH selectionRate= 0.02
+SELECT SEQ(A, H, I) FROM A; SEQ(H, I) WITH selectionRate= 0.0004000000000000001
+SELECT SEQ(SEQ(H, B), I) FROM SEQ(H, I); B WITH selectionRate= 0.0004000000000000001
+
+~~
+node3
+--
+Forward rules:
+H - [ETB:(H: node3) FROM:[node3] TO:[node1]] 
+SEQ(H, I) - [ETB:(H: ANY);(I: node3) FROM:[node3] TO:[node1]] 
+I,B|SEQ(SEQ(H, B), I) - [ETB:(H: ANY);(B: node3);(I: ANY) FROM:[node3] TO:[node1]] 
+A,I|SEQ(A, H, I) - [ETB:(A: node3);(H: ANY);(I: ANY) FROM:[node3] TO:[node1]] 
+
+--
+Projections to process:
+SELECT SEQ(H, I) FROM H; I WITH selectionRate= 0.02
+SELECT SEQ(A, H, I) FROM A; SEQ(H, I) WITH selectionRate= 0.0004000000000000001
+SELECT SEQ(SEQ(H, B), I) FROM SEQ(H, I); B WITH selectionRate= 0.0004000000000000001
+
+~~
+node4
+--
+Forward rules:
+H - [ETB:(H: node4) FROM:[node4] TO:[node0]] 
+SEQ(H, I) - [ETB:(H: ANY);(I: node4) FROM:[node4] TO:[node0]] 
+I,B|SEQ(SEQ(H, B), I) - [ETB:(H: ANY);(B: node4);(I: ANY) FROM:[node4] TO:[node0]] 
+A,I|SEQ(A, H, I) - [ETB:(A: node4);(H: ANY);(I: ANY) FROM:[node4] TO:[node0]] 
+
+--
+Projections to process:
+SELECT SEQ(H, I) FROM H; I WITH selectionRate= 0.02
+SELECT SEQ(A, H, I) FROM A; SEQ(H, I) WITH selectionRate= 0.0004000000000000001
+SELECT SEQ(SEQ(H, B), I) FROM SEQ(H, I); B WITH selectionRate= 0.0004000000000000001
+

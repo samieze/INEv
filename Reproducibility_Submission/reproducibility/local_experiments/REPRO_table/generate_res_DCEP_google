@@ -1,0 +1,23 @@
+#!/bin/bash
+#!/bin/bash
+
+for dataset in "google"; do   
+        for query in 1 2 3 4; do
+	 	 for partitioning in 5 10 20 30 50; do
+                	echo "starting "$approach"_"$dataset"_Q"$query"_"$partitioning".txt"
+
+                timeout 45m ./bin/DCEP.Simulation $dataset/$query/$partitioning/inev_"$dataset"_Q"$query"_"$partitioning".txt -w 1 -d 42 -t Minute --name bla > inev_"$dataset"_Q"$query"_"$partitioning"_out.txt &
+
+		timeout 45m ./bin/DCEP.Simulation $dataset/$query/$partitioning/muse_"$dataset"_Q"$query"_"$partitioning".txt -w 1 -d 42 -t Minute --name bla > muse_"$dataset"_Q"$query"_"$partitioning"_out.txt
+            done
+        done
+    done
+
+			
+#cp *muse.txt ../res
+#cp *inev.txt ../res
+
+
+# in plot skript check if line "Sent over network contained", if not, count "Sending ..." prints
+			
+

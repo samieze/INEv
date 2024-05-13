@@ -1,0 +1,49 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Sep 17 13:34:39 2021
+
+@author: samira
+"""
+def NEWcomputeMSplacementCosts(sourcetypes, destinationtypes): #we need tuples, (C, [E,A]) C should be sent to all e and a nodes ([D,E], [A]) d and e should be sent to all a nodes etc
+    costs = 0
+    destinationNodes = []
+    
+    for etype in destinationtypes:
+        for etb in IndexEventNodes[etype]:
+            destinationNodes += getNodes(etb)
+            
+            
+    for etype in sourcetypes:  
+        for etb in IndexEventNodes[etype]: #NOT FOR EACH ETB NECESSARY IF SIS PLACMENT
+            mycosts = np.Inf
+            mytree = nx.Graph()
+            for node in getNodes(etb): # add optimization to reduce enumeration of steiner trees !!!
+                treenodes = copy.deepcopy(destinationNodes)
+                treenodes.append(node)
+                placementTree = steiner_tree(G, treenodes)
+                if len(etype) == 1:
+                    curcosts = len(placementTree.edges()) * rates[etype]
+                else:                    
+                    num = NumETBsByKey(etb, etype)
+                    #curcosts = len(placementTree.edges()) * projrates[etype][1] * num
+              
+                    curcosts = len(placementTree.edges()) * projFilterDict[etype][getMaximalFilter(projFilterDict, etype)][0] * num     # FILTER       
+                    
+                if curcosts < mycosts:
+                    mycosts = curcosts
+                    mytree = placementTree
+                    if node in destinationNodes:
+                        break                   
+                    
+                    
+            placementTreeDict[(tuple(destinationtypes),etb)] = [node, destinationNodes, mytree]
+            costs +=  mycosts 
+            
+            # update events sent over network
+            for routingNode in mytree.nodes():
+                if not routingNode in getNodes(etb):
+                    setEventNodes(routingNode, etb)
+                
+                
+    return costs             

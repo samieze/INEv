@@ -1,0 +1,7 @@
+fs
+venv
+.idea
+publish.tgz
+config
+config-local
+IPs.txt

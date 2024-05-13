@@ -1,0 +1,89 @@
+1154 0 0 2 0 1 0 0 1 0 0 0 0 0 0 
+1154 0 0 2 0 1 0 0 1 0 0 0 0 0 0 
+1154 0 0 2 0 1 0 0 1 0 0 0 0 0 0 
+1154 0 0 2 0 1 0 0 1 0 0 0 0 0 0 
+1154 0 0 2 0 1 0 0 1 0 0 0 0 0 0 
+-----------
+Dataset-Based Primitive Event Generation 
+hm_input_%NodeName%.txt 
+-----------
+Single Selectivities:{'A': 1.0, 'D': 1.0, 'I': 1.0, 'F': 1.0, 'D|AD': 0.9203865898400033, 'A|AD': 0.021729999351116934, 'I|AI': 0.4130633430687876, 'A|AI': 0.04841872399379044, 'F|AF': 0.7190616999413713, 'A|AF': 0.02781402486272138, 'I|DI': 0.6834693892081272, 'D|DI': 0.029262466345672266, 'D|DF': 0.13645541880700968, 'F|DF': 0.1465680159487562, 'F|FI': 0.30749246112064216, 'I|FI': 0.0650422450264664, 'A|ADI': 0.00024057485220955725, 'I|ADI': 0.3104942942294786, 'D|ADI': 0.10709917748990301, 'A|ADF': 0.00027343013805201184, 'D|ADF': 0.11172160977419873, 'F|ADF': 0.26188246524455183, 'A|AFI': 0.02781402486272138, 'F|AFI': 0.30749246112064216, 'I|AFI': 0.0650422450264664, 'I|DFI': 0.01982605414998822, 'D|DFI': 0.009048095583842801, 'F|DFI': 0.0445960628824146, 'A|ADFI': 0.00010875283361068881, 'I|ADFI': 0.009700415465780815, 'D|ADFI': 0.008139073906906968, 'F|ADFI': 0.0074537370011136}
+-----------
+~~
+node0
+--
+Forward rules:
+AND(SEQ(D, I), F) - [ETB:(D: node0);(I: ANY);(F: ANY) FROM:[node0] TO:[node1;node4]] 
+AND(SEQ(D, I), F) - [ETB:(D: node1);(I: ANY);(F: ANY) FROM:[node1] TO:[node4]] 
+AND(SEQ(D, I), F) - [ETB:(D: node2);(I: ANY);(F: ANY) FROM:[node1] TO:[node4]] 
+AND(SEQ(D, I), F) - [ETB:(D: node3);(I: ANY);(F: ANY) FROM:[node1] TO:[node4]] 
+AND(SEQ(D, I), F) - [ETB:(D: node4);(I: ANY);(F: ANY) FROM:[node4] TO:[node1]] 
+AND(I, F) - [ETB:(I: ANY);(F: ANY) FROM:[node0] TO:[node1;node4]] 
+
+--
+Projections to process:
+SELECT AND(A, SEQ(D, I), F) FROM AND(SEQ(D, I), F); A WITH selectionRate= 8e-06
+SELECT AND(SEQ(D, I), F) FROM D; AND(I, F) WITH selectionRate= 0.0004000000000000001
+SELECT AND(I, F) FROM F; I WITH selectionRate= 0.02
+
+~~
+node1
+--
+Forward rules:
+AND(SEQ(D, I), F) - [ETB:(D: node0);(I: ANY);(F: ANY) FROM:[node0] TO:[node2;node3]] 
+AND(SEQ(D, I), F) - [ETB:(D: node1);(I: ANY);(F: ANY) FROM:[node1] TO:[node0;node2;node3]] 
+AND(SEQ(D, I), F) - [ETB:(D: node2);(I: ANY);(F: ANY) FROM:[node2] TO:[node0]] 
+AND(SEQ(D, I), F) - [ETB:(D: node3);(I: ANY);(F: ANY) FROM:[node3] TO:[node0]] 
+AND(SEQ(D, I), F) - [ETB:(D: node4);(I: ANY);(F: ANY) FROM:[node0] TO:[node2;node3]] 
+AND(I, F) - [ETB:(I: ANY);(F: ANY) FROM:[node0] TO:[node2;node3]] 
+F - [ETB:(F: node1) FROM:[node1] TO:[node0]] 
+F - [ETB:(F: node2) FROM:[node2] TO:[node0]] 
+F - [ETB:(F: node3) FROM:[node3] TO:[node0]] 
+I - [ETB:(I: node1) FROM:[node1] TO:[node0]] 
+I - [ETB:(I: node2) FROM:[node2] TO:[node0]] 
+I - [ETB:(I: node3) FROM:[node3] TO:[node0]] 
+
+--
+Projections to process:
+SELECT AND(A, SEQ(D, I), F) FROM AND(SEQ(D, I), F); A WITH selectionRate= 8e-06
+SELECT AND(SEQ(D, I), F) FROM D; AND(I, F) WITH selectionRate= 0.0004000000000000001
+
+~~
+node2
+--
+Forward rules:
+AND(SEQ(D, I), F) - [ETB:(D: node2);(I: ANY);(F: ANY) FROM:[node2] TO:[node1;node3]] 
+F - [ETB:(F: node2) FROM:[node2] TO:[node1]] 
+I - [ETB:(I: node2) FROM:[node2] TO:[node1]] 
+
+--
+Projections to process:
+SELECT AND(A, SEQ(D, I), F) FROM AND(SEQ(D, I), F); A WITH selectionRate= 8e-06
+SELECT AND(SEQ(D, I), F) FROM D; AND(I, F) WITH selectionRate= 0.0004000000000000001
+
+~~
+node3
+--
+Forward rules:
+AND(SEQ(D, I), F) - [ETB:(D: node3);(I: ANY);(F: ANY) FROM:[node3] TO:[node1;node2]] 
+F - [ETB:(F: node3) FROM:[node3] TO:[node1]] 
+I - [ETB:(I: node3) FROM:[node3] TO:[node1]] 
+
+--
+Projections to process:
+SELECT AND(A, SEQ(D, I), F) FROM AND(SEQ(D, I), F); A WITH selectionRate= 8e-06
+SELECT AND(SEQ(D, I), F) FROM D; AND(I, F) WITH selectionRate= 0.0004000000000000001
+
+~~
+node4
+--
+Forward rules:
+AND(SEQ(D, I), F) - [ETB:(D: node4);(I: ANY);(F: ANY) FROM:[node4] TO:[node0]] 
+F - [ETB:(F: node4) FROM:[node4] TO:[node0]] 
+I - [ETB:(I: node4) FROM:[node4] TO:[node0]] 
+
+--
+Projections to process:
+SELECT AND(A, SEQ(D, I), F) FROM AND(SEQ(D, I), F); A WITH selectionRate= 8e-06
+SELECT AND(SEQ(D, I), F) FROM D; AND(I, F) WITH selectionRate= 0.0004000000000000001
+

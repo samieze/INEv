@@ -1,0 +1,126 @@
+#!/bin/bash
+DIR="$(realpath "$(dirname "$0")")"         #script location
+ENGINE_DIR="$(realpath "$DIR/bin")"    #location of dcep code to use
+MAX_NODE_ID=9			      #Run this script on the primary node only (node ID 0). Expects other nodes to be available with passwordless SSH as pi1...piN-1
+SLICE=0
+IP_FILE="$DIR/IPs.txt" #location of file mapping node IDs to IP addresses. expects the hostnames pi1... to resolve to these addresses, for any plan file used with this script to contain MAX_NODE_ID+1 node rows (columns?) in the rate matrix
+
+trap 'export STOP="yes" && echo "got abort signal"' SIGUSR1
+
+function run_with_engine () {
+	RUNTIME="$1"
+	PLAN_FILE="$(realpath "$2")"
+	shift 2
+
+	PLAN_ID="$(basename -s .txt "$PLAN_FILE")"
+	GROUP="$(basename "$PLAN_FILE" | grep -E --only-matching '^[0-9]+')"
+	MS_OR_CC="$(basename -s .txt "$PLAN_FILE" | grep -E --only-matching '(MS$)|(CC$)')" #fixme: give empty string if neither
+	PLAN_DIR="$(dirname "$PLAN_FILE")"
+	OUT_DIR="$PLAN_DIR/results/$GROUP/${MS_OR_CC}_mul${RATE_FACTOR}"
+	ERR_DIR="$OUT_DIR"
+	BENCHMARK_DIR="$OUT_DIR"
+	#all of the above is assumed identical on all nodes
+	OUT0="$OUT_DIR/$PLAN_ID.0.out"
+	ERR0="$OUT_DIR/$PLAN_ID.0.err"
+
+
+	#check if output exists and has no error. if so, skip to end
+	if [[ ( -f "$OUT0" ) && ( ! -s "$ERR0" ) ]] && ( compgen -G "${OUT_DIR}/*.csv" >/dev/null ); then
+		echo "Skipping previously completed experiment."
+		return
+	fi
+
+	#start on all nodes	
+	PrevWD=$(pwd -P)
+	for ((i=0; i<=MAX_NODE_ID; i++)); do
+		if [[ $i -eq 0 ]]; then
+			OUT=$OUT0
+		else
+			OUT="$OUT_DIR/$PLAN_ID.${i}.out"
+		fi;
+		ERR="$ERR_DIR/$PLAN_ID.${i}.err"
+		CMD="mkdir -p $BENCHMARK_DIR $OUT_DIR $ERR_DIR && cd $ENGINE_DIR && rm -rf ./benchmark\\\\ && ln -s -f $BENCHMARK_DIR ./benchmark\\\\ && echo [\$(date)] Starting the simulation >$OUT && (nohup ./DCEP.Simulation $PLAN_FILE --nodeID $i --useIP6 --path $IP_FILE --doBenchmarkTo CSV --experimentname $PLAN_ID $* >>$OUT 2>$ERR &)"
+		if [[ $i -eq 0 ]]; then
+			eval "$CMD"
+			sleep 1
+		else
+			ssh "pi$((10*SLICE+i))" "$CMD" &
+		fi
+	done;
+
+	#wait allotted time
+	sleep "$RUNTIME"
+
+	#stop on all nodes	
+	for ((i=0; i<=MAX_NODE_ID; i++)); do
+		OUT="$OUT_DIR/$PLAN_ID.${i}.out"
+		KILLCMD="killall -w DCEP.Simulation && echo [\$(date)] Killed the simulation >>$OUT"
+		if [[ $i -eq 0 ]]; then
+			eval "$KILLCMD"
+		else
+			ssh "pi$((10*SLICE + i))" "$KILLCMD" &
+		fi
+	done;
+		
+	cd "$PrevWD" || exit 1
+	sleep 10
+}
+
+
+LO="0"
+HI="inf"
+MAX_IMPRECISION_FACTOR="1.95"
+EARGS=(-d 10 -t Minute -w 1)
+
+while [[ "$1" == "-l" || "$1" == "-h" || "$1" == "-p" ]]; 
+do
+	if [[ "$1" == "-l" ]]; then
+		LO="$2"
+	shift 2;
+	fi
+
+	if [[ "$1" == "-h" ]]; then
+		HI="$2"
+		shift 2
+	fi
+	
+	if [[ "$1" == "-p" ]]; then
+		MAX_IMPRECISION_FACTOR="$2"
+		shift 2
+	fi
+done;
+
+for planfile in "$@";
+do
+	lo="$LO"
+	hi="$HI"
+    lo_max_outdir=""
+	while [[ "$lo" == "0" || "$hi" == "inf" || $( bc -l <<<"$hi / $lo > $MAX_IMPRECISION_FACTOR" ) == "1" ]]; 
+	do
+        if [[ "$STOP" == "yes" ]]; then
+           return 1
+	    fi
+        if [[ $hi == "inf" ]]; then
+		    if [[ $lo == "0" ]]; then
+				cand="1"
+		    else
+				cand=$( bc -l <<<"2*$lo" | sed 's/^\./0./' ) #sed adds leading zero
+			fi;
+		else
+			cand=$( bc -l <<<"($hi+$lo)/2"   | sed 's/^\./0./' )
+		fi;
+
+        echo "Range [$lo, $hi), Candidate $cand"
+     	RATE_FACTOR="$cand"
+		run_with_engine 12m "$planfile" "${EARGS[@]}" -f "$cand"
+        if "$DIR/has_terminated" "$OUT0"; then
+            echo "$OUT0" terminated
+            lo=$cand
+            lo_max_outdir=$OUT_DIR
+		else
+			echo "$OUT0 not terminated - assuming overload condition"
+			hi=$cand
+		fi;
+	done;
+    echo "Highest factor with termination: $lo - Data in: $lo_max_outdir"
+done;

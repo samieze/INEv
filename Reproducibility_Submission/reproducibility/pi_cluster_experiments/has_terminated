@@ -1,0 +1,10 @@
+#!/bin/bash
+	#0 means ok, or yes. other values mean no (exit-status convention)
+	LOG_FILE="$1"
+	BENCHMARK_FILE="$2"
+	EXPECTED_NUMBER_OF_ROWS_IN_BENCHMARK_FILE="$3"
+
+	if cat "$LOG_FILE" | grep --quiet "Printing the result"; then exit 0; #ordinary termination
+	else exit 1
+	fi;
+
