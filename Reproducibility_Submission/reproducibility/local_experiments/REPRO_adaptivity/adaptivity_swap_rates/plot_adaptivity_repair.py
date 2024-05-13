@@ -48,10 +48,13 @@ def main():
     merged =  merged.assign(Broken = lambda x: x.costs/x.CentralizeCosts)
     merged =  merged.assign(Repair = lambda x: x.costs_rep2/x.CentralizeCosts)
     plt.ylabel("Transmission Ratio")
-    
+    k = 0
+    markers = ["x","o","o"]
     for i in ['Broken','Repair']:
-             plt.plot(merged.groupby('Percentage')[i].median(),marker="x",  label = i)
+             plt.plot(merged.groupby('Percentage')[i].median(),marker= markers[k],  label = i)
+             k+= 1
     plt.legend()   
+    
     #plt.show()
 
     plt.savefig("../res/figs/Fig_10_adaptivity_repaircosts_" + str(inputfile[:-4]), format = 'pdf',  bbox_inches='tight')

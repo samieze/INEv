@@ -28,7 +28,7 @@ plt.xlabel("%Changed Selectivities")
 plt.ylabel("Invalidity")
 #plt.yscale("log")
 labels = ['Projections', 'MNPlacements']  
-markers = ["o","x","o"]
+markers = ["x","o","o"]
     
 # arrange x-Ticks
       
@@ -36,7 +36,7 @@ myX_o = sorted(list(set(merged['Percentage'].tolist()))) # to extract x-ticks us
 myX = list((map(lambda x: x/len(list(set(merged['Percentage'].tolist()))), list(set(merged['Percentage'].tolist()))))) # counting of x ticks
 #todo, relative x achse
 k = 0
-for i in ['ratioBrokenProjs', 'ratioBrokenPlacements']:
+for i in ['ratioBrokenPlacements','ratioBrokenProjs']:
            print(merged.groupby('Percentage')[i].median())
            plt.plot(merged.groupby('Percentage')[i].median(),  label = labels[k], marker = markers[k], markersize = 10)
            k+=1
