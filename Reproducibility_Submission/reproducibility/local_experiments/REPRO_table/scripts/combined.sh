@@ -11,8 +11,7 @@ cd ..
 python3.8 get_res_inev_muse.py
 #shaky
 cp table_gen.py res/
+cd res
 python3.8 table_gen.py
 pdflatex table_3.tex
-
-cd res
 cp * ../../Figures
