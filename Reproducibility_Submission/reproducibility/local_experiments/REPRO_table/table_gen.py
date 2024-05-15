@@ -24,11 +24,16 @@ def generate_latex_document(csv_path, latex_file_path):    # Load CSV file
         outer_col = row[0]
         inner_col = row[1]
         outer_row = row[2]
-        inner_row = row[5]
         value = row[3]
-        print(row[5])
+        if row[4]!="PPoP":   
+            inner_row = row[5]
+            successful = row[4]
+        else:
+            inner_row = row[4]
+            successful = True
+        
         if not table_data[outer_col][inner_col][outer_row][inner_row]:
-            if  row[4] == False:
+            if successful== False:
                   table_data[outer_col][inner_col][outer_row][inner_row] = "$ > "+ str("{:.4f}".format(value)) + "$"
             else: 
                  table_data[outer_col][inner_col][outer_row][inner_row] ="{:.4f}".format(value) 
